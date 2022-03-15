@@ -1,0 +1,42 @@
+{
+    "name": "Brands Banner",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Brand Cards",
+            "id": "brandItem",
+            "defaultCount": 6,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+                {
+                "type": "tab",
+                "label": "Content",
+                "sections": [{
+                    "settings": [{
+                            "type": "imageManager",
+                            "id": "imageUrl",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Alt text",
+                            "id": "altText",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Brand Link",
+                            "id": "brandLink",
+                            "default": ""
+                        }
+                    ]
+                }]
+            }]
+        }          
+    ],
+    "template": "<div class='brands-banner'> <ul class='brands-list'> {{#each brandItem}} <li class='brand-item'> <a href='{{brandLink}}' class='brand-link'> <img src='{{imageUrl.src}}' alt='{{altText}}'> </a> </li> {{/each}} </ul> <a href='/brands/' class='banner-action'>View All Brands</a> </div> "
+}

@@ -1,0 +1,18 @@
+<div class='mainBanner'>
+    <div class='mainBanner-container'>
+        <div class='mainBanner-imageContainer'>
+            <img src='{{image.src}}'
+                alt='{{alt}}' class='mainBanner-image'>
+        </div>
+        <div class='mainBanner-content'>
+            {{#if title.length}}
+            <h2 class='mainBanner-title'>{{title}}</h2>
+            {{/if}}
+            {{#if text.length}}
+            <p class='mainBanner-description'>
+                {{text}}
+            </p>
+            {{/if}}
+        </div>
+    </div>
+</div>

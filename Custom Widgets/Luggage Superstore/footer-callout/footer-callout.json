@@ -1,0 +1,410 @@
+{
+    "name": "Footer Callout",
+    "schema": [{
+        "type": "tab",
+        "label": "Callout List",
+        "sections": [
+            {
+                "label": "Callout #1",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Card #1?",
+                        "id": "showCard_1",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-1",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showCard_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "imageAlt-1",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCard_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout #1 Heading",
+                        "id": "cardHeading-1",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCard_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout #1 link",
+                        "id": "cardLink-1",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showCard_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": " Callout #1 Link Text",
+                        "id": "cardLinkText-1",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showCard_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Callout #2",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Card #2?",
+                        "id": "showCard_2",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-2",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showCard_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "imageAlt-2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCard_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout #2 Heading",
+                        "id": "cardHeading-2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCard_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout #2 link",
+                        "id": "cardLink-2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showCard_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": " Callout #2 Link Text",
+                        "id": "cardLinkText-2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showCard_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Callout #3",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Card #3?",
+                        "id": "showCard_3",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-3",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showCard_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "imageAlt-3",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCard_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout #3 Heading",
+                        "id": "cardHeading-3",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCard_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout #3 link",
+                        "id": "cardLink-3",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showCard_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": " Callout #3 Link Text",
+                        "id": "cardLinkText-3",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showCard_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Callout #4",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Card #4?",
+                        "id": "showCard_4",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-4",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showCard_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "imageAlt-4",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCard_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout #4 Heading",
+                        "id": "cardHeading-4",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCard_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout #4 link",
+                        "id": "cardLink-4",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showCard_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": " Callout #4 Link Text",
+                        "id": "cardLinkText-4",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showCard_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='footer-callout__container'> <ul class='callout-list'> <li class='callout-item'> <img src='{{imageUrl-1.src}}' alt='{{imageAlt-1}}' class='icon'> <div class='callout-content'> <h3> {{cardHeading-1}} </h3> <a href='{{cardLink-1}}'>{{cardLinkText-1}}</a> </div> </li> <li class='callout-item'> <img src='{{imageUrl-2.src}}' alt='{{imageAlt-2}}' class='icon'> <div class='callout-content'> <h3> {{cardHeading-2}} </h3> <a href='{{cardLink-2}}'>{{cardLinkText-2}}</a> </div> </li> <li class='callout-item'> <img src='{{imageUrl-3.src}}' alt='{{imageAlt-3}}' class='icon'> <div class='callout-content'> <h3> {{cardHeading-3}} </h3> <a href='{{cardLink-3}}'>{{cardLinkText-3}}</a> </div> </li> <li class='callout-item'> <img src='{{imageUrl-4.src}}' alt='{{imageAlt-4}}' class='icon'> <div class='callout-content'> <h3> {{cardHeading-4}} </h3> <a href='{{cardLink-4}}'>{{cardLinkText-4}}</a> </div> </li> </ul> </div>"
+}

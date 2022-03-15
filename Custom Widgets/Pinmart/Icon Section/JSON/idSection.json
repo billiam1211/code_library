@@ -1,0 +1,358 @@
+{
+    "name": "Icon Section",
+    "schema": [{
+        "type": "tab",
+        "label": "Id Section Icons",
+        "sections": [
+            {
+                "label": "Icon #1",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Icon #1?",
+                        "id": "showIcon_1",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-01",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showIcon_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "altText-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showIcon_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #1 Title",
+                        "id": "title-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showIcon_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #1 Text",
+                        "id": "text-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showIcon_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #1 link",
+                        "id": "link-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showIcon_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #1 Link Text",
+                        "id": "linkText-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showIcon_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Icon #2",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Icon #2?",
+                        "id": "showIcon_2",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-02",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showIcon_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "altText-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showIcon_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #2 Title",
+                        "id": "title-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showIcon_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #2 Text",
+                        "id": "text-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showIcon_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #2 link",
+                        "id": "link-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showIcon_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #2 Link Text",
+                        "id": "linkText-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showIcon_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Icon #3",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Icon #3?",
+                        "id": "showIcon_3",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-03",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showIcon_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "altText-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showIcon_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #3 Title",
+                        "id": "title-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showIcon_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #3 Text",
+                        "id": "text-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showIcon_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #3 link",
+                        "id": "link-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showIcon_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Icon #3 Link Text",
+                        "id": "linkText-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showIcon_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div id='idSection' class='icon-section'> <div class='icon-item'> <div class='icon-item-icon'> <img class='icon-sec-style' src='{{imageUrl-01.src}}' alt='{{altText-01}}'> </div> <div class='icon-item-body'> <p class='icon-item-body--header'>{{title-01}}</p> <p class='icon-item-body--text'>{{text-01}}</p> <a class='icon-link' href='{{link-01}}'> {{linkText-01}} <svg class='icon-more-arrow'> <use xlink:href='#icon-more-arrow'></use> </svg> </a> </div> </div> <div class='icon-item'> <div class='icon-item-icon'> <img class='icon-sec-style' src='{{imageUrl-02.src}}' alt='{{altText-02}}'> </div> <div class='icon-item-body'> <p class='icon-item-body--header'>{{title-02}}</p> <p class='icon-item-body--text'>{{text-02}}</p> <a class='icon-link' href='{{link-02}}'> {{linkText-02}} <svg class='icon-more-arrow'> <use xlink:href='#icon-more-arrow'></use> </svg> </a> </div> </div> <div class='icon-item'> <div class='icon-item-icon'> <img class='icon-sec-style' src='{{imageUrl-03.src}}' alt='{{altText-03}}'> </div> <div class='icon-item-body'> <p class='icon-item-body--header'>{{title-03}}</p> <p class='icon-item-body--text'>{{text-03}}</p> <a class='icon-link' href='{{link-03}}'> {{linkText-03}} <svg class='icon-more-arrow'> <use xlink:href='#icon-more-arrow'></use> </svg> </a> </div> </div> </div>"
+}

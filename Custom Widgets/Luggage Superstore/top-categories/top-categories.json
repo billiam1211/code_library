@@ -1,0 +1,71 @@
+{
+    "name": "Top Categories",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Category Cards",
+            "id": "categoryItem",
+            "defaultCount": 4,
+            "entryLabel": "Category",
+            "thumbnail": "imageUrl",
+            "schema": [
+                {
+                "type": "tab",
+                "label": "Content",
+                "sections": [{
+                    "settings": [
+                        {
+                            "type": "imageManager",
+                            "id": "bgImageUrl",
+                            "label": "Category Background Image",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Image Description",
+                            "id": "bgImageAltText",
+                            "default": ""
+                        },
+                        {
+                            "type": "imageManager",
+                            "id": "imageUrl",
+                            "label": "Category Product Image",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Image Description",
+                            "id": "altText",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Category Title",
+                            "id": "categoryTitle",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Category Link",
+                            "id": "categoryLink",
+                            "default": "/"
+                        },
+                        {
+                            "type": "input",
+                            "label": "Category Link Text",
+                            "id": "categoryLinkText",
+                            "default": ""
+                        }
+                    ]
+                }]
+            }]
+        }          
+    ],
+    "template": "<div class='categoryCard-container'> <ul class='categoryCard-list'> {{#each categoryItem}} <li class='categoryCard-item'> <div class='card-img-wrapper'> <img src='{{bgImageUrl.src}}' alt='{{bgImageAltText}}' class='card-bg'> </div> <div class='card-content'> <h2 class='card-title'>{{categoryTitle}}</h2> <img src='{{imageUrl.src}}' alt='{{altText}}'> </div> <a class='card-link' href='{{categoryLink}}'>{{categoryLinkText}}</a> </li> {{/each}} </ul> </div>"
+}

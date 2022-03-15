@@ -1,0 +1,86 @@
+{
+    "name": "Dept Feature",
+    "schema": [{
+        "type": "tab",
+        "label": "Dept Feature",
+        "sections": [
+            {
+                "label": "Dept Feature",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },          
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Title",
+                        "id": "title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Heading",
+                        "id": "heading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter heading"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Sub-heading",
+                        "id": "sub-heading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter sub-heading"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Text",
+                        "id": "text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter banner text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Button Text",
+                        "id": "button-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter button text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Button Link",
+                        "id": "button-link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter button link"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='banner--alternate'> <div class='bannerImage-container'> <img src='{{image.src}}' alt='{{alt}}' class='bannerImage'> </div> <div class='bannerContent'> <div class='bannerLayout'> {{#if title.length}} <h2 class='bannerTitle'> {{title}} </h2> {{/if}} {{#if heading.length}} <h3 class='bannerHeading'> {{heading}} </h3> {{/if}} {{#if sub-heading.length}} <h4 class='bannerSubheading'>{{sub-heading}}</h4> {{/if}} {{#if text.length}} <p class='bannerText'>{{text}}</p> {{/if}} <a href='{{button-link}}' class='bannerAction'>{{button-text}}</a> </div> </div> </div>"
+}

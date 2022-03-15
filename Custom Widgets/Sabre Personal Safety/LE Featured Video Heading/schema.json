@@ -1,0 +1,33 @@
+{
+    "name": "Featured Video Heading",
+    "schema": [{
+        "type": "tab",
+        "label": "Featured Video Heading",
+        "sections": [
+            {
+                "label": "Featured Video Heading",
+                "settings": [
+                    {
+                        "type": "input",
+                        "label": "Title",
+                        "id": "title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Subtitle",
+                        "id": "subtitle",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter subtitle"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<h2 class='le-drawer__title custom-widget'>{{title}} <span class='le-drawer__total-items'>{{subtitle}}</span> </h2>"
+}

@@ -1,0 +1,59 @@
+{
+    "name": "Journal",
+    "schema": [{
+        "type": "tab",
+        "label": "The Vault Journal",
+        "sections": [
+            {
+                "label": "Journal Contents",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "banner-image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "banner-image-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Heading",
+                        "id": "banner-heading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter heading"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text #1",
+                        "id": "banner-text-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text #2",
+                        "id": "banner-text-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='journal-image-container'> <img src='{{banner-image.src}}' alt='{{banner-image-alt}}'> </div><div class='journal-content'> <h2>{{banner-heading}}</h2> <p>{{banner-text-01}}</p> <p>{{banner-text-02}}</p> </div>"
+}

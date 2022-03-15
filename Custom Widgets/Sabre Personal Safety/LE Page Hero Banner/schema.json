@@ -1,0 +1,78 @@
+{
+    "name": "LE Hero Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "LE Hero Banner",
+        "sections": [
+            {
+                "label": "LE Hero Banner",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "label": "banner image",
+                        "id": "banner-img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "banner description",
+                        "id": "banner-img-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Heading",
+                        "id": "bannerHeading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Heading BOLD",
+                        "id": "bannerHeading-bold",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "bannerText",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text BOLD",
+                        "id": "bannerText-bold",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Description",
+                        "id": "banner-description",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='le-hero__outer'> <img src='{{banner-img.src}}' alt='{{banner-img-alt}}' class='le-hero__backgroundImage'> <div class='le-hero__content'> <h1 class='le-hero__title section__title'> {{bannerHeading}} <span class='le-hero__hero-subTitle section__title-bold'>{{bannerHeading-bold}}</span> </h1> <div class='le-hero__center-block'> <div class='le-hero__center-block-content'> <h2 class='le-hero__center-block-title section__title'> {{bannerText}} <span class='le-hero__center-block-subTitle section__title-bold'>{{bannerText-bold}}</span> </h2> <p class='le-hero__center-block-description'> {{banner-description}} </p> </div> </div> </div> </div>"
+}

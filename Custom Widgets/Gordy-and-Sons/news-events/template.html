@@ -1,0 +1,66 @@
+<img src='{{banner-image.src}}' alt='{{banner-image-alt}}'>
+<div class='destinations-content'>
+    <h3>{{content-heading}}</h3>
+    <h2>{{content-subheading}}</h2>
+    <div class='destinations-actions'>
+        <a href='{{link-url-01}}'>{{link-text-01}}</a>
+        <a href='{{link-url-02}}'>{{link-text-02}}</a>
+    </div>
+</div>
+
+<!-- UUID: 1336e293-8822-4809-956b-33c08df09ee6 -->
+
+<!-- ORIGINAL HTML -->
+<div class='news-events'>
+    <h2 class='news-events-heading'>What's Happening at Gordy & Sons</h2>
+    <section class='layout'>
+        <article class='destinations-col'>
+            <div class='destinations-layout'>
+                <img src='https://gordy-sons-outfitters.mybigcommerce.com/product_images/uploaded_images/fly-fishing.png' alt='man fishing in new zealand'>
+                <div class='destinations-content'>
+                    <h3>Featured Fishing Destination</h3>
+                    <h2>Poronui Taharua, New Zealand</h2>
+                    <div class='destinations-actions'>
+                        <a href='/featured-fishing-destinations/'>Learn More</a>
+                        <a href='/destinations/'>View All Destinations</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class='news-events-col'>
+            <ul class='news-events-list'>
+                {{#each blog.recent_posts}}
+                    <li class='news-events-item{{#each tags}} {{#or (occurrences 'news' name)(occurrences 'event' name)}} visible{{/or}}{{/each}}'>
+                        <img src='{{getImage thumbnail 'default'}}' alt='{{thumbnail.alt}}'>
+                        <div class='content'>
+                            <div class='labels'>
+                                {{#each tags}}
+                                    <span class='blog-label'>
+                                        {{name}}
+                                    </span>
+                                {{/each}}
+                            </div>
+                            <h2>{{title}}</h2>
+                            {{#contains summary '|^|'}}
+                                <p class='date'>
+                                    {{first (split summary '|^|')}}
+                                </p>
+                                <p class='location'>
+                                    {{last (split summary '|^|')}}
+                                </p>
+                            {{else}}
+                                <span>{{summary}}</span>
+                            {{/contains}}
+
+                        </div>
+                        <a href='{{url}}'></a>
+                    </li>
+                {{/each}}
+            </ul>
+            <a href='/blog' class='news-events-action'>View All News & Events</a>
+        </article>
+    </section>
+</div>
+
+
+{{{region name="news-events-banner"}}}

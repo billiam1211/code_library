@@ -1,0 +1,228 @@
+{
+    "name": "Home Page Marketing Banner Bottom",
+    "schema": [{
+        "type": "tab",
+        "label": "Marketing Banner",
+        "sections": [{
+            "label": "Marketing Banner Bottom",
+            "settings": [{
+                    "type": "select",
+                    "label": "Show banner bottom?",
+                    "id": "showBannerBottom",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "id": "backgroundImage",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "id": "imageUrl",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Image Description",
+                    "id": "altText",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Background Image Link",
+                    "id": "backgroundImage-link",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image link"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Title",
+                    "id": "heading",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Text",
+                    "id": "description",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter description"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner link",
+                    "id": "linkUrl",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Link Text",
+                    "id": "linkText",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter link text"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner List Item #1",
+                    "id": "listItem-01",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter item text"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner List Item #2",
+                    "id": "listItem-02",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter item text"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner List Item #3",
+                    "id": "listItem-03",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter item text"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner List Item #4",
+                    "id": "listItem-04",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter item text"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner List Item #5",
+                    "id": "listItem-05",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter item text"
+                    },
+                    "conditional": {
+                        "key": "showBannerBottom",
+                        "operator": "IN",
+                        "value": [
+                            "show"
+                        ]
+                    }
+                }
+            ]
+        }]
+    }],
+    "template": "<div class='market-banner-bottom' style='background-image: url({{backgroundImage.src}});'> <img class='lazyload mobile-image' src='{{imageUrl.src}}' alt='{{imageAlt}}' data-src='{{imageUrl.src}}'> <div class='middle-box'> <div class='middle-box-inner'> <p class='middle-box--heading'>{{heading}}</p> <ul> <li>{{listItem-01}}</li> <li>{{listItem-02}}</li> <li>{{listItem-03}}</li> <li>{{listItem-04}}</li> <li>{{listItem-05}}</li> </ul> <p>{{description}}</p> <a class='button-global' href='{{linkUrl}}'>{{linkText}}</a> </div> </div> </div>"
+}

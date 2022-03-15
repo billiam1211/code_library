@@ -1,0 +1,86 @@
+{
+    "name": "News Events Blog",
+    "schema": [{
+        "type": "tab",
+        "label": "News Events Banner",
+        "sections": [
+            {
+                "label": "News Events Section",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "banner-image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "banner-image-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Content Heading",
+                        "id": "content-heading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter heading"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Content subheading",
+                        "id": "content-subheading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter section subheading"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #1 Url",
+                        "id": "link-url-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #1 Text",
+                        "id": "link-text-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #2 Url",
+                        "id": "link-url-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #2 Text",
+                        "id": "link-text-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<img src='{{banner-image.src}}' alt='{{banner-image-alt}}'> <div class='destinations-content'> <h3>{{content-heading}}</h3> <h2>{{content-subheading}}</h2> <div class='destinations-actions'> <a href='{{link-url-01}}'>{{link-text-01}}</a> <a href='{{link-url-02}}'>{{link-text-02}}</a> </div> </div>"
+}

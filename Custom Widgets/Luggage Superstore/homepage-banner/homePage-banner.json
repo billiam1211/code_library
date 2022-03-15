@@ -1,0 +1,154 @@
+{
+    "name": "Home Page Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Banner",
+        "sections": [{
+                "label": "Content",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl",
+                        "label": "Image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Alt text",
+                        "id": "imageAltText",
+                        "default": "Enter image description"
+                    },
+                    {
+                        "id": "subHeadingText",
+                        "label": "Sub-heading Text",
+                        "default": "Place your text here",
+                        "type": "text"
+                    },
+                    {
+                        "id": "HeadingText",
+                        "label": "Heading Text",
+                        "default": "Place your text here",
+                        "type": "text"
+                    },
+                    {
+                        "id": "subHeadingText-2",
+                        "label": "Sub-heading Text",
+                        "default": "Place your text here",
+                        "type": "text"
+                    },
+                    {
+                        "id": "bannerDescription",
+                        "label": "Description Text",
+                        "default": "Place your text here",
+                        "type": "text"
+                    },
+                    {
+                        "id": "linkText",
+                        "label": "Link Text",
+                        "default": "Place your text here",
+                        "type": "text"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Link Url",
+                        "id": "bannerLink-url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='homePage-banner'> <div class='container'> <div class='banner-images'> <img src='{{imageUrl.src}}' alt='{{imageAltText}}' class='banner-image'> </div> <div class='banner-content'> <span class='banner-subHeading'>{{subHeadingText}}</span> <h2 class='banner-heading'>{{HeadingText}}</h2> <p class='banner-subHeading'>{{subHeadingText-2}}</p> <p class='banner-description'>{{bannerDescription}}</p> <a href='{{bannerLink-url}}' class='banner-action'>{{linkText}}</a> </div> </div> </div>"
+}
+
+{
+    "data": {
+        "uuid": "99424116-0dce-4181-a669-5f72a391122d",
+        "name": "Home Page Banner",
+        "schema": [
+            {
+                "type": "tab",
+                "label": "Banner",
+                "sections": [
+                    {
+                        "label": "Content",
+                        "settings": [
+                            {
+                                "type": "imageManager",
+                                "id": "imageUrl",
+                                "label": "Image",
+                                "default": {
+                                    "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                                    "type": "IMAGE_MANAGER"
+                                }
+                            },
+                            {
+                                "type": "input",
+                                "label": "Image Alt text",
+                                "id": "imageAltText",
+                                "default": "Enter image description"
+                            },
+                            {
+                                "id": "subHeadingText",
+                                "label": "Sub-heading Text",
+                                "default": "Place your text here",
+                                "type": "text"
+                            },
+                            {
+                                "id": "HeadingText",
+                                "label": "Heading Text",
+                                "default": "Place your text here",
+                                "type": "text"
+                            },
+                            {
+                                "id": "subHeadingText-2",
+                                "label": "Sub-heading Text",
+                                "default": "Place your text here",
+                                "type": "text"
+                            },
+                            {
+                                "id": "bannerDescription",
+                                "label": "Description Text",
+                                "default": "Place your text here",
+                                "type": "text"
+                            },
+                            {
+                                "id": "linkText",
+                                "label": "Link Text",
+                                "default": "Place your text here",
+                                "type": "text"
+                            },
+                            {
+                                "type": "input",
+                                "label": "Banner Link Url",
+                                "id": "bannerLink-url",
+                                "default": "",
+                                "typeMeta": {
+                                    "placeholder": "enter url"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "template": "<div class='homePage-banner'> <div class='container'> <div class='banner-images'> <img src='{{imageUrl.src}}' alt='{{imageAltText}}' class='banner-image'> </div> <div class='banner-content'> <span class='banner-subHeading'>{{subHeadingText}}</span> <h2 class='banner-heading'>{{HeadingText}}</h2> <p class='banner-subHeading'>{{subHeadingText-2}}</p> <p class='banner-description'>{{bannerDescription}}</p> <a href='{{bannerLink-url}}' class='banner-action'>{{linkText}}</a> </div> </div> </div>",
+        "date_created": "2021-05-21T22:11:33.781Z",
+        "date_modified": "2021-05-21T22:11:33.781Z",
+        "kind": "custom",
+        "storefront_api_query": "",
+        "icon_name": "default",
+        "template_engine": "handlebars_v3",
+        "client_rerender": false,
+        "current_version_uuid": "63aaea3d-e1e8-4d82-b2c2-83557687a974",
+        "channel_id": 1,
+        "schema_translations": {}
+    },
+    "meta": {}
+}

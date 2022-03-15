@@ -1,0 +1,475 @@
+{
+    "name": "Top Categories",
+    "schema": [{
+        "type": "tab",
+        "label": "Top Categories",
+        "sections": [
+            {
+                "label": "Category #1",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Category #1?",
+                        "id": "showCategory_1",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-01",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showCategory_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Title",
+                        "id": "imageTitle-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image title"
+                        },
+                        "conditional": {
+                            "key": "showCategory_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "altText-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCategory_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #1 Title",
+                        "id": "categoryTitle-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        },
+                        "conditional": {
+                            "key": "showCategory_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #1 Text",
+                        "id": "categoryText-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "showCategory_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #1 link",
+                        "id": "categoryLink-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showCategory_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #1 Link Text",
+                        "id": "categoryLinkText-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showCategory_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Category #2",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Category #2?",
+                        "id": "showCategory_2",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-02",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showCategory_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Title",
+                        "id": "imageTitle-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image title"
+                        },
+                        "conditional": {
+                            "key": "showCategory_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "altText-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCategory_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #2 Title",
+                        "id": "categoryTitle-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        },
+                        "conditional": {
+                            "key": "showCategory_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #2 Text",
+                        "id": "categoryText-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "showCategory_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #2 link",
+                        "id": "categoryLink-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showCategory_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #2 Link Text",
+                        "id": "categoryLinkText-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showCategory_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Category #3",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Category #3?",
+                        "id": "showCategory_3",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageUrl-03",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showCategory_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Title",
+                        "id": "imageTitle-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image title"
+                        },
+                        "conditional": {
+                            "key": "showCategory_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "altText-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showCategory_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #3 Title",
+                        "id": "categoryTitle-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        },
+                        "conditional": {
+                            "key": "showCategory_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #3 Text",
+                        "id": "categoryText-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "showCategory_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #3 link",
+                        "id": "categoryLink-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showCategory_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category #3 Link Text",
+                        "id": "categoryLinkText-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "showCategory_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Category Callout",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Category Callout?",
+                        "id": "showCategory_callout",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Category Callout Title",
+                        "id": "calloutTitle",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        },
+                        "conditional": {
+                            "key": "showCategory_callout",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout Text #1",
+                        "id": "calloutText-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "showCategory_callout",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Callout Text #2",
+                        "id": "calloutText-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "showCategory_callout",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='top-category'> <div data-event-type='promotion' data-entity-id='2' data-name='Top Banner' data-position='top' data-banner-id='Top Banner'> <div data-event-type='promotion-click'> <div class='top-category-banner'> <div class='category-card'> <img class='__mce_add_custom__' title='{{imageTitle-01}}' src='{{imageUrl-01.src}}' alt='{{altText-01}}' width='393' height='393'><br> <div class='category-card--body'> <h2>{{categoryTitle-01}}</h2> <p>{{categoryText-01}}</p> <a class='category-card-link' href='{{categoryLink-01}}'>{{categoryLinkText-01}}</a> </div> </div> <div class='category-card'> <img class='__mce_add_custom__' title='{{imageTitle-02}}' src='{{imageUrl-02.src}}' alt='{{altText-02}}' width='393' height='393'><br> <div class='category-card--body'> <h2>{{categoryTitle-02}}</h2> <p>{{categoryText-02}}</p> <a class='category-card-link' href='{{categoryLink-02}}'>{{categoryLinkText-02}}</a> </div> </div> <div class='category-card'> <img class='__mce_add_custom__' title='{{imageTitle-03}}' src='{{imageUrl-03.src}}' alt='{{altText-03}}' width='393' height='393'><br> <div class='category-card--body'> <h2>{{categoryTitle-03}}</h2> <p>{{categoryText-03}}</p> <a class='category-card-link' href='{{categoryLink-03}}'>{{categoryLinkText-03}}</a> </div> </div> </div> <div class='why-shop'> <h2>{{calloutTitle}}</h2> <div class='why_shop_description'> <p>{{calloutText-01}}</p> <p>{{calloutText-02}}</p> </div> <button class='button-full customAccordion read-more' type='button'> <span class='read-more'>Read More</span> <span class='read-less'>Read Less</span> </button> </div> </div> </div> </div>"
+}

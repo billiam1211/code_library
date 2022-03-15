@@ -1,0 +1,89 @@
+{
+    "name": "Featured Items",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Featured Items Heading",
+            "sections": [{
+                "label": "Featured Items Heading",
+                "settings": [{
+                    "type": "input",
+                    "label": "",
+                    "id": "section-heading",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                }]
+            }]
+        },
+        {
+            "type": "array",
+            "label": "Featurd Cards",
+            "id": "featured-item",
+            "defaultCount": 5,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+                {
+                "type": "tab",
+                "label": "Content",
+                "sections": [{
+                    "settings": [
+                        {
+                            "type": "select",
+                            "label": "Show Video?",
+                            "id": "show-video",
+                            "default": "show",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "show",
+                                        "value": "show"
+                                    },
+                                    {
+                                        "label": "hide",
+                                        "value": "hide"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "imageManager",
+                            "id": "imageUrl",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Image Description",
+                            "id": "alt",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Title",
+                            "id": "title",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Subtitle",
+                            "id": "subtitle",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Item Link",
+                            "id": "link",
+                            "default": ""
+                        }
+                    ]
+                }]
+            }]
+        }   
+    ],
+    "template": "<div class='le-drawer__container container custom-widget'> <div class='le-drawer__inner-container'> <div class='le-drawer__top custom-widget'> <button type='button' class='le-drawer__view-all'>View All</button> </div> <div class='le-drawer__main'> <ul class='le-drawer__videos'> {{#each featured-item}} {{#if show-video '===' 'show'}} <li class='le-drawer__video'> <img src='{{imageUrl.src}}' alt='{{alt}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{title}} </p> <p class='le-drawer__video-miniTitle'>{{subtitle}}</p> <a href='{{link}}' class='le-drawer__action'></a> </li> {{/if}} {{/each}} </ul> </div> </div> </div>"
+}

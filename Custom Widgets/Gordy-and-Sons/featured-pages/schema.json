@@ -1,0 +1,358 @@
+{
+    "name": "Featured Pages",
+    "schema": [{
+        "type": "tab",
+        "label": "Pages List",
+        "sections": [
+            {
+                "label": "Pages 1",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Page #1?",
+                        "id": "show_page_1",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "page-image-01",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "show_page_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image description",
+                        "id": "page-image-01-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        },
+                        "conditional": {
+                            "key": "show_page_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Page Heading",
+                        "id": "page-01-heading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter section title"
+                        },
+                        "conditional": {
+                            "key": "show_page_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Page Text",
+                        "id": "page-01-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter section text"
+                        },
+                        "conditional": {
+                            "key": "show_page_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "page-01-link-url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        },
+                        "conditional": {
+                            "key": "show_page_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "page-01-link-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "show_page_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Pages 2",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Page #2?",
+                        "id": "show_page_2",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "page-image-02",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "show_page_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image description",
+                        "id": "page-image-02-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        },
+                        "conditional": {
+                            "key": "show_page_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Page Heading",
+                        "id": "page-02-heading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter section title"
+                        },
+                        "conditional": {
+                            "key": "show_page_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Page Text",
+                        "id": "page-02-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter section text"
+                        },
+                        "conditional": {
+                            "key": "show_page_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "page-02-link-url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        },
+                        "conditional": {
+                            "key": "show_page_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "page-02-link-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "show_page_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Pages 3",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Page #3?",
+                        "id": "show_page_3",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "page-image-03",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "show_page_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image description",
+                        "id": "page-image-03-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        },
+                        "conditional": {
+                            "key": "show_page_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Page Heading",
+                        "id": "page-03-heading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter section title"
+                        },
+                        "conditional": {
+                            "key": "show_page_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Page Text",
+                        "id": "page-03-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter section text"
+                        },
+                        "conditional": {
+                            "key": "show_page_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "page-03-link-url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        },
+                        "conditional": {
+                            "key": "show_page_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "page-03-link-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        },
+                        "conditional": {
+                            "key": "show_page_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='featuredPages container'> <ul class='featuredPages-list'> <li class='featuredPages-item'> <div class='featuredPages-image-container'> <img src='{{page-image-01.src}}' alt='{{page-image-01-alt}}'> </div> <div class='featuredPages-content'> <h2>{{page-01-heading}}</h2> <p>{{page-01-text}}</p> <a href='{{page-01-link-url}}'>{{page-01-link-text}}</a> </div> </li> <li class='featuredPages-item'> <div class='featuredPages-image-container'> <img src='{{page-image-02.src}}' alt='{{page-image-02-alt}}'> </div> <div class='featuredPages-content'> <h2>{{page-02-heading}}</h2> <p>{{page-02-text}}</p> <a href='{{page-02-link-url}}'>{{page-02-link-text}}</a> </div> </li> <li class='featuredPages-item'> <div class='featuredPages-image-container'> <img src='{{page-image-03.src}}' alt='{{page-image-03-alt}}'> </div> <div class='featuredPages-content'> <h2>{{page-03-heading}}</h2> <p>{{page-03-text}}</p> <a href='{{page-03-link-url}}'>{{page-03-link-text}}</a> </div> </li> </ul> </div>"
+}

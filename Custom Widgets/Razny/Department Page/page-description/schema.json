@@ -1,0 +1,51 @@
+{
+    "name": "Dept Description",
+    "schema": [{
+        "type": "tab",
+        "label": "Dept Description",
+        "sections": [
+            {
+                "label": "Dept Description",
+                "settings": [       
+                    {
+                        "type": "input",
+                        "label": "Banner Text #1",
+                        "id": "text-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter banner text"
+                        }
+                    },
+                    {
+                        "type": "select",
+                        "label": "Show Text Field #2?",
+                        "id": "show-text-02",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text #2",
+                        "id": "text-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter banner text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='description'> <p> {{text-01}} </p> {{#if show-text-02 '===' 'show'}} <p> {{text-02}} </p> {{/if}} </div>"
+}

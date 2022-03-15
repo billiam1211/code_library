@@ -1,0 +1,118 @@
+{
+    "name": "Dept Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Dept Banner",
+        "sections": [{
+            "label": "Dept Banner",
+            "settings": [
+                {
+                    "type": "select",
+                    "label": "Background Image or Color?",
+                    "id": "background-image",
+                    "default": "image",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "image",
+                                "value": "image"
+                            },
+                            {
+                                "label": "color",
+                                "value": "color"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Filter?",
+                    "id": "filter",
+                    "default": "true",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "true",
+                                "value": "true"
+                            },
+                            {
+                                "label": "false",
+                                "value": "false"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "id": "image",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                        "type": "IMAGE_MANAGER"
+                    },
+                    "conditional": {
+                        "key": "background-image",
+                        "operator": "IN",
+                        "value": [
+                            "image"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Image Description",
+                    "id": "alt",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    },
+                    "conditional": {
+                        "key": "background-image",
+                        "operator": "IN",
+                        "value": [
+                            "image"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Title",
+                    "id": "banner-title",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Background Color (Color Code)",
+                    "id": "background-color",
+                    "default": "#6B6570",
+                    "conditional": {
+                        "key": "background-image",
+                        "operator": "IN",
+                        "value": [
+                            "color"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Text",
+                    "id": "banner-text",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter text"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Link",
+                    "id": "banner-link",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter link url"
+                    }
+                }
+            ]
+        }]
+    }],
+    "template": "{{#if background-image '===' 'image'}} {{#if filter '===' 'true'}} <div class='banner'> <div class='bannerImage-container has-overlay'> <img class='bannerImage' src='{{image.src}}' alt='{{alt}}'> </div> <div class='bannerContent'> <h2 class='bannerHeading'> {{banner-title}} </h2> <p class='bannerText'> {{banner-text}} </p> </div> {{#if banner-link.length}} <a href='{{banner-link}}' class='bannerAction'></a> {{/if}} </div> {{else}} <div class='banner'> <div class='bannerImage-container'> <img class='bannerImage' src='{{image.src}}' alt='{{alt}}'> </div> <div class='bannerContent'> <h2 class='bannerHeading'> {{banner-title}} </h2> <p class='bannerText'> {{banner-text}} </p> </div> {{#if banner-link.length}} <a href='{{banner-link}}' class='bannerAction'></a> {{/if}} </div> {{/if}} {{/if}} {{#if background-image '===' 'color'}} {{#if filter '===' 'true'}} <div class='banner no-image' style='background-color: {{background-color}};'> <div class='bannerImage-container has-overlay'> </div> <div class='bannerContent'> <h2 class='bannerHeading'> {{banner-title}} </h2> <p class='bannerText'> {{banner-text}} </p> </div> {{#if banner-link.length}} <a href='{{banner-link}}' class='bannerAction'></a> {{/if}} </div> {{else}} <div class='banner no-image' style='background-color: {{background-color}};'> <div class='bannerImage-container'> </div> <div class='bannerContent'> <h2 class='bannerHeading'> {{banner-title}} </h2> <p class='bannerText'> {{banner-text}} </p> </div> {{#if banner-link.length}} <a href='{{banner-link}}' class='bannerAction'></a> {{/if}} </div> {{/if}} {{/if}}"
+}

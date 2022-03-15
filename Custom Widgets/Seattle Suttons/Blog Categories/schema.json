@@ -1,0 +1,43 @@
+{
+    "name": "Blog Category List",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Categories",
+            "id": "category",
+            "defaultCount": 5,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+                {
+                "type": "tab",
+                "label": "Content",
+                "sections": [{
+                    "settings": [
+                        {
+                            "type": "imageManager",
+                            "id": "image",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link URL",
+                            "id": "link",
+                            "default": "/"
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link Text",
+                            "id": "linkText",
+                            "default": "Enter Category Name"
+                        }
+                    ]
+                }]
+            }]
+        }          
+    ],
+    "template": "<div class='side-box category-box'> <h2>Categories</h2> <div> <ul> {{#each category}} <li> <img src='{{image.src}}'/> <a href='{{link}}'>{{linkText}}</a></li> {{/each}} </ul> </div> </div>"
+}

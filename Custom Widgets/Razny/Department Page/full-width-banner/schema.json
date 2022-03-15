@@ -1,0 +1,66 @@
+{
+    "name": "Full Width Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Full Width Banner",
+        "sections": [{
+            "label": "Full Width Banner",
+            "settings": [
+                {
+                    "type": "imageManager",
+                    "id": "image",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Image Description",
+                    "id": "alt",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Title",
+                    "id": "title",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Text",
+                    "id": "text",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter text"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Button Text",
+                    "id": "button-text",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter text"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Button Url",
+                    "id": "link",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter link url"
+                    }
+                }
+            ]
+        }]
+    }],
+    "template": "<div class='bannerFull'> <div class='bannerFull-image__container'> <img src='{{image.src}}' alt='{{alt}}' class='bannerFull-image'> </div> <div class='bannerFull-content'> <h2 class='bannerFull-heading'> {{title}} </h2> <p class='bannerFull-text'> {{text}} </p> <a href='{{link}}' class='bannerFull-action'>{{button-text}}</a> </div> </div>"
+}

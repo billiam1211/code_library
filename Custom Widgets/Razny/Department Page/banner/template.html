@@ -1,0 +1,79 @@
+{{#if background-image '===' 'image'}}
+    {{#if filter '===' 'true'}}
+        <div class='banner'>
+            <div class='bannerImage-container has-overlay'>
+                    <img class='bannerImage'
+                        src='{{image.src}}'
+                        alt='{{alt}}'>
+            </div>
+            <div class='bannerContent'>
+                <h2 class='bannerHeading'>
+                    {{banner-title}}
+                </h2>
+                <p class='bannerText'>
+                    {{banner-text}}
+                </p>
+            </div>
+            {{#if banner-link.length}}
+                <a href='{{banner-link}}' class='bannerAction'></a>
+            {{/if}}
+        </div>
+    {{else}}
+        <div class='banner'>
+            <div class='bannerImage-container'>
+                    <img class='bannerImage'
+                        src='{{image.src}}'
+                        alt='{{alt}}'>
+            </div>
+            <div class='bannerContent'>
+                <h2 class='bannerHeading'>
+                    {{banner-title}}
+                </h2>
+                <p class='bannerText'>
+                    {{banner-text}}
+                </p>
+            </div>
+            {{#if banner-link.length}}
+                <a href='{{banner-link}}' class='bannerAction'></a>
+            {{/if}}
+        </div>
+    {{/if}}
+{{/if}}
+
+{{#if background-image '===' 'color'}}
+    {{#if filter '===' 'true'}}
+        <div class='banner no-image' style='background-color: {{background-color}};'>
+            <div class='bannerImage-container has-overlay'>
+            </div>
+            <div class='bannerContent'>
+                <h2 class='bannerHeading'>
+                    {{banner-title}}
+                </h2>
+                <p class='bannerText'>
+                    {{banner-text}}
+                </p>
+            </div>
+            {{#if banner-link.length}}
+                <a href='{{banner-link}}' class='bannerAction'></a>
+            {{/if}}
+        </div>
+    {{else}}
+        <div class='banner no-image' style='background-color: {{background-color}};'>
+            <div class='bannerImage-container'>
+            </div>
+            <div class='bannerContent'>
+                <h2 class='bannerHeading'>
+                    {{banner-title}}
+                </h2>
+                <p class='bannerText'>
+                    {{banner-text}}
+                </p>
+            </div>
+            {{#if banner-link.length}}
+                <a href='{{banner-link}}' class='bannerAction'></a>
+            {{/if}}
+        </div>
+
+    {{/if}}
+{{/if}}
+

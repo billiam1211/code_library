@@ -1,0 +1,171 @@
+{
+    "name": "Brands Carousel",
+    "schema": [{
+        "type": "tab",
+        "label": "Brand Carousel",
+        "sections": [
+            {
+                "label": "Brand Carousel Contents",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "brand-01-img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "brand-01-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Brand Link",
+                        "id": "brand-01-link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "brand-02-img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "brand-02-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Brand Link",
+                        "id": "brand-02-link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "brand-03-img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "brand-03-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Brand Link",
+                        "id": "brand-03-link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "brand-04-img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "brand-04-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Brand Link",
+                        "id": "brand-04-link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "brand-05-img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "brand-05-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Brand Link",
+                        "id": "brand-05-link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "brand-06-img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "brand-06-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Brand Link",
+                        "id": "brand-06-link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<section class='featured-brands'> <ul class='brands-list'> <li class='brands-item'> <img src='{{brand-01-img.src}}' alt='{{brand-01-alt}}' class='brands-image'> <a class='brands-link' href='{{brand-01-link}}'><span class='brand-description'>{{brand-01-alt}}</span></a> </li> <li class='brands-item'> <img src='{{brand-02-img.src}}' alt='{{brand-02-alt}}' class='brands-image'> <a class='brands-link' href='{{brand-02-link}}'><span class='brand-description'>{{brand-02-alt}}</span></a> </li> <li class='brands-item'> <img src='{{brand-03-img.src}}' alt='{{brand-03-alt}}' class='brands-image'> <a class='brands-link' href='{{brand-03-link}}'><span class='brand-description'>{{brand-03-alt}}</span></a> </li> <li class='brands-item'> <img src='{{brand-04-img.src}}' alt='{{brand-04-alt}}' class='brands-image'> <a class='brands-link' href='{{brand-04-link}}'><span class='brand-description'>{{brand-04-alt}}</span></a> </li> <li class='brands-item'> <img src='{{brand-05-img.src}}' alt='{{brand-05-alt}}' class='brands-image'> <a class='brands-link' href='{{brand-05-link}}'><span class='brand-description'>{{brand-05-alt}}</span></a> </li> <li class='brands-item'> <img src='{{brand-06-img.src}}' alt='{{brand-06-alt}}' class='brands-image'> <a class='brands-link' href='{{brand-06-link}}'><span class='brand-description'>{{brand-06-alt}}</span></a> </li> </ul> </section>"
+}

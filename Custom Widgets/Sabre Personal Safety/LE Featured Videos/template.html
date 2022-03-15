@@ -1,0 +1,23 @@
+<div class='le-drawer__container container custom-widget'>
+    <div class='le-drawer__inner-container'>
+        <div class='le-drawer__top custom-widget'>
+            <button type='button' class='le-drawer__view-all'>View All</button>
+        </div>
+        <div class='le-drawer__main'>
+            <ul class='le-drawer__videos'>
+                {{#each featured-item}}
+                    {{#if show-video '===' 'show'}}
+                        <li class='le-drawer__video'>
+                            <img src='{{imageUrl.src}}' alt='{{alt}}' class='le-drawer__thumbnail'>
+                            <p class='le-drawer__video-title'>
+                                {{title}}
+                            </p>
+                            <p class='le-drawer__video-miniTitle'>{{subtitle}}</p>
+                            <a href='{{link}}' class='le-drawer__action'></a>
+                        </li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

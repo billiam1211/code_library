@@ -1,0 +1,27 @@
+<div class='banner--alternate'>
+    <div class='bannerImage-container'>
+        <img src='{{image.src}}'
+            alt='{{alt}}' class='bannerImage'>
+    </div>
+    <div class='bannerContent'>
+        <div class='bannerLayout'>
+            {{#if title.length}}
+                <h2 class='bannerTitle'>
+                    {{title}}
+                </h2>
+            {{/if}}
+            {{#if heading.length}}
+                <h3 class='bannerHeading'>
+                    {{heading}}
+                </h3>
+            {{/if}}
+            {{#if sub-heading.length}}
+                <h4 class='bannerSubheading'>{{sub-heading}}</h4>
+            {{/if}}
+            {{#if text.length}}
+                <p class='bannerText'>{{text}}</p>
+            {{/if}}
+            <a href='{{button-link}}' class='bannerAction'>{{button-text}}</a>
+        </div>
+    </div>
+</div>

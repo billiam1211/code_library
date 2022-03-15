@@ -1,0 +1,16 @@
+<div class='categoryCard-container'>
+    <ul class='categoryCard-list'>
+        {{#each categoryItem}}
+            <li class='categoryCard-item'>
+                <div class='card-img-wrapper'>
+                    <img src='{{bgImageUrl.src}}' alt='{{bgImageAltText}}' class='card-bg'>
+                </div>
+                <div class='card-content'>
+                    <h2 class='card-title'>{{categoryTitle}}</h2>
+                    <img src='{{imageUrl.src}}' alt='{{altText}}'>
+                </div>
+                <a class='card-link' href='{{categoryLink}}'>{{categoryLinkText}}</a>
+            </li>
+        {{/each}}
+    </ul>
+</div>

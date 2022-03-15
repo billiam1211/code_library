@@ -1,0 +1,178 @@
+{
+    "name": "Navigation Upsell",
+    "schema": [{
+        "type": "tab",
+        "label": "Navigation Upsell",
+        "sections": [
+            {
+                "label": "Upsell #1",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Upsell #1?",
+                        "id": "showUpsell_1",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageSrc-01",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showUpsell_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "altText-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showUpsell_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Upsell #1 Text",
+                        "id": "upsellText-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "showUpsell_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Upsell #1 link",
+                        "id": "link-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showUpsell_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Upsell #2",
+                "settings": [{
+                        "type": "select",
+                        "label": "Show Upsell #2?",
+                        "id": "showUpsell_2",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "imageSrc-02",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "showUpsell_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "altText-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        },
+                        "conditional": {
+                            "key": "showUpsell_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Upsell #2 Text",
+                        "id": "upsellText-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "showUpsell_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Upsell #2 link",
+                        "id": "link-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "showUpsell_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<ul class='navUpsell-list'> <li class='navUpsell-item'> <img class='lazyload' src='{{cdn 'img/loading.svg'}}' data-src='{{imageSrc-01.src}}' alt='{{altText-01}}'> <a href='{{link-01}}'></a> <span>{{upsellText-01}}</span> </li> <li class='navUpsell-item'> <img class='lazyload' src='{{cdn 'img/loading.svg'}}' data-src='{{imageSrc-02.src}}' alt='{{altText-02}}'> <a href='{{link-02}}'></a> <span>{{upsellText-02}}</span> </li> </ul>"
+}

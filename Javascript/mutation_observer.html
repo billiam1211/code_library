@@ -1,0 +1,65 @@
+<!--///////////////////
+// MUTATION OBSERVER //
+////////////////////-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    // Select the document as the node that will be observed for mutations
+
+    var targetNode = document;
+
+    // Set up options for the observer (which mutations to observe)
+    var config = {
+        childList: true,
+        characterData: true,
+        attributes: true,
+        subtree: true,
+        attributeOldValue: true,
+        characterDataOldValue: true
+    };
+
+    // Function to execute when mutations are observed
+    // Note: Because this JS is living in a <script> on an html page, we have to use var instead of let and const
+    var callback = function (mutationsList, observer) {
+        // delay function from firing until elements have been written to the page
+        setTimeout(function () {
+            // the current or active step in checkout always contains the checkout-view-content <div>
+            // this is the element that we want to target stored in a variable
+            var $contentContainer = $(mutationsList[0].target).find('.checkout-view-content');
+            // check to see if the content container exists and loaded safety check to prevent loop
+            // only fire the code below if the targeted element does not have the 'content-loaded' class
+            // Once the code inside the if() fires, it will add the 'content-loaded' class which prevents an endless loop
+            if ($contentContainer.length && !$contentContainer.hasClass('content-loaded')) {
+                // store the active checkout step in a variable
+                var $activeStep = $(mutationsList[0].target).find('.checkout-view-content').parent();
+                // create back button
+                var $backButton = $(
+                    '<button class="back-button button button--tertiary button--tiny optimizedCheckout-buttonSecondary">{{lang '
+                    optimized_checkout.common.back_button '}}</button>'
+                );
+                // Add the back button to the current active step
+                $contentContainer.append($backButton);
+                // Add the content-loaded class to the content container to prevent loop
+                $contentContainer.addClass('content-loaded');
+            }
+        }, 250);
+    };
+    // Create an observer instance linked to the callback function
+    var observer = new MutationObserver(callback);
+    // Start observing the target node for configured mutations
+    observer.observe(targetNode, config);
+
+    $(document).ready(function () {
+
+        // toggle the input field that is related to the address 2 label
+        $("body").on("click", "label[for='addressLine2Input']", function () {
+            $('.dynamic-form-field--addressLine2 input').toggle();
+        });
+
+        // when user clicks on Previous Step button, trigger a click on edit button of previous step
+        $("body").on("click", ".back-button", function (e) {
+            $(e.target).parents('.checkout-step').prev().find('button[data-test="step-edit-button"]')
+                .trigger('click');
+        });
+    });
+</script>

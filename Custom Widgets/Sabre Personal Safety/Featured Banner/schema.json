@@ -1,0 +1,316 @@
+{
+    "name": "Featured Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Featured Banner",
+        "sections": [
+            {
+                "label": "Featured Banner",
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Invert?",
+                        "id": "invert",
+                        "default": "reversed",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "true",
+                                    "value": "reversed"
+                                },
+                                {
+                                    "label": "false",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Heading",
+                        "id": "heading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text BOLD",
+                        "id": "heading-bold",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter bold text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Description",
+                        "id": "description",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Description II",
+                        "id": "description-2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "URL",
+                        "id": "url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter URL"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "link-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link URL"
+                        }
+                    },
+                    {
+                        "type": "select",
+                        "label": "Show Item #1?",
+                        "id": "show-1",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "item-image-01",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #1 Image Alt",
+                        "id": "item-alt-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #1 Title",
+                        "id": "item-title-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #1 URL",
+                        "id": "item-url-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    },
+                    {
+                        "type": "select",
+                        "label": "Show Item #2?",
+                        "id": "show-2",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "item-image-02",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #2 Image Alt",
+                        "id": "item-alt-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #2 Title",
+                        "id": "item-title-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #2 URL",
+                        "id": "item-url-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    },
+                    {
+                        "type": "select",
+                        "label": "Show Item #3?",
+                        "id": "show-3",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "item-image-03",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #3 Image Alt",
+                        "id": "item-alt-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #3 Title",
+                        "id": "item-title-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #3 URL",
+                        "id": "item-url-03",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    },
+                    {
+                        "type": "select",
+                        "label": "Show Item #4?",
+                        "id": "show-4",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "item-image-04",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #4 Image Alt",
+                        "id": "item-alt-04",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #4 Title",
+                        "id": "item-title-04",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #4 URL",
+                        "id": "item-url-04",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='featureBanner {{invert}}'> <div class='featureBanner-container'> <div class='featureBanner-image__container'> <img src='{{image.src}}' alt='{{alt}}' class='featureBanner-image'> </div> <div class='featureBanner-content'> <div class='heading-layout'> <img src='{{image.src}}' alt='{{alt}}' class='featureBanner-image--mobile'> <h2 class='featureBanner-heading'>{{heading}}<strong>{{heading-bold}}</strong></h2> </div> <p class='featureBanner-text'>{{description}}</p> <p class='featureBanner-text'>{{description-2}}</p> <a href='{{url}}' class='featureBanner-action'>{{link-text}}</a> </div> <ul class='featureBanner-list'> {{#if show-1 '===' 'show'}} <li class='featureBanner-item'> <img src='{{item-image-01.src}}' alt='{{item-alt-01}}'> <p><span>{{item-title-01}}</span></p> <a href='{{item-url-01}}'></a> </li> {{/if}} {{#if show-2 '===' 'show'}} <li class='featureBanner-item'> <img src='{{item-image-02.src}}' alt='{{item-alt-02}}'> <p><span>{{item-title-02}}</span></p> <a href='{{item-url-02}}'></a> </li> {{/if}} {{#if show-3 '===' 'show'}} <li class='featureBanner-item'> <img src='{{item-image-03.src}}' alt='{{item-alt-03}}'> <p><span>{{item-title-03}}</span></p> <a href='{{item-url-03}}'></a> </li> {{/if}} {{#if show-4 '===' 'show'}} <li class='featureBanner-item'> <img src='{{item-image-04.src}}' alt='{{item-alt-04}}'> <p><span>{{item-title-04}}</span></p> <a href='{{item-url-04}}'></a> </li> {{/if}} </ul> </div> </div>"
+}

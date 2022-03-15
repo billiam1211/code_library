@@ -1,0 +1,11 @@
+<!-- check a product for custom fields, combine all the custom field names into a string and then check that string for a sub-string -->
+{{#if (occurrences (join (pluck product.custom_fields 'name') ' ') 'image_alt_text_1') '>' 0}}    
+    {{#each product.custom_fields}}
+        {{#if name '===' 'image_alt_text_1'}}
+            alt="{{value}}"
+            title="{{value}}"{{/if}}
+    {{/each}}
+{{else}}
+    alt="{{image.alt}}"
+    title="{{image.alt}}"
+{{/if}}

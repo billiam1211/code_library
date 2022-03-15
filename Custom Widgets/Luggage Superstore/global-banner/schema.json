@@ -1,0 +1,193 @@
+{
+    "name": "Global Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Global Banner",
+        "sections": [
+            {
+                "label": "Banner Item #1",
+                "settings": [{
+                        "type": "select",
+                        "label": "Hide Icon #1",
+                        "id": "hide-icon-01",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #1 Text",
+                        "id": "text-01",
+                        "default": "Enter text"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Bold Text #1",
+                        "id": "bold-01",
+                        "default": "Enter text"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #1 Url",
+                        "id": "link-url-01",
+                        "default": "Enter url"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #1 Text",
+                        "id": "link-text-01",
+                        "default": "Enter text"
+                    }
+                ]
+            },
+            {
+                "label": "Banner Item #2",
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Hide Icon #2",
+                        "id": "hide-icon-02",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #2 Text",
+                        "id": "text-02",
+                        "default": "Enter text"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Bold Text #2",
+                        "id": "bold-02",
+                        "default": "Enter text"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #2 Url",
+                        "id": "link-url-02",
+                        "default": "Enter url"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #2 Text",
+                        "id": "link-text-02",
+                        "default": "Enter text"
+                    }
+                ]
+            },
+            {
+                "label": "Banner Item #3",
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Hide Icon #3",
+                        "id": "hide-icon-03",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #3 Text",
+                        "id": "text-03",
+                        "default": "Enter text"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Bold Text #3",
+                        "id": "bold-03",
+                        "default": "Enter text"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #3 Url",
+                        "id": "link-url-03",
+                        "default": "Enter url"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #3 Text",
+                        "id": "link-text-03",
+                        "default": "Enter text"
+                    }
+                ]
+            },
+            {
+                "label": "Banner Item #4",
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Hide Icon #4",
+                        "id": "hide-icon-04",
+                        "default": "show",
+                        "typeMeta": {
+                            "selectOptions": [{
+                                    "label": "show",
+                                    "value": "show"
+                                },
+                                {
+                                    "label": "hide",
+                                    "value": "hide"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Item #4 Text",
+                        "id": "text-04",
+                        "default": "Enter text"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Bold Text #4",
+                        "id": "bold-04",
+                        "default": "Enter text"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #4 Url",
+                        "id": "link-url-04",
+                        "default": "Enter url"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link #4 Text",
+                        "id": "link-text-04",
+                        "default": "Enter text"
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='global-banner-top'> <ul class='global-banner-list'> <li class='global-banner-item'> <i class='icon' aria-hidden='true' {{#if hide-icon-01 '===' 'hide'}}style='display: none;'{{/if}}> <svg> <use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#icon-priceTag'></use> </svg> </i> <p> {{text-01}}<strong>{{bold-01}}</strong> <a href='{{link-url-01}}'>{{link-text-01}}</a> </p> </li> <li class='global-banner-item'> <i class='icon' aria-hidden='true' {{#if hide-icon-02 '===' 'hide'}}style='display: none;'{{/if}}> <svg> <use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#icon-truck'></use> </svg> </i> <p> {{text-02}}<strong>{{bold-02}}</strong> <a href='{{link-url-02}}'>{{link-text-02}}</a> </p> </li> <li class='global-banner-item'> <i class='icon' aria-hidden='true' {{#if hide-icon-03 '===' 'hide'}}style='display: none;'{{/if}}> <svg> <use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#icon-plane'></use> </svg> </i> <p> {{text-03}}<strong>{{bold-03}}</strong> <a href='{{link-url-03}}'>{{link-text-03}}</a> </p> </li> <li class='global-banner-item'> <i class='icon' aria-hidden='true' {{#if hide-icon-04 '===' 'hide'}}style='display: none;'{{/if}}> <svg> <use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#icon-calendar'></use> </svg> </i> <p> {{text-04}} <strong>{{bold-04}}</strong> <a href='{{link-url-04}}'>{{link-text-04}}</a> </p> </li> </ul> </div>"
+}

@@ -1,0 +1,53 @@
+{
+    "name": "Blog Page Banner",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [
+                {
+                    "label": "Blog Page Banner",
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Top Title",
+                            "id": "topTitle",
+                            "default": "FEATURED BLOG"
+                        },
+                        {
+                            "type": "input",
+                            "label": "Bottom Title",
+                            "id": "bottomTitle",
+                            "default": "NEW FALL FAVORITES"
+                        },
+                        {
+                            "type": "imageManager",
+                            "label": "Blog Header icon",
+                            "id": "iconUrl",
+                            "default": {
+                                "src": "https://placehold.it/350x350.png",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        },
+                        {
+                            "type": "imageManager",
+                            "label": "Blog Header Image",
+                            "id": "imageUrl",
+                            "default": {
+                                "src": "https://placehold.it/350x350.png",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Banner Link",
+                            "id": "link",
+                            "default": "/"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<a href='{{link}}' class='bannerLink'> <div style='background-image: url({{imageUrl.src}}); display: block; width: 100%; height: 400px; background-position: center; position: relative; background-repeat: no-repeat; background-size: cover;' class='banner-header'> <div class='top-title' style='position: absolute; padding: 15px 10px; background-color: white; opacity: 0.9; color: #2f8455; font-size: 25px; text-transform: uppercase; left: 100px; top: 1px;'> <img src='{{iconUrl.src}}'> {{topTitle}} </div> <div class='bottom-title' style='background-color: #2f8455; bottom: 0; position: absolute; width: 100%; font-size: 30px; text-align: center; color: white; text-transform: uppercase; padding-top: 5px; padding-bottom: 5px;'> {{bottomTitle}} </div> </div> </a>"
+}

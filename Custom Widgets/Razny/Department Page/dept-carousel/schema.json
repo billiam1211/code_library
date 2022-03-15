@@ -1,0 +1,42 @@
+{
+    "name": "Dept Carousel",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Carousel Item",
+            "id": "carousel-item",
+            "defaultCount": 4,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [{
+                "type": "tab",
+                "label": "Content",
+                "sections": [{
+                    "settings": [
+                        {
+                            "type": "imageManager",
+                            "id": "image",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Image Description",
+                            "id": "alt",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Item Link",
+                            "id": "url",
+                            "default": ""
+                        }
+                    ]
+                }]
+            }]
+        }
+    ],
+    "template": "<div class='department-carousel'> <ul class='carouselList'> {{#each carousel-item}} <li class='carouselItem'> <img src='{{image.src}}' alt='{{alt}}' class='carouselItem-image'> <a href='{{url}}' class='carouselItem-action'></a> </li> {{/each}} </ul> </div>"
+}

@@ -1,0 +1,12 @@
+<div class='brands-banner'>
+    <ul class='brands-list'>
+    {{#each brandItem}}
+        <li class='brand-item'>
+            <a href='{{brandLink}}' class='brand-link'>
+                <img src='{{imageUrl.src}}' alt='{{altText}}'>
+            </a>
+        </li>
+    {{/each}}
+    </ul>
+    <a href='/brands/' class='banner-action'>View All Brands</a>
+</div>

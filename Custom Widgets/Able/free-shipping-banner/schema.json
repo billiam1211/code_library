@@ -1,0 +1,51 @@
+{
+    "name": "Global Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Global Banner",
+        "sections": [
+            {
+                "label": "Global Banner",
+                "settings": [
+                    {
+                        "type": "input",
+                        "label": "Image description",
+                        "id": "imageAlt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "bannerText",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Link URL",
+                        "id": "bannerLink",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Action Text",
+                        "id": "bannerLinkText",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='globalBanner-top'> <div class='globalBanner-content'> <img src='{{image.src}}' alt='{{imageAlt}}' class='globalBanner-image'> <p class='globalBanner-text'>{{bannerText}}</p> <a href='{{bannerLink}}' class='globalBanner-action'> <span> {{bannerLinkText}} </span> </a> </div> </div>"
+}

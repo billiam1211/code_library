@@ -1,0 +1,83 @@
+{
+    "name": "Global Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Global Banner",
+        "sections": [
+            {
+                "label": "Global Banner",
+                "settings": [
+                    {
+                        "type": "input",
+                        "label": "Banner link",
+                        "id": "bannerLink",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "shippingIcon",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },          
+                    {
+                        "type": "input",
+                        "label": "Shipping Icon Alt",
+                        "id": "shippingIconAlt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text #1",
+                        "id": "bannerText-01",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text #2",
+                        "id": "bannerText-02",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Banner Background Color",
+                        "id": "banner-bg-color",
+                        "default": "#525b5c"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Icon Fill Color",
+                        "id": "icon-fill-color",
+                        "default": "#FFFFFF"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Large Text Color",
+                        "id": "large-text-color",
+                        "default": "#FFFFFF"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Text Color",
+                        "id": "text-color",
+                        "default": "#FFFFFF"
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='header-banner' style='background-color: {{banner-bg-color}};'> <div class='container'> <div class='topBanner'> <div class='globalTopBanner'> <a href='{{bannerLink}}' class='globalTopBanner-link'> <div class='globalTopBanner-icon'> <img src='{{shippingIcon.src}}' alt='{{shippingIconAlt}}'> </div> <div class='globalTopBanner-text'> <div class='largeText'><span style='color: {{large-text-color}};'>{{bannerText-01}}</span></div> <div style='color: {{text-color}}'>{{bannerText-02}}</div> </div> </a> </div> </div> </div> </div>"
+}

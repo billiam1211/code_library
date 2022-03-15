@@ -1,0 +1,77 @@
+{
+    "name": "Featured Card",
+    "schema": [{
+        "type": "tab",
+        "label": "Featured Card",
+        "sections": [
+            {
+                "label": "Featured Card",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Button Text",
+                        "id": "button-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Button Text BOLD",
+                        "id": "button-text--bold",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter bold text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Description",
+                        "id": "description",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "URL",
+                        "id": "url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter URL"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "link-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link URL"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='featuredCard'> <div class='featuredCard__img--container'> <img src='{{image.src}}' alt='{{alt}}'> </div> <button class='featuredCard-button'>{{button-text}}<strong>{{button-text--bold}}</strong></button> <div class='featuredCard-content'> <p>{{description}}</p> <a href='{{url}}'>{{link-text}}</a> </div> </div>"
+}

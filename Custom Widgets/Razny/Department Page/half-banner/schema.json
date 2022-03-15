@@ -1,0 +1,48 @@
+{
+    "name": "Half Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Half Banner",
+        "sections": [{
+            "label": "Half Banner",
+            "settings": [
+                {
+                    "type": "imageManager",
+                    "id": "image",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Image Description",
+                    "id": "alt",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Button Text",
+                    "id": "link-text",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter text"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Button Url",
+                    "id": "link",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter link url"
+                    }
+                }
+            ]
+        }]
+    }],
+    "template": "<div class='halfBanner'> <div class='halfBanner-image__container'> <img src='{{image.src}}' alt='{{alt}}' class='halfBanner-image'> </div> <a href='{{link}}' class='halfBanner-action'>{{link-text}}</a> </div>"
+}

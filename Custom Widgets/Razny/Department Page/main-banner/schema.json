@@ -1,0 +1,50 @@
+{
+    "name": "Dept Main Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Dept Main Banner",
+        "sections": [
+            {
+                "label": "Dept Main Banner",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },          
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Title",
+                        "id": "title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter banner text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='mainBanner'> <div class='mainBanner-container'> <div class='mainBanner-imageContainer'> <img src='{{image.src}}' alt='{{alt}}' class='mainBanner-image'> </div> <div class='mainBanner-content'> {{#if title.length}} <h2 class='mainBanner-title'>{{title}}</h2> {{/if}} {{#if text.length}} <p class='mainBanner-description'> {{text}} </p> {{/if}} </div> </div> </div>"
+}

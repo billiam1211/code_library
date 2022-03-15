@@ -1,0 +1,45 @@
+<!-- Big Commerce accordion for web pages -->
+
+<!-- Iterate through all the web pages -->
+{{#each pages}}
+    <!-- Check for the footer web pages flag -->
+    {{#if name '===' '--FOOTER LINKS--'}}
+        <!-- iterate through the children -->
+        {{#forEach children}}
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <div class="accordion-block">
+                    <!-- Using forEach gives the ability to leverage the index in handlebars -->
+                    <div class="accordion-navigation toggleLink" role="button" data-collapsible="#footer-column-{{index}}">
+                        <!-- Accordion Name -->
+                        <h5 class="footer-info-heading">{{name}}</h5>
+                        <!-- Accordion controls -->
+                        <div class="accordion-navigation-actions">
+                            {{#if selected}}
+                                <a href="{{ remove_url }}" class="facetedSearch-clearLink" data-faceted-search-facet>{{lang 'search.faceted.clear'}}</a>
+                            {{/if}}
+                            <svg class="icon accordion-indicator toggleLink-text toggleLink-text--off">
+                                <use xlink:href="#icon-add" />
+                            </svg>
+                            <svg class="icon accordion-indicator toggleLink-text toggleLink-text--on">
+                                <use xlink:href="#icon-remove" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Accordion Content -->
+                    <div class="accordion-content" id="footer-column-{{index}}">
+                        <!-- If there are children render them in a list -->
+                        {{#if children}}
+                            {{#each children}}
+                                <ul class="footer-info-list">
+                                    <li>
+                                        <a href="{{url}}">{{name}}</a>
+                                    </li>
+                                </ul>
+                            {{/each}}
+                        {{/if}}
+                    </div>
+                </div>
+            </article>
+        {{/forEach}}
+    {{/if}}
+{{/each}}

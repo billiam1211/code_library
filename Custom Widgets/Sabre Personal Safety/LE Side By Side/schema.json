@@ -1,0 +1,96 @@
+{
+    "name": "LE 2-Column Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "LE 2-Column Banner",
+        "sections": [
+            {
+                "label": "LE 2-Column Banner",
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Reverse Columns?",
+                        "id": "reverse-columns",
+                        "default": "auto",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "yes",
+                                    "value": "le-sbs__container"
+                                },
+                                {
+                                    "label": "no",
+                                    "value": "le-sbs__container le-sbs__container--reversed"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "label": "banner image",
+                        "id": "banner-img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "banner description",
+                        "id": "banner-img-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Heading",
+                        "id": "bannerHeading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Heading BOLD",
+                        "id": "bannerHeading-bold",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "banner-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Button Text",
+                        "id": "button-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "button-link",
+                        "id": "button-link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter button url"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='{{reverse-columns}}'> <div class='le-sbs__inner container'> <div class='le-sbs__content'> <div class='le-sbs__left'> <img src='{{banner-img.src}}' alt='{{banner-img-alt}}' class='le-sbs__image'> </div> <div class='le-sbs__right'> <h2 class='le-sbs__title section__title'> {{bannerHeading}} <span class='le-sbs__subTitle section__title-bold'>{{bannerHeading-bold}}</span> </h2> <p class='le-sbs__description'> {{banner-text}} </p> <a href='{{button-link}}' class='le-sbs__link'>{{button-text}}</a> </div> </div> </div> </div>"
+}

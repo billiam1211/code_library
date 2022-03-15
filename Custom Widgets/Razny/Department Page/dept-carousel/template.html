@@ -1,0 +1,11 @@
+<div class='department-carousel'>
+    <ul class='carouselList'>
+        {{#each carousel-item}}
+            <li class='carouselItem'>
+                <img src='{{image.src}}'
+                    alt='{{alt}}' class='carouselItem-image'>
+                <a href='{{url}}' class='carouselItem-action'></a>
+            </li>
+        {{/each}}
+    </ul>
+</div>

@@ -1,0 +1,50 @@
+{
+    "name": "Featured Products Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Featured Products Banner",
+        "sections": [
+            {
+                "label": "Callout #1",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "banner-image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "banner-image-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Title",
+                        "id": "banner-title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter banner title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "banner-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='seasonalProducts-banner'> <img src='{{banner-image.src}}' alt='{{banner-image-alt}}'> <div class='banner-content'> <h2 class='banner-heading'>{{banner-title}}</h2> <p class='banner-text'>{{banner-text}}</p> </div> </div> "
+}

@@ -1,0 +1,651 @@
+{
+    "name": "LE Featured Videos (Max 10)",
+    "schema": [{
+        "type": "tab",
+        "label": "LE Featured Videos (Max 10)",
+        "sections": [{
+            "label": "LE Featured Videos (Max 10)",
+            "settings": [{
+                    "type": "input",
+                    "label": "",
+                    "id": "section-heading",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #1?",
+                    "id": "show-video-01",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-01",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-01",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-01",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-01",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-01",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #2?",
+                    "id": "show-video-02",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-02",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-02",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-02",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-02",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-02",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #3?",
+                    "id": "show-video-03",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-03",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-03",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-03",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-03",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-03",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #4?",
+                    "id": "show-video-04",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-04",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-04",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-04",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-04",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-04",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #5?",
+                    "id": "show-video-05",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-05",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-05",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-05",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-05",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-05",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #6?",
+                    "id": "show-video-06",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-06",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-06",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-06",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-06",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-06",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #7?",
+                    "id": "show-video-07",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-07",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-07",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-07",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-07",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-07",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #8?",
+                    "id": "show-video-08",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-08",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-08",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-08",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-08",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-08",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #9?",
+                    "id": "show-video-09",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-09",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-09",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-09",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-09",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-09",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Video #10?",
+                    "id": "show-video-10",
+                    "default": "show",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "show",
+                                "value": "show"
+                            },
+                            {
+                                "label": "hide",
+                                "value": "hide"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "label": "Featured Video Thumbnail",
+                    "id": "video-img-10",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Video Alt",
+                    "id": "video-alt-10",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter image description"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Title",
+                    "id": "video-title-10",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Subtitle",
+                    "id": "video-subtitle-10",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter sub title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Video Action",
+                    "id": "video-action-10",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter url"
+                    }
+                }
+            ]
+        }]
+    }],
+    "template": "<div class='le-drawer__container container'> <div class='le-drawer__inner-container'> <div class='le-drawer__top'> <h2 class='le-drawer__title'>{{section-heading}} <span class='le-drawer__total-items'></span> </h2> <button type='button' class='le-drawer__view-all'>View All</button> </div> <div class='le-drawer__main'> <ul class='le-drawer__videos'> {{#if show-video-01 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-01.src}}' alt='{{video-alt-01}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-01}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-01}}</p> <a href='{{video-action-01}}' class='le-drawer__action'></a> </li> {{/if}} {{#if show-video-02 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-02.src}}' alt='{{video-alt-02}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-02}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-02}}</p> <a href='{{video-action-02}}' class='le-drawer__action'></a> </li> {{/if}} {{#if show-video-03 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-03.src}}' alt='{{video-alt-03}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-03}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-03}}</p> <a href='{{video-action-03}}' class='le-drawer__action'></a> </li> {{/if}} {{#if show-video-04 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-04.src}}' alt='{{video-alt-04}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-04}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-04}}</p> <a href='{{video-action-04}}' class='le-drawer__action'></a> </li> {{/if}} {{#if show-video-05 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-05.src}}' alt='{{video-alt-05}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-05}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-05}}</p> <a href='{{video-action-05}}' class='le-drawer__action'></a> </li> {{/if}} {{#if show-video-06 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-06.src}}' alt='{{video-alt-06}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-06}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-06}}</p> <a href='{{video-action-06}}' class='le-drawer__action'></a> </li> {{/if}} {{#if show-video-07 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-07.src}}' alt='{{video-alt-07}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-07}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-07}}</p> <a href='{{video-action-07}}' class='le-drawer__action'></a> </li> {{/if}} {{#if show-video-08 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-08.src}}' alt='{{video-alt-08}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-08}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-08}}</p> <a href='{{video-action-08}}' class='le-drawer__action'></a> </li> {{/if}} {{#if show-video-09 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-09.src}}' alt='{{video-alt-09}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-09}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-09}}</p> <a href='{{video-action-09}}' class='le-drawer__action'></a> </li> {{/if}} {{#if show-video-10 '===' 'show'}} <li class='le-drawer__video'> <img src='{{video-img-10.src}}' alt='{{video-alt-10}}' class='le-drawer__thumbnail'> <p class='le-drawer__video-title'> {{video-title-10}} </p> <p class='le-drawer__video-miniTitle'>{{video-subtitle-10}}</p> <a href='{{video-action-10}}' class='le-drawer__action'></a> </li> {{/if}} </ul> </div> </div> </div>"
+}
