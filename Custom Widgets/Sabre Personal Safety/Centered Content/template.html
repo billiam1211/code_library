@@ -1,0 +1,36 @@
+<div class='category-description {{style}}'
+    style='padding-top: {{topPadding.value}}{{topPadding.type}}; padding-bottom: {{bottomPadding.value}}{{bottomPadding.type}};'>
+    {{#eq style 'darkWTab'}} 
+        <div class='corner'>
+            <div class='corner-triangle'></div>
+        </div> 
+    {{/eq}} 
+    {{#if toggle-tile '===' 'true'}}
+        <h2>{{{title}}}</h2>
+    {{/if}}
+    {{#if toggle-caption '===' 'true'}}
+        {{{caption}}}
+    {{/if}}
+    {{#if hasLink}}
+        <a href='{{link}}'>{{linkTitle}}</a>
+    {{/if}}
+</div>
+
+
+
+
+<h2 style="
+  color: #2B3B41;
+  font-family: Roboto Condensed;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 0.14px;
+  line-height: 60px;
+           ">WE KNOW THAT PERSONAL SAFETY IS PERSONAL<sup>®</sup></h2>
+<p style="
+  font: Roboto Light;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 30px;
+  text-align: center;
+">SABRE offers a variety of personal safety products, from pepper sprays and gels, bear and dog sprays, and home security devices, all of which include innovative features to perform at the highest level at a moment’s notice, helping provide safety and peace of mind no matter where the day takes you.</p>

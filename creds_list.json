@@ -1,0 +1,45 @@
+{
+    "encryption": {
+        "JWT": "HS256",
+        "date": "1-24-2022"
+    },
+    "creds_list": [
+        {
+            "bank_of_america": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYmJha29wb3Vsb3NAZ21haWwuY29tIiwicHciOiJCaWxsc2IwZkAyMDIyIn0.6qRt1-0Wg71olr-tZrx9W7yziwBZCIZrEAiWQXK1tRc"
+        },
+        {
+            "chase": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYmJha29wb3Vsb3NAZ21haWwuY29tIiwicHciOiJCIWxsJGNoQHMzIn0.Y8Cqa16h_CSGskQEbgzXWBQMa-y8DQDLqxlSMclyxQQ"
+        },
+        {
+            "paypal": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYmJha29wb3Vsb3NAZ21haWwuY29tIiwicHciOiJCIWxsJHBAeXBAbCJ9.aoCdJJJNwVm4Ye1I84DQvOkrz00rBivXzPdNPveNNbE"
+        },
+        {
+            "powder_valley": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYmJha29wb3Vsb3NAZ21haWwuY29tIiwicHciOiJCIWxsJHAwd2QzcnZAbGwzeSJ9.o5dXrLxft-Jd8Juf83P8PdzMdLuD0bi9IEnUnzvZe80"
+        },
+        {
+            "amazon": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmJha29wb3Vsb3NAZ21haWwuY29tIiwicHciOiJCIWxsJEBtQHowbiJ9.m8F5w9Kqz1tTFSJlBXxyR7lujdPJ5wxCVy0BX1WrZkY"
+        },
+        {
+            "practiscore.com": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmJha29wb3Vsb3NAZ21haWwuY29tIiwicHciOiJiMTIxMTI5MTIxMiJ9.YQgZwu1JJOE9w5sPSMidSxsORdTufnsbgjsp_2fbFJ4"
+        },
+        {
+            "linked_in": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmJha29wb3Vsb3NAZ21haWwuY29tIiwicHciOiJiMTIxMTI5MTIxMiJ9.YQgZwu1JJOE9w5sPSMidSxsORdTufnsbgjsp_2fbFJ4"
+        },
+        {
+            "facebook": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmJha29wb3Vsb3NAZ21haWwuY29tIiwicHciOiJCIWxsJGZAYzNiMDBrIn0.uWZ8pdG182BTJhW0wSLzl8f_Dtid9GfXboIxUJUb1nU"
+        },
+        {
+            "snipers_hide": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmJha29wb3Vsb3NAZ21haWwuY29tIiwicHciOiJiMTIxMTI5MTIxMiJ9.YQgZwu1JJOE9w5sPSMidSxsORdTufnsbgjsp_2fbFJ4"
+        },
+        {
+            "kenzies_optis": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJiYWtvcG91bG9zQGdtYWlsLmNvbSAgICIsInBhc3N3b3JkIjoiQiFsbCRrM256ITMkMHB0IWMkIn0.EVZs_QSDOAmq8qBZd4CyqUsI62fcQs7LO-jvT6RaZ5k"
+        },
+        {
+            "bigcommerce_americaneagle": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJpbGwuYmFrb3BvdWxvc0BhbWVyaWNhbmVhZ2xlLmNvbSIsInBhc3N3b3JkIjoiQiFsbCRiIWdjMG1tM3JjMzIwMjIifQ.0SLlImc4MM3jOB9ppltEN9O36iXIpqTl0W4_B1Kso98"
+        },
+        {
+            "aurora_sportsmens_club": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJiYWtvcG91bG9zQGdtYWlsLmNvbSAgICIsInBhc3N3b3JkIjoiQiFsbCRAdXIwckAkcDBydCRtM25zY2x1YiJ9.tcM8Z17nXGe-HRAWuHgNfDvJewiS38Kwire8gre57aY"
+        }
+    ]
+}
+

@@ -1,0 +1,241 @@
+{
+    "name": "Centered Content",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [
+                {
+                    "label": "Content",
+                    "settings": [
+                        {
+                            "type": "select",
+                            "label": "Style",
+                            "id": "style",
+                            "default": "white",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "White",
+                                        "value": "white"
+                                    },
+                                    {
+                                        "label": "Dark",
+                                        "value": "dark"
+                                    },
+                                    {
+                                        "label": "Dark w/ Tab",
+                                        "value": "darkWTab"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Show title?",
+                            "id": "toggle-title",
+                            "default": "false",
+                            "typeMeta": {
+                                "selectOptions": [{
+                                        "label": "false",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "label": "true",
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "title",
+                            "label": "Title",
+                            "default": "enter title",
+                            "type": "input"
+                        },
+                        {
+                            "type": "select",
+                            "label": "Show caption?",
+                            "id": "toggle-caption",
+                            "default": "false",
+                            "typeMeta": {
+                                "selectOptions": [{
+                                        "label": "false",
+                                        "value": "false"
+                                    },
+                                    {
+                                        "label": "true",
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "caption",
+                            "label": "Content",
+                            "type": "code",
+                            "typeMeta": {
+                                "language": "html",
+                                "placeholder": "Insert HTML code here"
+                            }
+                        },
+                        {
+                            "id": "hasLink",
+                            "label": "Show Link",
+                            "default": false,
+                            "type": "boolean"
+                        },
+                        {
+                            "id": "link",
+                            "label": "Link Url",
+                            "default": "enter link",
+                            "type": "input"
+                        },
+                        {
+                            "id": "linkTitle",
+                            "label": "Link Title",
+                            "default": "enter link title",
+                            "type": "input"
+                        },
+                        {
+                            "type": "number",
+                            "label": "Top Padding",
+                            "id": "topPadding",
+                            "default": {
+                                "value": 20,
+                                "type": "px"
+                            },
+                            "typeMeta": {
+                                "parseType": "integer"
+                            }
+                        },
+                        {
+                            "type": "number",
+                            "label": "Bottom Padding",
+                            "id": "bottomPadding",
+                            "default": {
+                                "value": 20,
+                                "type": "px"
+                            },
+                            "typeMeta": {
+                                "parseType": "integer"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='category-description {{style}}' style='padding-top: {{topPadding.value}}{{topPadding.type}}; padding-bottom: {{bottomPadding.value}}{{bottomPadding.type}};'> {{#eq style 'darkWTab'}} <div class='corner'> <div class='corner-triangle'></div> </div> {{/eq}} {{#if toggle-tile '===' 'true'}} <h2>{{{title}}}</h2> {{/if}} {{#if toggle-caption '===' 'true'}} {{{caption}}} {{/if}} {{#if hasLink}} <a href='{{link}}'>{{linkTitle}}</a> {{/if}} </div>"
+}
+
+
+
+// ORIGINAL
+{
+    "uuid": "c715a5f2-3924-4e1a-8f8c-fd0dc883cd14",
+    "name": "Centered Content",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [
+                {
+                    "label": "Content",
+                    "settings": [
+                        {
+                            "type": "select",
+                            "label": "Style",
+                            "id": "style",
+                            "default": "white",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "White",
+                                        "value": "white"
+                                    },
+                                    {
+                                        "label": "Dark",
+                                        "value": "dark"
+                                    },
+                                    {
+                                        "label": "Dark w/ Tab",
+                                        "value": "darkWTab"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "title",
+                            "label": "Title",
+                            "default": "enter title",
+                            "type": "input"
+                        },
+                        {
+                            "id": "caption",
+                            "label": "Content",
+                            "type": "code",
+                            "typeMeta": {
+                                "language": "html",
+                                "placeholder": "Insert HTML code here"
+                            }
+                        },
+                        {
+                            "id": "hasLink",
+                            "label": "Show Link",
+                            "default": false,
+                            "type": "boolean"
+                        },
+                        {
+                            "id": "link",
+                            "label": "Link Url",
+                            "default": "enter link",
+                            "type": "input"
+                        },
+                        {
+                            "id": "linkTitle",
+                            "label": "Link Title",
+                            "default": "enter link title",
+                            "type": "input"
+                        },
+                        {
+                            "type": "number",
+                            "label": "Top Padding",
+                            "id": "topPadding",
+                            "default": {
+                                "value": 20,
+                                "type": "px"
+                            },
+                            "typeMeta": {
+                                "parseType": "integer"
+                            }
+                        },
+                        {
+                            "type": "number",
+                            "label": "Bottom Padding",
+                            "id": "bottomPadding",
+                            "default": {
+                                "value": 20,
+                                "type": "px"
+                            },
+                            "typeMeta": {
+                                "parseType": "integer"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='category-description {{style}}' style='padding-top: {{topPadding.value}}{{topPadding.type}}; padding-bottom: {{bottomPadding.value}}{{bottomPadding.type}};'> {{#eq style 'darkWTab'}} <div class='corner'> <div class='corner-triangle'></div> </div> {{/eq}} <h2>{{{title}}}</h2> <p>{{{caption}}}</p> {{#if hasLink}}<a href='{{link}}'>{{linkTitle}}</a>{{/if}} </div>",
+    "date_created": "2022-01-05T19:34:47.098Z",
+    "date_modified": "2022-01-05T19:34:47.098Z",
+    "kind": "custom",
+    "storefront_api_query": "",
+    "icon_name": "default",
+    "template_engine": "handlebars_v3",
+    "client_rerender": false,
+    "current_version_uuid": "4da96d57-9df6-4266-b99f-3de51e9c4fac",
+    "channel_id": 1,
+    "schema_translations": {}
+},

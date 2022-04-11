@@ -73,5 +73,5 @@
             }
         ]
     }],
-    "template": "<div class='featuredCard'> <div class='featuredCard__img--container'> <img src='{{image.src}}' alt='{{alt}}'> </div> <button class='featuredCard-button'>{{button-text}}<strong>{{button-text--bold}}</strong></button> <div class='featuredCard-content'> <p>{{description}}</p> <a href='{{url}}'>{{link-text}}</a> </div> </div>"
+    "template": "<div class='featuredCard'> <div class='featuredCard__img--container'> <img src='{{image.src}}' alt='{{alt}}'> </div> <button class='featuredCard-button' aria-expanded='false'>{{button-text}}<strong>{{button-text--bold}}</strong></button> <div class='featuredCard-content'> <a href='{{url}}'> <p>{{description}}</p> <strong>{{link-text}}</strong> </a> </div> </div>"
 }

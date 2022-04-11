@@ -1,6 +1,5 @@
 getUserCart(addToCartClick, form = null) {
     // console.log('Get user cart is firing');
-
     // setting empty array for products in user shopping cart
     const productIdList = [];
     // api call to get the cart items

@@ -23,23 +23,23 @@ testGraphQl() {
             }
             `;
 
-    fetch('/graphql', {
-            'method': 'POST',
-            'credentials': 'include',
-            'mode': 'cors',
-            'headers': {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${this.context.storefrontToken}`
-            },
-            body: JSON.stringify({
-                query: graphQLQuery
-            }),
-        })
-        .then(res => {
-            // Here is our data
-            console.log(res.data);
-
-        });
+            fetch('/graphql', {
+                'method': 'POST',
+                'credentials': 'include',
+                'mode': 'cors',
+                'headers': {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${this.context.storefrontToken}`
+                },
+                body: JSON.stringify({
+                    query: graphQLQuery
+                }),
+            })
+            .then(res => {
+                // Here is our data
+                console.log(res.data);
+    
+            });
 
     // sample template of a graphQL api call
     $.ajax({
@@ -99,3 +99,21 @@ testGraphQl() {
         // store products array in a variable
     });
 }
+
+fetch('/graphql', {
+    'method': 'POST',
+    'credentials': 'include',
+    'mode': 'cors',
+    'headers': {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.context.storefrontToken}`
+    },
+    body: JSON.stringify({
+        query: graphQLQuery
+    }),
+})
+.then(res => {
+    // Here is our data
+    console.log(res.data);
+
+});

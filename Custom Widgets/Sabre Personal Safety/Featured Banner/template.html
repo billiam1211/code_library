@@ -10,37 +10,43 @@
             </div>
             <p class='featureBanner-text'>{{description}}</p>
             <p class='featureBanner-text'>{{description-2}}</p>
-            <a href='{{url}}' class='featureBanner-action'>{{link-text}}</a>                
+            <a href='{{url}}' class='featureBanner-action' aria-label='{{link-text}}: {{heading}} {{heading-bold}}'>{{link-text}}</a>                
         </div>
         <ul class='featureBanner-list'>
             {{#if show-1 '===' 'show'}}
                 <li class='featureBanner-item'>
-                    <img src='{{item-image-01.src}}' alt='{{item-alt-01}}'>
-                    <p><span>{{item-title-01}}</span></p>
-                    <a href='{{item-url-01}}'></a>
+                    <a href='{{item-url-01}}'>
+                        <img src='{{item-image-01.src}}' alt='{{item-alt-01}}'>
+                        <p><span>{{item-title-01}}</span></p>
+                    </a>
                 </li>
             {{/if}}
             {{#if show-2 '===' 'show'}}
                 <li class='featureBanner-item'>
-                    <img src='{{item-image-02.src}}' alt='{{item-alt-02}}'>
-                    <p><span>{{item-title-02}}</span></p>
-                    <a href='{{item-url-02}}'></a>
+                    <a href='{{item-url-02}}'>
+                        <img src='{{item-image-02.src}}' alt='{{item-alt-02}}'>
+                        <p><span>{{item-title-02}}</span></p>
+                    </a>
                 </li>
             {{/if}}
             {{#if show-3 '===' 'show'}}
                 <li class='featureBanner-item'>
-                    <img src='{{item-image-03.src}}' alt='{{item-alt-03}}'>
-                    <p><span>{{item-title-03}}</span></p>
-                    <a href='{{item-url-03}}'></a>
+                    <a href='{{item-url-03}}'>
+                        <img src='{{item-image-03.src}}' alt='{{item-alt-03}}'>
+                        <p><span>{{item-title-03}}</span></p>
+                    </a>
                 </li>
             {{/if}}
             {{#if show-4 '===' 'show'}}
                 <li class='featureBanner-item'>
-                    <img src='{{item-image-04.src}}' alt='{{item-alt-04}}'>
-                    <p><span>{{item-title-04}}</span></p>
-                    <a href='{{item-url-04}}'></a>
+                    <a href='{{item-url-04}}'>
+                        <img src='{{item-image-04.src}}' alt='{{item-alt-04}}'>
+                        <p><span>{{item-title-04}}</span></p>
+                    </a>
                 </li>
             {{/if}}
         </ul>
     </div>
 </div>
+
+<div class='featureBanner {{invert}}'> <div class='featureBanner-container'> <div class='featureBanner-image__container'> <img src='{{image.src}}' alt='{{alt}}' class='featureBanner-image'> </div> <div class='featureBanner-content'> <div class='heading-layout'> <img src='{{image.src}}' alt='{{alt}}' class='featureBanner-image--mobile'> <h2 class='featureBanner-heading'>{{heading}}<strong>{{heading-bold}}</strong></h2> </div> <p class='featureBanner-text'>{{description}}</p> <p class='featureBanner-text'>{{description-2}}</p> <a href='{{url}}' class='featureBanner-action' aria-label='{{link-text}}: {{heading}} {{heading-bold}}'>{{link-text}}</a> </div> <ul class='featureBanner-list'> {{#if show-1 '===' 'show'}} <li class='featureBanner-item'> <a href='{{item-url-01}}'> <img src='{{item-image-01.src}}' alt='{{item-alt-01}}'> <p><span>{{item-title-01}}</span></p> </a> </li> {{/if}} {{#if show-2 '===' 'show'}} <li class='featureBanner-item'> <a href='{{item-url-02}}'> <img src='{{item-image-02.src}}' alt='{{item-alt-02}}'> <p><span>{{item-title-02}}</span></p> </a> </li> {{/if}} {{#if show-3 '===' 'show'}} <li class='featureBanner-item'> <a href='{{item-url-03}}'> <img src='{{item-image-03.src}}' alt='{{item-alt-03}}'> <p><span>{{item-title-03}}</span></p> </a> </li> {{/if}} {{#if show-4 '===' 'show'}} <li class='featureBanner-item'> <a href='{{item-url-04}}'> <img src='{{item-image-04.src}}' alt='{{item-alt-04}}'> <p><span>{{item-title-04}}</span></p> </a> </li> {{/if}} </ul> </div> </div>

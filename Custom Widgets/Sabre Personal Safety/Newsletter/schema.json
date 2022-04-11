@@ -1,0 +1,248 @@
+{
+    "name": "Newsletter",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [
+                {
+                    "label": "Content",
+                    "settings": [
+                        {
+                            "type": "select",
+                            "label": "Background",
+                            "id": "backgroundColor",
+                            "default": "grey",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "Grey",
+                                        "value": "grey"
+                                    },
+                                    {
+                                        "label": "White",
+                                        "value": "white"
+                                    },
+                                    {
+                                        "label": "Dark",
+                                        "value": "dark"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Tab Background Color",
+                            "id": "tabBackgroundColor",
+                            "default": "grey",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "Grey",
+                                        "value": "grey"
+                                    },
+                                    {
+                                        "label": "White",
+                                        "value": "white"
+                                    },
+                                    {
+                                        "label": "Dark",
+                                        "value": "dark"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "tabPositionOnImage",
+                            "label": "Position tab on image",
+                            "default": false,
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "imageManager",
+                            "id": "image",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                                "type": "imageManager"
+                            }
+                        },
+                        {
+                            "id": "imageAlt",
+                            "label": "Image Alt",
+                            "default": "",
+                            "type": "input"
+                        },
+                        {
+                            "id": "title",
+                            "label": "Title (wrap in span for thin text)",
+                            "default": "enter title",
+                            "type": "input"
+                        },
+                        {
+                            "id": "text",
+                            "label": "Text Content (optional)",
+                            "type": "text",
+                            "default": "enter text"
+                        },
+                        {
+                            "type": "number",
+                            "label": "Top Padding",
+                            "id": "topPadding",
+                            "default": {
+                                "value": 20,
+                                "type": "px"
+                            },
+                            "typeMeta": {
+                                "parseType": "integer"
+                            }
+                        },
+                        {
+                            "type": "number",
+                            "label": "Bottom Padding",
+                            "id": "bottomPadding",
+                            "default": {
+                                "value": 20,
+                                "type": "px"
+                            },
+                            "typeMeta": {
+                                "parseType": "integer"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='newsletter-widget {{backgroundColor}}'> <div class='newsletter-image'> <img class='lazyload' data-src='{{image.src}}' alt='{{imageAlt}}'> {{#if tabPositionOnImage}} <div class='corner {{tabBackgroundColor}}'> <div class='corner-triangle'></div> </div> {{/if}} </div> <div class='newsletter-content-container' style='padding-top: {{topPadding.value}}{{topPadding.type}}; padding-bottom: {{bottomPadding.value}}{{bottomPadding.type}};'> <h2>{{{title}}}</h2> {{#if text}}<p>{{text}}</p>{{/if}} <form class='form' action='{{urls.subscribe.action}}' method='post'> <fieldset class='form-fieldset'> <input type='hidden' name='action' value='subscribe'> <input type='hidden' name='nl_first_name' value='bc'> <input type='hidden' name='check' value='1'> <div class='form-field'> <label class='form-label is-srOnly' for='nl_email'>Email address</label> <div class='form-prefixPostfix wrap'> <input class='form-input' id='nl_email' name='nl_email' type='email' value='{{customer.email}}' placeholder='Email Address' aria-describedby='alertBox-message-text' aria-required='true' required > <input class='button button--primary form-prefixPostfix-button--postfix' type='submit' value='SUBMIT' > </div> </div> </fieldset> </form> </div> {{#if tabPositionOnImage}}{{else}} <div class='corner {{tabBackgroundColor}}'> <div class='corner-triangle'></div> </div> {{/if}} </div>"
+}
+
+
+
+{
+    "uuid": "4c6b3ebe-1a43-4c43-9fb6-21fd0e59e9eb",
+    "name": "Newsletter",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [
+                {
+                    "label": "Content",
+                    "settings": [
+                        {
+                            "type": "select",
+                            "label": "Background",
+                            "id": "backgroundColor",
+                            "default": "grey",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "Grey",
+                                        "value": "grey"
+                                    },
+                                    {
+                                        "label": "White",
+                                        "value": "white"
+                                    },
+                                    {
+                                        "label": "Dark",
+                                        "value": "dark"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Tab Background Color",
+                            "id": "tabBackgroundColor",
+                            "default": "grey",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "Grey",
+                                        "value": "grey"
+                                    },
+                                    {
+                                        "label": "White",
+                                        "value": "white"
+                                    },
+                                    {
+                                        "label": "Dark",
+                                        "value": "dark"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "tabPositionOnImage",
+                            "label": "Position tab on image",
+                            "default": false,
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "imageManager",
+                            "id": "image",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                                "type": "imageManager"
+                            }
+                        },
+                        {
+                            "id": "imageAlt",
+                            "label": "Image Alt",
+                            "default": "",
+                            "type": "input"
+                        },
+                        {
+                            "id": "title",
+                            "label": "Title (wrap in span for thin text)",
+                            "default": "enter title",
+                            "type": "input"
+                        },
+                        {
+                            "id": "text",
+                            "label": "Text Content (optional)",
+                            "type": "text",
+                            "default": "enter text"
+                        },
+                        {
+                            "type": "number",
+                            "label": "Top Padding",
+                            "id": "topPadding",
+                            "default": {
+                                "value": 20,
+                                "type": "px"
+                            },
+                            "typeMeta": {
+                                "parseType": "integer"
+                            }
+                        },
+                        {
+                            "type": "number",
+                            "label": "Bottom Padding",
+                            "id": "bottomPadding",
+                            "default": {
+                                "value": 20,
+                                "type": "px"
+                            },
+                            "typeMeta": {
+                                "parseType": "integer"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='newsletter-widget {{backgroundColor}}'> <div class='newsletter-image'> <img class='lazyload' data-src='{{image.src}}' alt='{{imageAlt}}'> {{#if tabPositionOnImage}} <div class='corner {{tabBackgroundColor}}'> <div class='corner-triangle'></div> </div> {{/if}} </div> <div class='newsletter-content-container' style='padding-top: {{topPadding.value}}{{topPadding.type}}; padding-bottom: {{bottomPadding.value}}{{bottomPadding.type}};'> <h2>{{{title}}}</h2> {{#if text}}<p>{{text}}</p>{{/if}} <form class='form' action='{{urls.subscribe.action}}' method='post'> <fieldset class='form-fieldset'> <input type='hidden' name='action' value='subscribe'> <input type='hidden' name='nl_first_name' value='bc'> <input type='hidden' name='check' value='1'> <div class='form-field'> <label class='form-label is-srOnly' for='nl_email'>Email address</label> <div class='form-prefixPostfix wrap'> <input class='form-input' id='nl_email' name='nl_email' type='email' value='{{customer.email}}' placeholder='Email Address' aria-describedby='alertBox-message-text' aria-required='true' required > <input class='button button--primary form-prefixPostfix-button--postfix' type='submit' value='SUBMIT' > </div> </div> </fieldset> </form> </div> {{#if tabPositionOnImage}}{{else}} <div class='corner {{tabBackgroundColor}}'> <div class='corner-triangle'></div> </div> {{/if}} </div>",
+    "date_created": "2022-01-05T19:35:54.510Z",
+    "date_modified": "2022-01-05T19:35:54.510Z",
+    "kind": "custom",
+    "storefront_api_query": "",
+    "icon_name": "default",
+    "template_engine": "handlebars_v3",
+    "client_rerender": false,
+    "current_version_uuid": "79b85e13-41ab-447a-bb5e-9750a3d2ee1e",
+    "channel_id": 1,
+    "schema_translations": {}
+}
