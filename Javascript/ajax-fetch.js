@@ -115,5 +115,5 @@ fetch('/graphql', {
 .then(res => {
     // Here is our data
     console.log(res.data);
-
 });
+
