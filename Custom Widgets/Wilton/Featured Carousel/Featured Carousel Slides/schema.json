@@ -1,0 +1,48 @@
+{
+    "name": "Featured Carousel Slides",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Featured Carousel Slide",
+            "id": "featuredCarousel-slide",
+            "defaultCount": 3,
+            "entryLabel": "Featured Carousel Slide",
+            "schema": [
+                {
+                "type": "tab",
+                "label": "Featured Carousel Slide",
+                "sections": [{
+                    "settings": [
+                        {
+                            "type": "imageManager",
+                            "id": "image",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        }, 
+                        {
+                            "type": "input",
+                            "label": "Link",
+                            "id": "link",
+                            "default": "enter link url"
+                        },
+                        {
+                            "type": "input",
+                            "label": "Image Description",
+                            "id": "alt",
+                            "default": "enter image description"
+                        },
+                        {
+                            "type": "input",
+                            "label": "title",
+                            "id": "title",
+                            "default": "enter slide title"
+                        }
+                    ]
+                }]
+            }]
+        }          
+    ],
+    "template": "<ul class='featuredCarousel-slides'> {{#each featuredCarousel-slide}} <li class='featuredCarousel-slide'> <a class='featuredCarousel-slide__action' href='{{link}}'> <div class='featuredCarousel-slide__container'> <img src='{{image.src}}' alt='{{alt}}'> <p>{{title}}</p> </div> </a> </li> {{/each}} </ul>"
+}

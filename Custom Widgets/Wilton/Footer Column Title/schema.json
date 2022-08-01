@@ -1,0 +1,24 @@
+{
+    "name": "Footer Column Title",
+    "schema": [{
+        "type": "tab",
+        "label": "Footer Column Title",
+        "sections": [
+            {
+                "label": "Footer Column Title",
+                "settings": [
+                    {
+                        "type": "input",
+                        "label": "Footer Column Title",
+                        "id": "columnTitle",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<h3 class='footerColumn-title'>{{columnTitle}} <svg class='icon'> <use class='expand' xmlns:xlink='http://www.w3.org/1999/xlink ' xlink:href='#icon-expand-accordion '> </use> <use class='collapse' xmlns:xlink='http://www.w3.org/1999/xlink ' xlink:href='#icon-collapse-accordion '></use> </svg> </h3>"
+}

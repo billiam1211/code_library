@@ -1,0 +1,36 @@
+{
+    "name": "Footer Column Widget",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Column Items",
+            "id": "footerColumn-item",
+            "defaultCount": 3,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+                {
+                "type": "tab",
+                "label": "Items Content",
+                "sections": [{
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Item URL",
+                            "label_2": "*The First item in the list will be the colunn heading and will not have a usable URL",
+                            "id": "itemUrl",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Item Text",
+                            "id": "itemText",
+                            "default": ""
+                        }
+                    ]
+                }]
+            }]
+        } 
+    ],
+    "template": " <article class='footerColumn' data-section-type='footer-webPages'> <ul class='footerColumn-list'> {{#each footerColumn-item}} {{#if @index '===' 0}} <li class='footerColumn-item footerColumn-headingItem'> <h3 class='footerColumn-heading'> {{itemText}} <button class='footerColumn-toggle' aria-label='Expand / Collapse'> </button> </h3> </li> {{else}} <li class='footerColumn-item'> <a class='footerColumn-action' href='{{itemUrl}}'>{{itemText}}</a> </li> {{/if}} {{/each}} </ul> </article>"
+}

@@ -1,0 +1,12 @@
+<ul class='featuredCarousel-slides'>
+    {{#each featuredCarousel-slide}}
+        <li class='featuredCarousel-slide'>
+            <a class='featuredCarousel-slide__action' href='{{link}}'>
+                <div class='featuredCarousel-slide__container'>
+                    <img src='{{image.src}}' alt='{{alt}}'>
+                    <p>{{title}}</p>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</ul>

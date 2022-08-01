@@ -1,0 +1,31 @@
+{
+    "name": "Featured Carousel Action",
+    "schema": [{
+        "type": "tab",
+        "label": "Featured Carousel Action",
+        "sections": [{
+            "label": "Featured Carousel Action",
+            "settings": [
+                {
+                    "type": "input",
+                    "label": "Link URL",
+                    "id": "url",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter link url"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Link text",
+                    "id": "text",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter button text"
+                    }
+                }
+            ]
+        }]
+    }],
+    "template": "<a class='featuredCarousel-action' href='{{url}}'><button class='featuredCarousel-button'> <span>{{text}}</span></button> </a>"
+}
