@@ -1,0 +1,106 @@
+<div class='product-freshest-section' data-te='On Sale!'>
+    <div class='grid-header'>
+        <h3 class='grid-title'>{{title}}</h3>
+        <div class='title-underline'></div>
+    </div>
+    <ul class='product-grid'>
+        <li>
+            <figure>
+                <a href='{{_.data.site.prod1.path}}' class='product-image'>
+                    <img src='{{_.data.site.prod1.defaultImage.url}}' alt='{{_.data.site.prod1.name}}'>
+                </a>                
+                {{#each _.data.site.prod1.customFields.edges}}
+                    {{#if node.name '===' 'skill-level'}}
+                        <span class='badge'>{{node.value}}</span>
+                    {{/if}}
+                {{/each}}
+            </figure>
+            <div class='product-contain'>
+                <a href='{{_.data.site.prod1.path}}' class='product-title'>{{_.data.site.prod1.name}}</a>
+                <div class='product-rating'>
+                    <div class='yotpo bottomLine hide-text' data-yotpo-product-id='{{_.data.site.prod1.entityId}}'>
+                    </div>
+                </div>
+                {{#each _.data.site.prod1.customFields.edges}}
+                    {{#if node.name '===' 'total-time'}}
+                        <div class='time-section'>
+                            <svg><use xlink:href='#icon-time' /></svg><span>{{node.value}}</span>
+                        </div>
+                    {{/if}}
+                {{/each}}
+            </div>
+        </li>
+        <li>
+            <figure>
+                <a href='{{_.data.site.prod2.path}}' class='product-image'>
+                    <img src='{{_.data.site.prod2.defaultImage.url}}' alt='{{_.data.site.prod2.name}}'>
+                </a>             
+                {{#each _.data.site.prod2.customFields.edges}}
+                    {{#if node.name '===' 'skill-level'}}
+                        <span class='badge'>{{node.value}}</span>
+                    {{/if}}
+                {{/each}}
+            </figure>
+            <div class='product-contain'>
+                <a href='{{_.data.site.prod2.path}}' class='product-title'>{{_.data.site.prod2.name}}</a>
+                <div class='product-rating'>
+                    <div class='yotpo bottomLine hide-text' data-yotpo-product-id='{{_.data.site.prod2.entityId}}'>
+                    </div>
+                </div>
+                {{#each _.data.site.prod2.customFields.edges}}
+                    {{#if node.name '===' 'total-time'}}
+                        <div class='time-section'><svg><use xlink:href='#icon-time' /></svg><span>{{node.value}}</span></div>
+                    {{/if}}
+                {{/each}}
+            </div>
+        </li>
+        <li>
+            <figure>
+                <a href='{{_.data.site.prod3.path}}' class='product-image'>
+                    <img src='{{_.data.site.prod3.defaultImage.url}}' alt='{{_.data.site.prod3.name}}'>
+                </a>
+                {{#each _.data.site.prod3.customFields.edges}}
+                    {{#if node.name '===' 'skill-level'}}
+                        <span class='badge'>{{node.value}}</span>
+                    {{/if}}
+                {{/each}}
+            </figure>
+            <div class='product-contain'>
+                <a href='{{_.data.site.prod3.path}}' class='product-title'>{{_.data.site.prod3.name}}</a>
+                <div class='product-rating'>
+                    <div class='yotpo bottomLine hide-text' data-yotpo-product-id='{{_.data.site.prod3.entityId}}'>
+                    </div>
+                </div>
+                {{#each _.data.site.prod3.customFields.edges}}
+                    {{#if node.name '===' 'total-time'}}
+                        <div class='time-section'><svg><use xlink:href='#icon-time' /></svg><span>{{node.value}}</span></div>
+                    {{/if}}
+                {{/each}}
+            </div>
+        </li>
+        <li>
+            <figure>
+                <a href='{{_.data.site.prod4.path}}' class='product-image'>
+                    <img src='{{_.data.site.prod4.defaultImage.url}}' alt='{{_.data.site.prod4.name}}'>
+                </a>
+                {{#each _.data.site.prod4.customFields.edges}}
+                    {{#if node.name '===' 'skill-level'}}
+                        <span class='badge'>{{node.value}}</span>
+                    {{/if}}
+                {{/each}}
+            </figure>
+            <div class='product-contain'>
+                <a href='{{_.data.site.prod4.path}}' class='product-title'>{{_.data.site.prod4.name}}</a>
+                <div class='product-rating'>
+                    <div class='yotpo bottomLine hide-text' data-yotpo-product-id='{{_.data.site.prod4.entityId}}'>
+                    </div>
+                </div>
+                {{#each _.data.site.prod4.customFields.edges}}
+                    {{#if node.name '===' 'total-time'}}
+                        <div class='time-section'><svg><use xlink:href='#icon-time' /></svg><span>{{node.value}}</span></div>
+                    {{/if}}
+                {{/each}}
+            </div>
+        </li>
+    </ul>
+</div>
