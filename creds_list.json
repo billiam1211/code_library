@@ -3,12 +3,11 @@
         "JWT": "HS256",
         "date": "1-24-2022"
     },
-    "creds_list": [
-        {
+    "creds_list": [{
             "mac_book_pro": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiQmlsbCBCYWtvcG91bG9zIiwicHciOiJCIWxsJG1AY2IwMGsifQ.UmCYVsO6s16g6sl9eUBSkIkggbsCpFpENY_J-M_z0Vg"
         },
         {
-            "apple_id": ""
+            "apple_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJpbGxiZWUyMzVAbWFjLmNvbSIsInB3IjoiQiFsbCRAcHBsMyJ9.hKQtT1aAQM1tD2CHFyHt0SBL9WGZzivVYxsKgWue2P8"
         },
         {
             "github": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJpbGxpYW0xMjExIiwicHciOiJCIWxsJGchdGh1YjIwMjIiLCJ1cmwiOiJodHRwczovL2dpdGh1Yi5jb20vYmlsbGlhbTEyMTEifQ.L9pHpZilA8bt5c9UDBbJmUuiqGCMtgnB2J0_hPYKxuM"
@@ -51,4 +50,3 @@
         }
     ]
 }
-
