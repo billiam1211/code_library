@@ -1,0 +1,95 @@
+{
+    "name": "Split Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Homepage Banner",
+        "sections": [
+            {
+                "label": "Banner Contents",
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Invert?",
+                        "id": "invert",
+                        "default": "reversed",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "true",
+                                    "value": "reversed"
+                                },
+                                {
+                                    "label": "false",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "image-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Title",
+                        "id": "title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "text-1",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "text-2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "link-url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "link-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='splitBanner {{invert}}'> <div class='splitBanner-container'> <div class='splitBanner-image'> <img src='{{image.src}}' alt='{{image-alt}}'> </div> <div class='splitBanner-content'> <h2 class='splitBanner-heading'>{{title}}</h2> {{#if text-1.length}} <p class='splitBanner-text'>{{text-1}}</p> {{/if}} {{#if text-2.length}} <p class='splitBanner-text'>{{text-2}}</p> {{/if}} {{#if link-text.length}} <a href='{{link-url}}' class='splitBanner-action'>{{link-text}}</a> {{/if}} </div> </div> </div>"
+}
