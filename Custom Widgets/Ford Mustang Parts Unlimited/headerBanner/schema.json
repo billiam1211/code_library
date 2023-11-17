@@ -1,0 +1,83 @@
+{
+    "name": "Header Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Header Banner",
+        "sections": [
+            {
+                "label": "Banner Contents",
+                "settings": [
+                    {
+                        "type": "color",
+                        "label": "Background color",
+                        "id": "bg_color",
+                        "default": "#0D04CA"
+                    },
+                    {
+                        "type": "color",
+                        "label": "text_color",
+                        "id": "text_color",
+                        "default": "#fff"
+                    },
+                    {
+                        "type": "range",
+                        "label": "Font Size (mobile)",
+                        "id": "font_size_mobile",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 100,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "label": "Font Size (desktop)",
+                        "id": "font_size_desktop",
+                        "default": 16,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 100,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                  
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Link text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    }                  
+                ]
+            }
+        ]
+    }],
+    "template": "<style> #headerBanner--{{_.id}} { background-color: {{bg_color}}; text-align: center; padding: 14px; } #headerBanner--{{_.id}} p, #headerBanner--{{_.id}} a { color: {{text_color}}; font-size: {{font_size_mobile}}px; margin: 0; padding: 0;} #headerBanner--{{_.id}} a { font-weight: 900; text-decoration: none; } #headerBanner--{{_.id}} a:hover { text-decoration: underline; } @media (min-width: 801px) { #headerBanner--{{_.id}} p, #headerBanner--{{_.id}} a { font-size: {{font_size_desktop}}px; } } </style> <div class='headerBanner' id='headerBanner--{{_.id}}'> <p>{{text}}<a href='{{url}}'>{{link}}</a></p> </div>"
+}

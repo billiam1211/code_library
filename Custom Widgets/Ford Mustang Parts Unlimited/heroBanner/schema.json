@@ -1,0 +1,408 @@
+{
+    "name": "Main Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Main Banner",
+        "sections": [
+            {
+                "label": "Banner Content",
+                "settings": [
+                {
+                    "type": "select",
+                    "label": "Alignment",
+                    "id": "alignment",
+                    "default": "left",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "left",
+                                "value": "left"
+                            },
+                            {
+                                "label": "center",
+                                "value": "center"
+                            },
+                            {
+                                "label": "right",
+                                "value": "right"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Overlay",
+                    "id": "overlay",
+                    "default": "overlay",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "true",
+                                "value": "overlay"
+                            },
+                            {
+                                "label": "false",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "conditional": {
+                        "key": "bg_type",
+                        "operator": "IN",
+                        "value": [
+                            "image"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Overlay Color",
+                    "id": "overlay-color",
+                    "default": "rgba(0, 0, 0, .8)",
+                    "conditional": {
+                        "key": "overlay",
+                        "operator": "IN",
+                        "value": [
+                            "overlay"
+                        ]
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Background Type",
+                    "id": "bg_type",
+                    "default": "image",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "image",
+                                "value": "image"
+                            },
+                            {
+                                "label": "color",
+                                "value": "color"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Banner Size",
+                    "id": "bg_size",
+                    "default": "large",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "small",
+                                "value": "small"
+                            },
+                            {
+                                "label": "medium",
+                                "value": "medium"
+                            },
+                            {
+                                "label": "large",
+                                "value": "large"
+                            }
+                        ]
+                    },
+                    "conditional": {
+                        "key": "bg_type",
+                        "operator": "IN",
+                        "value": [
+                            "color"
+                        ]
+                    }
+                    
+                },
+                {
+                    "type": "imageManager",
+                    "id": "image",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    },
+                    "conditional": {
+                        "key": "bg_type",
+                        "operator": "IN",
+                        "value": [
+                            "image"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Image Description",
+                    "id": "alt",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "Image description"
+                    },
+                    "conditional": {
+                        "key": "bg_type",
+                        "operator": "IN",
+                        "value": [
+                            "image"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Banner Background Color",
+                    "id": "banner_bg_color",
+                    "default": "rgba(0, 0, 0, 0)",
+                    "conditional": {
+                        "key": "bg_type",
+                        "operator": "IN",
+                        "value": [
+                            "color"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Title",
+                    "id": "title",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Text?",
+                    "id": "show_text",
+                    "default": "false",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "true",
+                                "value": "true"
+                            },
+                            {
+                                "label": "false",
+                                "value": "false"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Text",
+                    "id": "description",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter text"
+                    },
+                    "conditional": {
+                        "key": "show_text",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Banner Text",
+                    "id": "description_2",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter text"
+                    },
+                    "conditional": {
+                        "key": "show_text",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Show Button?",
+                    "id": "show_button",
+                    "default": "false",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "true",
+                                "value": "true"
+                            },
+                            {
+                                "label": "false",
+                                "value": "false"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Link URL",
+                    "id": "link_url",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter link url"
+                    },
+                    "conditional": {
+                        "key": "show_button",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Link Text",
+                    "id": "link_text",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter link text"
+                    },
+                    "conditional": {
+                        "key": "show_button",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Text Color",
+                    "id": "text_color",
+                    "default": "#fff",
+                    "conditional": {
+                        "key": "show_button",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Button Color",
+                    "id": "button_color",
+                    "default": "#fff",
+                    "conditional": {
+                        "key": "show_button",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Button Border Color",
+                    "id": "button_border_color",
+                    "default": "#fff",
+                    "conditional": {
+                        "key": "show_button",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Button Text Color",
+                    "id": "button_text_color",
+                    "default": "#0D04CA",
+                    "conditional": {
+                        "key": "show_button",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Button Color (hover)",
+                    "id": "button_color_hover",
+                    "default": "#0D04CA",
+                    "conditional": {
+                        "key": "show_button",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Button Text Color (hover)",
+                    "id": "button_text_color_hover",
+                    "default": "#fff",
+                    "conditional": {
+                        "key": "show_button",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Button Border Color (hover)",
+                    "id": "button_border_color_hover",
+                    "default": "#fff",
+                    "conditional": {
+                        "key": "show_button",
+                        "operator": "IN",
+                        "value": [
+                            "true"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Content background (mobile)",
+                    "id": "content_bg_color_mobile",
+                    "default": "#000"
+                },
+                {
+                    "type": "color",
+                    "label": "Content background (desktop)",
+                    "id": "content_bg_color_desktop",
+                    "default": "#000"
+                },
+                {
+                    "type": "color",
+                    "label": "Content border-color",
+                    "id": "content_border_color",
+                    "default": "#fff"
+                },     
+    
+                {
+                    "type": "select",
+                    "label": "Content Blur",
+                    "id": "blur",
+                    "default": "0",
+                    "typeMeta": {
+                        "selectOptions": [{
+                                "label": "No Blur",
+                                "value": "0"
+                            },
+                            {
+                                "label": "Light",
+                                "value": "3"
+                            },
+                            {
+                                "label": "Mild",
+                                "value": "5"
+                            },
+                            {
+                                "label": "Medium",
+                                "value": "10"
+                            },
+                            {
+                                "label": "Heavy",
+                                "value": "15"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }]
+    }],
+    "template": "<style> #heroBanner--{{_.id}} { background-color: {{banner_bg_color}}; } #heroBanner--{{_.id}}.color div.heroBanner-image-wrapper { display: none; } #heroBanner--{{_.id}} h2, #heroBanner--{{_.id}} p { color: {{text_color}}; } #heroBanner--{{_.id}} div.heroBanner-content { background-color: {{content_bg_color_mobile}}; border: 1px solid {{content_border_color}}; backdrop-filter: blur({{blur}}px); } @media (min-width: 1024px) { #heroBanner--{{_.id}} div.heroBanner-content { background-color: {{content_bg_color_desktop}}; } } #heroBanner--{{_.id}} a.heroBanner-action { background-color: {{button_color}}; color: {{button_text_color}}; border: 1px solid {{button_border_color}}; } #heroBanner--{{_.id}} a.heroBanner-action:hover, #heroBanner--{{_.id}} a.heroBanner-action:focus { background-color: {{button_color_hover}}; color: {{button_text_color_hover}}; border: 1px solid {{button_border_color_hover}}; } #heroBanner--{{_.id}}.overlay div.heroBanner-image-wrapper:before { content: ''; height: 100%; width: 100%; background-color: {{overlay-color}}; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); } </style> <section class='heroBanner alignment-{{alignment}} {{overlay}} {{bg_type}} {{bg_size}}' id='heroBanner--{{_.id}}'> <div class='heroBanner-slide'> <div class='heroBanner-image-wrapper'> <img src='{{image.src}}' alt='{{alt}}' class='heroBanner-image'> </div> {{#or title.length description.length link_text.length description_2.length}} <div class='heroBanner-content'> {{#if title.length}} <h2 class='heroBanner-title'>{{title}}</h2> {{/if}} {{#if description.length}} <p class='heroBanner-description'> {{description}} </p> {{/if}} {{#if description_2.length}} <p class='heroBanner-description'> {{description_2}} </p> {{/if}} {{#if link_text.length}} <a href='{{link_url}}' class='heroBanner-action'>{{link_text}}</a> {{/if}} </div> {{/or}} </div> </section> "
+}

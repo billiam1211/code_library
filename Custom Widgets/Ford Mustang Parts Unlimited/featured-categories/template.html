@@ -1,0 +1,89 @@
+<div class='featuredCategory'>
+    {{#if title.length}}
+        <h2 class='featuredCategory-title'>
+            {{title}}
+        </h2>
+    {{/if}}
+    <ul class='featuredCategory-list'>
+        {{#if showCat_1 '===' 'show'}}
+            <li class='featuredCategory-item'>
+                <div class='featuredCategory-container'>
+                    <div class='featuredCategory-image'>
+                        <a href='{{linkUrl_01}}'>
+                            <img src='{{image_01.src}}' alt='{{img_alt_01}}'>
+                        </a>
+                    </div>
+                    {{#if linkText_01.length}}
+                        <div class='featuredCategory-content'>
+                            <a href='{{linkUrl_01}}' class='featuredCategory-link'>{{linkText_01}}</a>
+                        </div>
+                    {{/if}}
+                </div>
+            </li>
+        {{/if}}
+        {{#if showCat_2 '===' 'show'}}
+            <li class='featuredCategory-item'>
+                <div class='featuredCategory-container'>
+                    <div class='featuredCategory-image'>
+                        <a href='{{linkUrl_02}}'>
+                            <img src='{{image_02.src}}' alt='{{img_alt_02}}'>
+                        </a>
+                    </div>
+                    {{#if linkText_02.length}}
+                        <div class='featuredCategory-content'>
+                            <a href='{{linkUrl_02}}' class='featuredCategory-link'>{{linkText_02}}</a>
+                        </div>
+                    {{/if}}
+                </div>
+            </li>
+        {{/if}} 
+        {{#if showCat_3 '===' 'show'}}
+            <li class='featuredCategory-item'>
+                <div class='featuredCategory-container'>
+                    <div class='featuredCategory-image'>
+                        <a href='{{linkUrl_03}}'>
+                            <img src='{{image_03.src}}' alt='{{img_alt_03}}'>
+                        </a>
+                    </div>
+                    {{#if linkText_03.length}}
+                        <div class='featuredCategory-content'>
+                            <a href='{{linkUrl_03}}' class='featuredCategory-link'>{{linkText_03}}</a>
+                        </div>
+                    {{/if}}
+                </div>
+            </li>
+        {{/if}}
+        {{#if showCat_4 '===' 'show'}}
+            <li class='featuredCategory-item'>
+                <div class='featuredCategory-container'>
+                    <div class='featuredCategory-image'>
+                        <a href='{{linkUrl_04}}'>
+                            <img src='{{image_04.src}}' alt='{{img_alt_04}}'>
+                        </a>
+                    </div>
+                    {{#if linkText_04.length}}
+                        <div class='featuredCategory-content'>
+                            <a href='{{linkUrl_04}}' class='featuredCategory-link'>{{linkText_04}}</a>
+                        </div>
+                    {{/if}}
+                </div>
+            </li>
+        {{/if}}
+        {{#if showCat_5 '===' 'show'}}
+            <li class='featuredCategory-item'>
+                <div class='featuredCategory-container'>
+                    <div class='featuredCategory-image'>
+                        <a href='{{linkUrl_05}}'>
+                            <img src='{{image_05.src}}' alt='{{img_alt_05}}'>
+                        </a>
+                    </div>
+                    {{#if linkText_05.length}}
+                        <div class='featuredCategory-content'>
+                            <a href='{{linkUrl_05}}' class='featuredCategory-link'>{{linkText_05}}</a>
+                        </div>
+                    {{/if}}
+                </div>
+            </li>
+        {{/if}}
+    </ul>
+</div>

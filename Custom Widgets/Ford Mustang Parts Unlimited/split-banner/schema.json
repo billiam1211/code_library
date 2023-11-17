@@ -1,0 +1,200 @@
+{
+    "name": "Split Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Homepage Banner",
+        "sections": [
+            {
+                "label": "Banner Contents",
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Invert?",
+                        "id": "invert",
+                        "default": "reversed",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "true",
+                                    "value": "reversed"
+                                },
+                                {
+                                    "label": "false",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "select",
+                        "label": "Image Padding",
+                        "id": "image_padding",
+                        "default": "false",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "true",
+                                    "value": "true"
+                                },
+                                {
+                                    "label": "false",
+                                    "value": "false"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Background color #1",
+                        "id": "color_1",
+                        "default": "#fff"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Background color #2",
+                        "id": "color_2",
+                        "default": "#000"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Gradient %",
+                        "id": "gradient",
+                        "default": "60%",
+                        "typeMeta": {
+                            "placeholder": "enter gradient %"
+                        }
+                    },
+                    {
+                        "type": "select",
+                        "label": "Image Position",
+                        "id": "image_position",
+                        "default": "front",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "front",
+                                    "value": "front"
+                                },
+                                {
+                                    "label": "behind",
+                                    "value": "behind"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "image-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Title",
+                        "id": "title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "text-1",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Text",
+                        "id": "text-2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Text Color",
+                        "id": "text_color",
+                        "default": "#fff"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "link-url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "link-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link text"
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Color",
+                        "id": "button_color",
+                        "default": "#fff"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Border Color",
+                        "id": "button_border_color",
+                        "default": "#fff"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Text Color",
+                        "id": "button_text_color",
+                        "default": "#0D04CA"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Color (hover)",
+                        "id": "button_color_hover",
+                        "default": "#0D04CA"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Text Color (hover)",
+                        "id": "button_text_color_hover",
+                        "default": "#fff"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Border Color (hover)",
+                        "id": "button_border_color_hover",
+                        "default": "#fff"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Box Shadow (hover)",
+                        "id": "box_shadow",
+                        "default": "#fff"
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "{{assignVar 'id' (random 1 100000)}}<style> div.splitBanner.splitBanner--{{getVar 'id'}} { background-image: linear-gradient({{color_1}}, {{color_2}} {{gradient}}); } @media (min-width: 801px) { div.splitBanner.splitBanner--{{getVar 'id'}} { background-image: linear-gradient(to right, {{color_1}}, {{color_2}} {{gradient}}); } div.splitBanner.splitBanner--{{getVar 'id'}}.reversed { background-image: linear-gradient(to left, {{color_1}}, {{color_2}} {{gradient}}); } #splitBanner--{{getVar 'id'}} div.splitBanner-image img { padding:{{#if image_padding '===' 'true'}}50px{{else}}0{{/if}}; } } .splitBanner--{{getVar 'id'}} div.splitBanner-image { z-index: {{#if image_position '===' 'behind'}}-1{{else}}1{{/if}}; } .splitBanner--{{getVar 'id'}} a.splitBanner-action { background-color: {{button_color}}; border: 1px solid {{button_border_color}}; color: {{button_text_color}}; } .splitBanner--{{getVar 'id'}} a.splitBanner-action:hover, .splitBanner--{{getVar 'id'}} a.splitBanner-action:focus { background-color: {{button_color_hover}}; border: 1px solid {{button_border_color_hover}}; color: {{button_text_color_hover}}; box-shadow: 2px 2px 15px {{box_shadow}}; } .splitBanner--{{getVar 'id'}} h2.splitBanner-heading, .splitBanner--{{getVar 'id'}} p.splitBanner-text { color: {{text_color}}; } </style> <div class='splitBanner splitBanner--{{getVar 'id'}} {{invert}}' id='splitBanner--{{getVar 'id'}}'> <div class='splitBanner-container'> <div class='splitBanner-image'> <img src='{{image.src}}' alt='{{image-alt}}'> </div> <div class='splitBanner-content'> <h2 class='splitBanner-heading'>{{title}}</h2> {{#if text-1.length}} <p class='splitBanner-text'>{{text-1}}</p> {{/if}} {{#if text-2.length}} <p class='splitBanner-text'>{{text-2}}</p> {{/if}} {{#if link-text.length}} <a href='{{link-url}}' class='splitBanner-action'>{{link-text}}</a> {{/if}} </div> </div> </div>"
+}

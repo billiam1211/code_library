@@ -1,0 +1,147 @@
+{
+    "name": "Three Box Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Three Box Banner",
+        "sections": [
+            {
+                "label": "Banner Content",
+                "settings": [
+                    {
+                        "type": "input",
+                        "label": "Banner Heading",
+                        "id": "heading",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Description",
+                        "id": "description",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Banner Description #2",
+                        "id": "description_2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image-1",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "image-1-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "link-1-url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Enter link url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "link-1-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Enter link text"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image-2",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "image-2-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "link-2-url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Enter link url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "link-2-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Enter link text"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image-3",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "image-3-alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "link-3-url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Enter link url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "link-3-text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Enter link text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='threeColumn'> <h2 class='threeColumn-heading'>{{heading}}</h2> <p class='threeColumn-description'>{{description}}</p> <p class='threeColumn-description'>{{description_2}}</p> <ul class='threeColumn-list'> <li class='threeColumn-item is-active'> <div class='threeColumn-content'> <a href='{{link-1-url}}' class='threeColumn-action'>{{link-1-text}}</a> <a href='{{link-1-url}}'> <div class='threeColumn-filter'> <img src='{{image-1.src}}' alt='{{image-1-alt}}' class='threeColumn-image'> </div> </a> </div> </li> <li class='threeColumn-item'> <div class='threeColumn-content'> <a href='{{link-2-url}}' class='threeColumn-action'>{{link-2-text}}</a> <a href='{{link-2-url}}'> <div class='threeColumn-filter'> <img src='{{image-2.src}}' alt='{{image-2-alt}}' class='threeColumn-image'> </div> </a> </div> </li> <li class='threeColumn-item'> <div class='threeColumn-content'> <a href='{{link-3-url}}' class='threeColumn-action'>{{link-3-text}}</a> <a href='{{link-3-url}}'> <div class='threeColumn-filter'> <img src='{{image-3.src}}' alt='{{image-3-alt}}' class='threeColumn-image'> </div> </a> </div> </li> </ul> </div>"
+}

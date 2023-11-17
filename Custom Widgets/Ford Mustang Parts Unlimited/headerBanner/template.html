@@ -1,0 +1,44 @@
+<style>
+    #headerBanner--{{_.id}} {
+        background-color: {{bg_color}};
+        text-align: center;
+        padding: 14px;
+    }
+
+    #headerBanner--{{_.id}} p,
+    #headerBanner--{{_.id}} a {
+        margin: 0;
+        padding: 0;
+        color: {{text_color}};
+        font-size: {{font_size_mobile}}px;
+    }
+        #headerBanner--{{_.id}} a {
+            font-weight: 900;
+            text-decoration: none;
+        }
+        #headerBanner--{{_.id}} a:hover {
+            text-decoration: underline;
+        }
+
+    @media (min-width: 801px) {
+        #headerBanner--{{_.id}} p,
+        #headerBanner--{{_.id}} a {
+            font-size: {{font_size_desktop}}px;
+        }
+    }
+</style>
+
+<div class='headerBanner' id='headerBanner--{{_.id}}'>
+    <p>{{text}}<a href='{{url}}'>{{link}}</a></p>
+</div>
+
+
+
+
+
+
+
+
+<div class='headerBanner'>
+    <p>Free shipping on orders over $150! <a href='/spring-sales-event/'>Shop Spring Sales Event!</a></p>
+</div>
