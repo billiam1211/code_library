@@ -1,0 +1,56 @@
+{
+    "name": "Footer Column",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Footer Column",
+            "id": "footerColumn-item",
+            "defaultCount": 3,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+
+                {
+                    "type": "tab",
+                    "label": "Item Content",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "type": "input",
+                                    "label": "URL",
+                                    "label_2": "*The 1st item will be the colunn heading and will not have a usable URL",
+                                    "id": "itemUrl",
+                                    "default": ""
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Item Text",
+                                    "id": "itemText",
+                                    "default": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Title Text",
+            "sections": [
+                {
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Column title",
+                            "id": "title",
+                            "default": "enter title"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<article class='footerColumn' data-section-type='footer-webPages'> <ul class='footerColumn-list'> <li class='footerColumn-item footerColumn-headingItem'> <h3 class='footerColumn-heading'> {{title}} <button class='footerColumn-toggle' aria-label='Expand / Collapse'></button> </h3> </li> {{#each footerColumn-item}} <li class='footerColumn-item'> <a class='footerColumn-action' href='{{itemUrl}}'> {{itemText}} </a> </li> {{/each}} </ul> </article> "
+}

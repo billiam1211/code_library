@@ -1,0 +1,29 @@
+{
+    "name": "Footer Column HTML",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Column Settings",
+            "sections": [
+                {
+                    "label": "Content",
+                    "settings": [
+                        {
+                            "label": "Custom HTML",
+                            "type": "code",
+                            "typeMeta": {
+                                "language": "html",
+                                "placeholder": "Insert HTML markup"
+                            },
+                            "id": "html",
+                            "default": "Add HTML"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<article class='footerColumn contact'><div class='footerColumn-content'>{{{html}}}</div></article>"
+}
+
+
