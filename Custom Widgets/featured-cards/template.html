@@ -1,0 +1,66 @@
+<style>
+    #featuredCards--{{_.id}} .featuredCards-title {
+        font-size: {{heading_font_size_mobile}}px;
+        color: {{text_color}};
+    }
+
+    #featuredCards--{{_.id}} .featuredCards-img img {
+        border-radius: {{image_radius}}%;
+        object-fit: {{object_fit}};
+    }
+
+    #featuredCards--{{_.id}} .featuredCards-action {
+        font-size: {{button_font_size_mobile}}px;
+        color: {{button_text_color}};
+        background-color: {{button_color}};
+        border-radius: {{button_radius}}px;
+    }
+
+    #featuredCards--{{_.id}} .featuredCards-action:hover,
+    #featuredCards--{{_.id}} .featuredCards-action:focus {
+        color: {{button_text_color_hover}};
+        background-color: {{button_color_hover}};
+    }
+
+    @media (min-width: 801px) {
+        #featuredCards--{{_.id}} .featuredCards-title {
+            font-size: {{heading_font_size_tablet}}px;
+        }
+        #featuredCards--{{_.id}} .featuredCards-action {
+            font-size: {{button_font_size_tablet}}px;
+        }
+    }
+
+    @media (min-width: 1261px) {
+        #featuredCards--{{_.id}} .featuredCards-title {
+            font-size: {{heading_font_size_desktop}}px;
+        }
+        #featuredCards--{{_.id}} .featuredCards-action {
+            font-size: {{button_font_size_desktop}}px;
+        }
+    }
+</style>
+
+
+
+<div class='featuredCards {{layout}} cardNumber--{{cards-per-row}}' id='featuredCards--{{_.id}}'>
+    {{#if heading.length}}
+        <{{#if main_heading.length}}{{main_heading}}{{else}}h2{{/if}} class='featuredCards-title'>{{heading}}</{{#if main_heading.length}}{{main_heading}}{{else}}h2{{/if}}>
+    {{/if}}
+    <ul class='featuredCards-list'>
+        {{#each featuredCard}}
+            <li class='featuredCards-item'>
+                <div class='featuredCards-img'>
+                    <a href='{{link}}'>
+                        <img src='{{image.src}}' alt='{{alt}}'>
+                    </a>
+                </div>
+                <div class='featuredCards-content'>
+                    <a href='{{link}}' class='featuredCards-action'>{{linkText}}</a>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+

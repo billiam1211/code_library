@@ -1,0 +1,123 @@
+
+<style>
+    #widgetBanner-{{_.id}} .widgetBanner-subHeading, 
+    #widgetBanner-{{_.id}} .widgetBanner-heading {
+        color: {{text_color}};
+    }
+
+    #widgetBanner-{{_.id}} .widgetBanner-heading {
+        font-size: {{font_size_heading_mobile}}px;
+    }
+    @media (min-width: 801px) {
+        #widgetBanner-{{_.id}} .widgetBanner-heading {
+            font-size: {{font_size_heading_tablet}}px;
+        }
+    }
+    @media (min-width: 1261px) {
+        #widgetBanner-{{_.id}} .widgetBanner-heading {
+            font-size: {{font_size_heading_desktop}}px;
+        }
+    }
+    #widgetBanner-{{_.id}} .widgetBanner-subHeading {
+        font-size: {{font_size_subheading_mobile}}px;
+    }
+    @media (min-width: 801px) {
+        #widgetBanner-{{_.id}} .widgetBanner-subHeading {
+            font-size: {{font_size_subheading_tablet}}px;
+        }
+    }
+    @media (min-width: 1261px) {
+        #widgetBanner-{{_.id}} .widgetBanner-subHeading {
+            font-size: {{font_size_subheading_desktop}}px;
+        }
+    }
+
+    #widgetBanner-{{_.id}} .widgetBanner-bg.overlay::before {
+        background: linear-gradient({{overlay-degrees}}deg, {{overlay-color}} {{overlay-percent}}%, transparent 100%);
+    }
+
+    #widgetBanner-{{_.id}} .widgetBanner-bg.color {
+        background-color: {{bg-color}};
+        img {
+            display: none;
+        }
+    }
+
+    #widgetBanner-{{_.id}} a.widgetBanner-action {
+        background: {{button_bg_color}};
+        color: {{button_text_color}};
+        border-radius: {{border_radius}}px;
+    }
+    #widgetBanner-{{_.id}} a.widgetBanner-action:focus {
+        color: {{button_text_color_hover}};
+        background-color: {{button_bg_color_hover}};
+    }
+    #widgetBanner-{{_.id}} a.widgetBanner-action:hover {
+        color: {{button_text_color_hover}};
+        background-color: {{button_bg_color_hover}};
+    }
+
+    #widgetBanner-{{_.id}} a.widgetBanner-action svg {
+        stroke: {{button_text_color}};
+    }
+
+    #widgetBanner-{{_.id}} a.widgetBanner-action:hover svg,
+    #widgetBanner-{{_.id}} a.widgetBanner-action:focus svg {
+       stroke: {{button_text_color_hover}};
+    }
+</style>
+
+<div class='widgetBanner' id='widgetBanner-{{_.id}}'>
+    <div class='widgetBanner-bg {{overlay}} {{banner-bg}}'>
+        {{#if image.src.length}}
+            <img src='{{image.src}}' alt='{{image_description}}'>
+        {{/if}}
+    </div>
+    <div class='widgetBanner-content {{alignment}} {{show-arrow}} {{banner_size}}'>
+        <p class='widgetBanner-subHeading'>{{sub_heading}}</p>
+        <{{#if main_heading.length}}{{main_heading}}{{else}}h1{{/if}} class='widgetBanner-heading'>{{heading}}</{{#if main_heading.length}}{{main_heading}}{{else}}h1{{/if}}>
+        <ul class='widgetBanner-actionList'>
+            {{#if show_btn_1 '===' 'show'}}
+            <li class='widgetBanner-actionItem'>
+                <a href='{{action_url_1}}' class='widgetBanner-action'>
+                    {{action_text_1}}
+                    <svg viewBox='0 0 20 16' fill='none'>
+                        <path d='M12 1L19 8M19 8L12 15M19 8L1 8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+                    </svg>
+                </a>
+            </li>
+            {{/if}}
+            {{#if show_btn_2 'show'}}
+            <li class='widgetBanner-actionItem'>
+                <a href='{{action_url_2}}' class='widgetBanner-action'>
+                    {{action_text_2}}
+                    <svg width='' height='' viewBox='0 0 20 16' fill='none'>
+                        <path d='M12 1L19 8M19 8L12 15M19 8L1 8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+                    </svg>
+                </a>
+            </li>
+            {{/if}}
+            {{#if show_btn_3 'show'}}
+            <li class='widgetBanner-actionItem'>
+                <a href='{{action_url_3}}' class='widgetBanner-action'>
+                    {{action_text_3}}
+                    <svg width='' height='' viewBox='0 0 20 16' fill='none'>
+                        <path d='M12 1L19 8M19 8L12 15M19 8L1 8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+                    </svg>
+                </a>
+            </li>
+            {{/if}}
+            {{#if show_btn_4 'show'}}
+            <li class='widgetBanner-actionItem'>
+                <a href='{{action_url_4}}' class='widgetBanner-action'>
+                    {{action_text_4}}
+                    <svg width='' height='' viewBox='0 0 20 16' fill='none'>
+                        <path d='M12 1L19 8M19 8L12 15M19 8L1 8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+                    </svg>
+                </a>
+            </li>
+            {{/if}}
+        </ul>
+    </div>
+</div>
+
