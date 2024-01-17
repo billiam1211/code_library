@@ -5,23 +5,37 @@
         "label": "Header Banner",
         "sections": [
             {
-                "label": "Banner Contents",
+                "label": "Content",
                 "settings": [
                     {
                         "type": "color",
                         "label": "Background color",
                         "id": "bg_color",
-                        "default": "#0D04CA"
+                        "default": "#A40D1C"
                     },
                     {
                         "type": "color",
-                        "label": "text_color",
+                        "label": "Text Color",
                         "id": "text_color",
-                        "default": "#fff"
+                        "default": "#FFFFFF"
                     },
                     {
                         "type": "range",
-                        "label": "Font Size (mobile)",
+                        "label": "Banner Padding",
+                        "id": "banner_padding",
+                        "default": 5,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 50,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    }, 
+                    {
+                        "type": "range",
+                        "label": "Mobile Font Size",
                         "id": "font_size_mobile",
                         "default": 14,
                         "typeMeta": {
@@ -35,7 +49,7 @@
                     },
                     {
                         "type": "range",
-                        "label": "Font Size (desktop)",
+                        "label": "Desktop Font Size",
                         "id": "font_size_desktop",
                         "default": 16,
                         "typeMeta": {
@@ -48,15 +62,14 @@
                         }
                     },
                     {
-                        "type": "input",
-                        "label": "Banner Text",
-                        "id": "text",
+                        "type": "code",
+                        "label": "Text / HTML",
+                        "id": "html",
                         "default": "",
                         "typeMeta": {
-                            "placeholder": "enter text"
+                            "placeholder": "enter text  or html here"
                         }
                     },
-                  
                     {
                         "type": "input",
                         "label": "Link Text",
@@ -74,10 +87,64 @@
                         "typeMeta": {
                             "placeholder": "enter url"
                         }
-                    }                  
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Color",
+                        "id": "button_color",
+                        "default": "#A40D1C"
+                    },                 
+                    {
+                        "type": "color",
+                        "label": "Button Text Color",
+                        "id": "button_text_color",
+                        "default": "#FFFFFF"
+                    },   
+                    {
+                        "type": "range",
+                        "label": "Button Radius",
+                        "id": "button_radius",
+                        "default": 5,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 50,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },              
+                    {
+                        "type": "range",
+                        "label": "Button Padding X",
+                        "id": "padding_x",
+                        "default": 5,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 50,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },              
+                    {
+                        "type": "range",
+                        "label": "Button Padding Y",
+                        "id": "padding_y",
+                        "default": 5,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 50,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    }     
                 ]
             }
         ]
     }],
-    "template": "<style> #headerBanner--{{_.id}} { background-color: {{bg_color}}; text-align: center; padding: 14px; } #headerBanner--{{_.id}} p, #headerBanner--{{_.id}} a { color: {{text_color}}; font-size: {{font_size_mobile}}px; margin: 0; padding: 0;} #headerBanner--{{_.id}} a { font-weight: 900; text-decoration: none; } #headerBanner--{{_.id}} a:hover { text-decoration: underline; } @media (min-width: 801px) { #headerBanner--{{_.id}} p, #headerBanner--{{_.id}} a { font-size: {{font_size_desktop}}px; } } </style> <div class='headerBanner' id='headerBanner--{{_.id}}'> <p>{{text}}<a href='{{url}}'>{{link}}</a></p> </div>"
+    "template": "<style> #headerBanner--{{_.id}} { background-color: {{bg_color}}; text-align: center; padding: {{banner_padding}}px; } #headerBanner--{{_.id}} p, #headerBanner--{{_.id}} a { margin: 0; padding: 0; color: {{text_color}}; font-size: {{font_size_mobile}}px; } #headerBanner--{{_.id}} a { font-weight: 900; text-decoration: none; display: inline-block; background-color: {{button_color}}; color: {{button_text_color}}; border-radius: {{button_radius}}px; padding: {{padding_y}}px {{padding_x}}px; } #headerBanner--{{_.id}} a:hover { text-decoration: underline; } @media (min-width: 801px) { #headerBanner--{{_.id}} p, #headerBanner--{{_.id}} a { font-size: {{font_size_desktop}}px; } } </style> <div class='headerBanner' id='headerBanner--{{_.id}}'> <p>{{html}}&nbsp;{{#if link.length}}<a href='{{url}}'>{{link}}</a>{{/if}}</p> </div>"
 }

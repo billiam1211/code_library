@@ -19,7 +19,6 @@
                                 {
                                     "type": "input",
                                     "label": "URL",
-                                    "label_2": "*The 1st item will be the colunn heading and will not have a usable URL",
                                     "id": "itemUrl",
                                     "default": ""
                                 },
@@ -52,5 +51,5 @@
             ]
         }
     ],
-    "template": "<article class='footerColumn' data-section-type='footer-webPages'> <ul class='footerColumn-list'> <li class='footerColumn-item footerColumn-headingItem'> <h3 class='footerColumn-heading'> {{title}} <button class='footerColumn-toggle' aria-label='Expand / Collapse'></button> </h3> </li> {{#each footerColumn-item}} <li class='footerColumn-item'> <a class='footerColumn-action' href='{{itemUrl}}'> {{itemText}} </a> </li> {{/each}} </ul> </article> "
+    "template": "<article class='footerColumn' data-section-type='footer-column'> <h3 class='footerColumn-heading'> {{title}} <button class='footerColumn-toggle' aria-label='Expand / Collapse'></button> </h3> <ul class='footerColumn-list'> {{#each footerColumn-item}} <li class='footerColumn-item'> <a class='footerColumn-action' href='{{itemUrl}}'>{{itemText}}</a> </li> {{/each}} </ul> </article>"
 }

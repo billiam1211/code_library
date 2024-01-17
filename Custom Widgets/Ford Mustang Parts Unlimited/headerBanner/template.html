@@ -2,7 +2,7 @@
     #headerBanner--{{_.id}} {
         background-color: {{bg_color}};
         text-align: center;
-        padding: 14px;
+        padding: {{banner_padding}}px;
     }
 
     #headerBanner--{{_.id}} p,
@@ -15,6 +15,11 @@
         #headerBanner--{{_.id}} a {
             font-weight: 900;
             text-decoration: none;
+            display: inline-block;
+            background-color: {{button_color}};
+            color: {{button_text_color}};
+            border-radius: {{button_radius}}px;
+            padding: {{padding_y}}px {{padding_x}}px;
         }
         #headerBanner--{{_.id}} a:hover {
             text-decoration: underline;
@@ -29,7 +34,7 @@
 </style>
 
 <div class='headerBanner' id='headerBanner--{{_.id}}'>
-    <p>{{text}}<a href='{{url}}'>{{link}}</a></p>
+    <p>{{html}}&nbsp;{{#if link.length}}<a href='{{url}}'>{{link}}</a>{{/if}}</p>
 </div>
 
 

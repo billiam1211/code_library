@@ -21,9 +21,23 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "tab",
+            "label": "Title Text",
+            "sections": [
+                {
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Column title",
+                            "id": "title",
+                            "default": "enter title"
+                        }
+                    ]
+                }
+            ]
         }
     ],
-    "template": "<article class='footerColumn contact'><div class='footerColumn-content'>{{{html}}}</div></article>"
+    "template": "<article class='footerColumn contact'> <h3 class='footerColumn-heading'> {{title}} <button class='footerColumn-toggle' aria-label='Expand / Collapse'></button> </h3> <div class='footerColumn-content'> {{{html}}} </div> </article>"
 }
-
-

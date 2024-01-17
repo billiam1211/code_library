@@ -1,14 +1,12 @@
-<article class="footerColumn" data-section-type="footer-webPages">
-	<ul class="footerColumn-list">
-		<li class="footerColumn-item footerColumn-headingItem">
-			<h3 class="footerColumn-heading">
-				{{title}}
-				<button class="footerColumn-toggle" aria-label="Expand / Collapse"></button>
-			</h3>
-		</li>
+<article class='footerColumn' data-section-type='footer-column'>
+    <h3 class='footerColumn-heading'>
+        {{title}}
+        <button class='footerColumn-toggle' aria-label='Expand / Collapse'></button>
+    </h3>
+	<ul class='footerColumn-list'>
 		{{#each footerColumn-item}}
-		<li class="footerColumn-item">
-			<a class="footerColumn-action" href="{{itemUrl}}"> {{itemText}} </a>
+		<li class='footerColumn-item'>
+			<a class='footerColumn-action' href='{{itemUrl}}'>{{itemText}}</a>
 		</li>
 		{{/each}}
 	</ul>
