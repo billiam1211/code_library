@@ -1,0 +1,16 @@
+<div class='navCards'>
+    <ul class='navCards-list' data-cards='{{cards.length}}'>
+        {{#each cards}}        
+            <li class='navCards-item'>
+                <div class='navCards-container'>
+                    <div class='image-container'>
+                        <a href='{{card-link}}'>
+                            <img src='{{image.src}}' alt='{{image-alt}}'>
+                        </a>
+                    </div>
+                    <h3><a href='{{link}}'>{{title}}</a></h3>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

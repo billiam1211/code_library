@@ -1,0 +1,14 @@
+<div class='infoBanner infoBanner--{{_.id}}'>
+    <section class='infoBanner-container{{#if reverse === "true"}} reverse{{/if}}'>
+        <article class='infoBanner-block'>
+            <h3>{{{title_html}}}</h3>    
+            {{{content_html}}}
+            {{#if btn_text.length}}
+                <a href='{{url}}'>{{btn_text}}</a>
+            {{/if}}
+        </article>
+        <article class='infoBanner-block'>
+            {{{block_html}}}
+        </article>
+    </section>
+</div>

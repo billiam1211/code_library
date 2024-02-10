@@ -1,0 +1,306 @@
+div.switchBanner {
+	padding: 0px;
+	margin: 40px auto;
+	position: relative;
+	overflow: hidden;
+
+	div.switchBanner-content {
+		ul.slideList {
+			margin: 0;
+			list-style: none;
+
+			li.slide {
+				margin: 0;
+				position: relative;
+				width: 100%;
+				display: none;
+				transition: all 0.3s ease-in-out;
+
+				&.remove {
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					animation: slide-out-right 0.75s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+					@keyframes slide-out-right {
+						0% {
+							transform: translate(0, -50%);
+							opacity: 1;
+						}
+						100% {
+							transform: translate(50%, -50%);
+							opacity: 0.5;
+						}
+					}
+				}
+
+				&.is-active {
+					display: block;
+					animation: fade-in 0.75s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+					@keyframes fade-in {
+						0% {
+							transform: translate(-50%, 0);
+							opacity: 0.5;
+						}
+
+						100% {
+							transform: translate(0%, 0);
+							opacity: 1;
+						}
+					}
+				}
+
+				div.image-container {
+					position: relative;
+					width: 100%;
+					min-height: 493px;
+
+					@include breakpoint('medium') {
+						min-height: 400px;
+					}
+
+					img {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+
+					&::after {
+						content: '';
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						background: rgba(0, 0, 0, 0.5);
+					}
+				}
+
+				div.slide-content {
+					position: absolute;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					padding: 20px;
+					margin: 0 auto;
+					z-index: 1;
+					left: 50%;
+					top: 0;
+					transform: translate(-50%, 0%);
+					width: 100%;
+					height: 80%;
+
+					@include breakpoint('small') {
+						align-items: center;
+						text-align: center;
+					}
+
+					@media (min-width: 1024px) {
+						left: 30%;
+						top: 50%;
+						transform: translate(0, -50%);
+						height: 100%;
+						width: 70%;
+						padding: 60px;
+						text-align: left;
+						align-items: flex-start;
+					}
+
+					h2 {
+						margin: 0 0 20px 0;
+						color: stencilColor('color-white');
+						display: block;
+						font-size: remCalc(24px);
+					}
+
+					p {
+						display: block;
+						margin: 0 0 20px 0;
+						color: stencilColor('color-white');
+						font-size: remCalc(18px);
+						max-width: 462px;
+					}
+
+					a {
+						display: inline-block;
+						text-decoration: none;
+						padding: 9px 24px;
+						background-color: stencilColor('color-white');
+						color: #1d4296;
+						border-radius: 2px;
+						font-weight: 700;
+						font-size: remCalc(14px);
+						align-self: start;
+						transition: all 0.3s ease-in-out;
+
+						@include breakpoint('small') {
+							align-self: initial;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	div.switchBanner-controls {
+		position: absolute;
+		z-index: 1;
+		background: rgba(1, 5, 13, 0.8);
+		backdrop-filter: blur(5px);
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 28px;
+
+		@media (min-width: 801px) {
+			padding-bottom: 20px;
+		}
+
+		@media (min-width: 1024px) {
+			top: 50%;
+			height: 100%;
+			width: 30%;
+			transform: translate(0, -50%);
+		}
+
+		ul.controlsList {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding-top: 20px;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+
+			@media (min-width: 1024px) {
+				flex-direction: column;
+				padding-left: 20px;
+			}
+
+			@media (min-width: 1440px) {
+				padding-left: 40px;
+			}
+
+			li.controlsList-item {
+				margin: 0;
+				transition: all 0.3s ease-in-out;
+				display: none;
+
+				@media (min-width: 1024px) {
+					display: block;
+					border-left: 3px solid rgba(255, 255, 255, 0.5);
+					padding: 10px;
+				}
+
+				&:hover,
+				&:focus {
+					@media (min-width: 1024px) {
+						border-left: 3px solid rgba(255, 255, 255, 0.75);
+					}
+
+					button {
+						color: rgba(255, 255, 255, 0.75);
+					}
+				}
+
+				button {
+					color: rgba(255, 255, 255, 0.5);
+					transition: all 0.3s ease-in-out;
+					font-size: remCalc(16px);
+
+					@media (min-width: 1024px) {
+						font-size: remCalc(18px);
+						padding-left: 17px;
+					}
+					@media (min-width: 1440px) {
+						font-size: remCalc(24px);
+					}
+				}
+
+				&.is-active {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: flex-start;
+
+					@media (min-width: 1024px) {
+						flex-direction: row;
+						border-left: 3px solid stencilColor('color-white');
+					}
+
+					button {
+						color: stencilColor('color-white');
+						pointer-events: none;
+						@media (min-width: 1024px) {
+							pointer-events: initial;
+						}
+					}
+				}
+
+				&.prev,
+				&.next {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					@media (min-width: 1024px) {
+						display: none;
+					}
+
+					button {
+						padding: 0;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+
+						svg {
+							fill: stencilColor('color-white');
+						}
+
+						&.disabled {
+							opacity: 0.5;
+							pointer-events: none;
+						}
+					}
+				}
+			}
+		}
+
+		ul.progressBar {
+			display: flex;
+			background-color: rgba(255, 255, 255, 0.5);
+			height: 3px;
+			width: 70%;
+			margin: 0;
+			max-width: 256px;
+
+			@media (min-width: 1024px) {
+				display: none;
+			}
+
+			li.progressBar-item {
+				flex: 1;
+				background-color: transparent;
+				height: 100%;
+				transition: all 0.3s ease-in-out;
+				margin: 0;
+
+				&.is-active {
+					background-color: stencilColor('color-white');
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+div.splitBanner {
+	div.splitBanner-container {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1440px;
+		margin: 0 auto;
+
+		@media (min-width: 1440px) {
+			padding: 0 80px;
+		}
+
+		div.splitBanner-image {
+			width: 100%;
+			padding: 16px;
+
+			@media (min-width: 1024px) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 50%;
+			}
+
+			img {
+				border-radius: 8px;
+			}
+		}
+
+		div.splitBanner-content {
+			width: 100%;
+			padding: 16px;
+
+			@media (min-width: 1024px) {
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			h2,
+			h3,
+			h4,
+			h5 {
+				line-height: 40px;
+				font-size: remCalc(24px);
+
+				strong {
+					color: stencilColor('color-primary');
+				}
+			}
+
+			ul {
+				list-style: none;
+				margin: 0;
+				display: flex;
+				flex-wrap: wrap;
+
+				li {
+					width: 100%;
+					margin: 0;
+					padding: 12px 0;
+					display: flex;
+					align-items: center;
+					padding-left: 40px;
+					position: relative;
+
+					svg {
+						height: 32px;
+						width: 32px;
+						margin-right: 12px;
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translate(0, -50%);
+					}
+
+					p {
+						color: stencilColor('color-primary');
+						margin: 0;
+						font-size: remCalc(14px);
+						font-weight: 700;
+					}
+				}
+			}
+
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: stencilColor('color-primary');
+				color: stencilColor('color-white');
+				padding: 9px 24px;
+				text-align: center;
+				font-weight: 900;
+				text-decoration: none;
+				min-height: 44px;
+				margin-top: 20px;
+				@media (min-width: 1024px) {
+					margin-top: 40px;
+				}
+			}
+		}
+	}
+}

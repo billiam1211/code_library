@@ -1,0 +1,61 @@
+{
+    "name": "Menu Cards",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Menu Cards",
+            "id": "cards",
+            "defaultCount": 4,
+            "entryLabel": "Menu Card",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Card Info",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "type": "imageManager",
+                                    "id": "image",
+                                    "default": {
+                                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                                        "type": "IMAGE_MANAGER"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Image Description",
+                                    "id": "alt",
+                                    "default": "",
+                                    "typeMeta": {
+                                        "placeholder": "Enter image description"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "LinK URL",
+                                    "id": "link",
+                                    "default": "",
+                                    "typeMeta": {
+                                        "placeholder": "Enter Link URL"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Title",
+                                    "id": "title",
+                                    "default": "enter title",
+                                    "typeMeta": {
+                                        "placeholder": "Enter text"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='navCards'> <ul class='navCards-list' data-cards='{{cards.length}}'> {{#each cards}} <li class='navCards-item'> <div class='navCards-container'> <div class='image-container'> <a href='{{card-link}}'> <img src='{{image.src}}' alt='{{image-alt}}'> </a> </div> <h3><a href='{{link}}'>{{title}}</a></h3> </div> </li> {{/each}} </ul> </div>"
+}
+

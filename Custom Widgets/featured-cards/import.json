@@ -143,13 +143,14 @@
                             }
                         },
                         {
-                            "type": "input",
-                            "label": "Heading",
-                            "id": "heading",
-                            "default": "",
+                            "label": "Heading HTML",
+                            "type": "code",
                             "typeMeta": {
-                                "placeholder": "Enter Title"
-                            }
+                                "language": "html",
+                                "placeholder": "Insert heading text or HTML"
+                            },
+                            "id": "html",
+                            "default": "Add HTML"
                         },
                         {
                             "type": "range",
@@ -310,12 +311,43 @@
                                     "unit": "px"
                                 }
                             }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Button Padding",
+                            "id": "button_padding",
+                            "default": 5,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 0,
+                                    "max": 50,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Show Button Arrows?",
+                            "id": "show-arrow",
+                            "default": "",
+                            "typeMeta": {
+                                "selectOptions": [{
+                                        "label": "true",
+                                        "value": "show-arrow"
+                                    },
+                                    {
+                                        "label": "false",
+                                        "value": ""
+                                    }
+                                ]
+                            }
                         }
                     ]
                 }
             ]
         }
     ],
-    "template": "<style> #featuredCards--{{_.id}} .featuredCards-title { font-size: {{heading_font_size_mobile}}px; color: {{text_color}}; } #featuredCards--{{_.id}} .featuredCards-img img { border-radius: {{image_radius}}%; object-fit: {{object_fit}}; } #featuredCards--{{_.id}} .featuredCards-action { font-size: {{button_font_size_mobile}}px; color: {{button_text_color}}; background-color: {{button_color}}; border-radius: {{button_radius}}px; } #featuredCards--{{_.id}} .featuredCards-action:hover, #featuredCards--{{_.id}} .featuredCards-action:focus { color: {{button_text_color_hover}}; background-color: {{button_color_hover}}; } @media (min-width: 801px) { #featuredCards--{{_.id}} .featuredCards-title { font-size: {{heading_font_size_tablet}}px; } #featuredCards--{{_.id}} .featuredCards-action { font-size: {{button_font_size_tablet}}px; } } @media (min-width: 1261px) { #featuredCards--{{_.id}} .featuredCards-title { font-size: {{heading_font_size_desktop}}px; } #featuredCards--{{_.id}} .featuredCards-action { font-size: {{button_font_size_desktop}}px; } } </style> <div class='featuredCards {{layout}} cardNumber--{{cards-per-row}}' id='featuredCards--{{_.id}}'> {{#if heading.length}} <{{#if main_heading.length}}{{main_heading}}{{else}}h2{{/if}} class='featuredCards-title'>{{heading}}</{{#if main_heading.length}}{{main_heading}}{{else}}h2{{/if}}> {{/if}} <ul class='featuredCards-list'> {{#each featuredCard}} <li class='featuredCards-item'> <div class='featuredCards-img'> <a href='{{link}}'> <img src='{{image.src}}' alt='{{alt}}'> </a> </div> <div class='featuredCards-content'> <a href='{{link}}' class='featuredCards-action'>{{linkText}}</a> </div> </li> {{/each}} </ul> </div> "
+    "template": "<style> #featuredCards--{{_.id}} .featuredCards-title { font-size: {{heading_font_size_mobile}}px; color: {{text_color}}; } #featuredCards--{{_.id}} .featuredCards-img img { border-radius: {{image_radius}}%; object-fit: {{object_fit}}; } #featuredCards--{{_.id}} .featuredCards-action { font-size: {{button_font_size_mobile}}px; color: {{button_text_color}}; background-color: {{button_color}}; border-radius: {{button_radius}}px; padding: {{button_padding}}px; } #featuredCards--{{_.id}} .featuredCards-action svg { fill: {{button_text_color}}; height: {{button_font_size_mobile}}px; width: {{button_font_size_mobile}}px; } #featuredCards--{{_.id}} .featuredCards-action:hover, #featuredCards--{{_.id}} .featuredCards-action:focus { color: {{button_text_color_hover}}; background-color: {{button_color_hover}}; } @media (min-width: 801px) { #featuredCards--{{_.id}} .featuredCards-title { font-size: {{heading_font_size_tablet}}px; } #featuredCards--{{_.id}} .featuredCards-action { font-size: {{button_font_size_tablet}}px; } } @media (min-width: 1261px) { #featuredCards--{{_.id}} .featuredCards-title { font-size: {{heading_font_size_desktop}}px; } #featuredCards--{{_.id}} .featuredCards-action { font-size: {{button_font_size_desktop}}px; } } </style> <div class='featuredCards {{layout}} {{show-arrow}} cardNumber--{{cards-per-row}}' id='featuredCards--{{_.id}}'> <{{#if main_heading.length}}{{main_heading}}{{else}}h2{{/if}} class='featuredCards-title'>{{{html}}}</{{#if main_heading.length}}{{main_heading}}{{else}}h2{{/if}}><ul class='featuredCards-list'> {{#each featuredCard}} <li class='featuredCards-item'> <div class='featuredCards-layout'> <div class='featuredCards-img'> <a href='{{link}}'> <img src='{{image.src}}' alt='{{alt}}'> </a> </div> <div class='featuredCards-content'> <a href='{{link}}' class='featuredCards-action'> <span> {{linkText}} <svg viewBox='0 0 24 24' id='icon-chevron-right'> <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' /> </svg> </span> </a> </div> </div> </li> {{/each}} </ul> </div>"
 }
 

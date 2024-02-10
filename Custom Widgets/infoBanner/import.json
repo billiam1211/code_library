@@ -1,0 +1,69 @@
+{
+    "name": "Info Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Info Banner",
+        "sections": [
+            {
+                "label": "Settings",
+                "settings": [
+                    {
+                        "type": "boolean",
+                        "label": "Reverse",
+                        "id": "reverse",
+                        "default": false
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link URL",
+                        "id": "url",
+                        "default": "/",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link Text",
+                        "id": "btn_text",
+                        "default": " ",
+                        "typeMeta": {
+                            "placeholder": "enter button text"
+                        }
+                    },
+                    {
+                        "label": "Title",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "<div>Enter Column #1 Title markup</div>"
+                        },
+                        "id": "title_html",
+                        "default": "<div>Enter Column #1 Title markup</div>"
+                    },
+                    {
+                        "label": "Column #1 HTML",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "<div>Column #1 HTML</div>"
+                        },
+                        "id": "content_html",
+                        "default": "<div>Column #1 HTML</div>"
+                    },
+                    {
+                        "label": "Column #2 HTML",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "<div>Column #2 HTML</div>"
+                        },
+                        "id": "block_html",
+                        "default": "<div>Column #2 HTML</div>"
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<div class='infoBanner infoBanner--{{_.id}}{{#if reverse}} reverse{{/if}}'> <section class='infoBanner-container'> <article class='infoBanner-block'> <h3>{{{title_html}}}</h3> {{{content_html}}} {{#if btn_text.length}} <a href='{{url}}'>{{btn_text}}</a> {{/if}} </article> <article class='infoBanner-block'> {{{block_html}}} </article> </section> </div>"
+}

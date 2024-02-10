@@ -1,0 +1,485 @@
+{
+    "name": "Switch Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Switch Banner",
+        "sections": [
+            {
+                "label": "Slide Settings",
+                "settings": [
+                    {
+                        "type": "visibility",
+                        "label": "Show Slide #2",
+                        "id": "show_slide_2",
+                        "default": "show"
+                    },
+                    {
+                        "type": "visibility",
+                        "label": "Show Slide #3",
+                        "id": "show_slide_3",
+                        "default": "show"
+                    },
+                    {
+                        "type": "visibility",
+                        "label": "Show Slide #4",
+                        "id": "show_slide_4",
+                        "default": "show"
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image_01",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image #1 Description",
+                        "id": "img_01_alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #1 Title",
+                        "id": "slide_01_title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #1 Subtitle",
+                        "id": "slide_01_subtitle",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter subtitle"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #1 Text",
+                        "id": "slide_01_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #1 Button Text",
+                        "id": "slide_01_btn_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #1 Button Url",
+                        "id": "slide_01_url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image_02",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "show_slide_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image #2 Description",
+                        "id": "img_02_alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        },
+                        "conditional": {
+                            "key": "show_slide_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #2 Title",
+                        "id": "slide_02_title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        },
+                        "conditional": {
+                            "key": "show_slide_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #2 Subtitle",
+                        "id": "slide_02_subtitle",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter subtitle"
+                        },
+                        "conditional": {
+                            "key": "show_slide_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #2 Text",
+                        "id": "slide_02_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "show_slide_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #2 Button Text",
+                        "id": "slide_02_btn_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "show_slide_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #2 Button Url",
+                        "id": "slide_02_url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "show_slide_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image_03",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "show_slide_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image #3 Description",
+                        "id": "img_03_alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        },
+                        "conditional": {
+                            "key": "show_slide_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #3 Title",
+                        "id": "slide_03_title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        },
+                        "conditional": {
+                            "key": "show_slide_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #3 Subtitle",
+                        "id": "slide_03_subtitle",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter subtitle"
+                        },
+                        "conditional": {
+                            "key": "show_slide_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #3 Text",
+                        "id": "slide_03_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "show_slide_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #3 Button Text",
+                        "id": "slide_03_btn_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "show_slide_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #3 Button Url",
+                        "id": "slide_03_url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "show_slide_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image_04",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "show_slide_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image #4 Description",
+                        "id": "img_04_alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        },
+                        "conditional": {
+                            "key": "show_slide_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #4 Title",
+                        "id": "slide_04_title",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter title"
+                        },
+                        "conditional": {
+                            "key": "show_slide_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #4 Subtitle",
+                        "id": "slide_04_subtitle",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter subtitle"
+                        },
+                        "conditional": {
+                            "key": "show_slide_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #4 Text",
+                        "id": "slide_04_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "show_slide_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #4 Button Text",
+                        "id": "slide_04_btn_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "show_slide_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Slide #4 Button Url",
+                        "id": "slide_04_url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "show_slide_4",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Button Settings",
+                "settings": [
+                    {
+                        "type": "color",
+                        "label": "Button Text Color",
+                        "id": "btn_text_color",
+                        "default": "rgba(255, 255, 255, 1)"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Text Color (hover)",
+                        "id": "btn_text_color_hover",
+                        "default": "rgba(255, 255, 255, 1)"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Color",
+                        "id": "btn_color",
+                        "default": "rgba(29, 66, 150, 1)"
+                    },                    
+                    {
+                        "type": "color",
+                        "label": "Button Color (hover)",
+                        "id": "btn_color_hover",
+                        "default": "rgba(29, 66, 150, 1)"
+                    },                    
+                    {
+                        "type": "range",
+                        "label": "Button Font Size (Mobile)",
+                        "id": "btn_font_size_mobile",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 50,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "label": "Button Font Size (Desktop)",
+                        "id": "btn_font_size_desktop",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 50,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<style> #switchBanner-{{_.id}} .slide-content a { background-color: {{btn_color}}; color: {{btn_text_color}}; font-size: {{btn_font_size_mobile}}px; @media (min-width: 1024px) { font-size: {{btn_font_size_desktop}}px; } } #switchBanner-{{_.id}} .slide-content a:hover, #switchBanner-{{_.id}} .slide-content a:hover { background-color: {{btn_color_hover}}; color: {{btn_text_color_hover}}; } </style> <div class='switchBanner' id='switchBanner-{{_.id}}'> <div class='switchBanner-content'> <ul class='slideList'> <li class='slide is-active'> <div class='image-container'> <img class='lazyload' src='{{image_01.src}}' alt='{{image_01_alt}}'> </div> <div class='slide-content'> <h2>{{slide_01_subtitle}}</h2> <p>{{slide_01_text}}</p> <a href='{{slide_01_url}}'>{{slide_01_btn_text}}</a> </div> </li> {{#if show_slide_2 'show'}} <li class='slide'> <div class='image-container'> <img class='lazyload' src='{{image_02.src}}' alt='{{image_02_alt}}'> </div> <div class='slide-content'> <h2>{{slide_02_subtitle}}</h2> <p>{{slide_02_text}}</p> <a href='{{slide_02_url}}'>{{slide_02_btn_text}}</a> </div> </li> {{/if}} {{#if show_slide_3 'show'}} <li class='slide'> <div class='image-container'> <img class='lazyload' src='{{image_03.src}}' alt='{{image_03_alt}}'> </div> <div class='slide-content'> <h2>{{slide_03_subtitle}}</h2> <p>{{slide_03_text}}</p> <a href='{{slide_03_url}}'>{{slide_03_btn_text}}</a> </div> </li> {{/if}} {{#if show_slide_4 'show'}} <li class='slide'> <div class='image-container'> <img class='lazyload' src='{{image_04.src}}' alt='{{image_04_alt}}'> </div> <div class='slide-content'> <h2>{{slide_04_subtitle}}</h2> <p>{{slide_04_text}}</p> <a href='{{slide_04_url}}'>{{slide_04_btn_text}}</a> </div> </li> {{/if}} </ul> </div> <div class='switchBanner-controls'> <ul class='controlsList'> <li class='controlsList-item arrow prev'> <button data-target='prev' class='disabled'> <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/></svg> </button> </li> <li class='controlsList-item btn is-active'> <button data-target='0'> {{slide_01_title}} </button> </li> {{#if show_slide_2 'show'}} <li class='controlsList-item btn'> <button data-target='1'> {{slide_02_title}} </button> </li> {{/if}} {{#if show_slide_3 'show'}} <li class='controlsList-item btn'> <button data-target='2'> {{slide_03_title}} </button> </li> {{/if}} {{#if show_slide_4 'show'}} <li class='controlsList-item btn'> <button data-target='3'> {{slide_04_title}} </button> </li> {{/if}} <li class='controlsList-item arrow next'> <button data-target='next'> <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/></svg> </button> </li> </ul> <ul class='progressBar'></ul> </div> </div>"
+}
