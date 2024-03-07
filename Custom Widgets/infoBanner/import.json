@@ -1,69 +1,294 @@
 {
-    "name": "Info Banner",
-    "schema": [{
-        "type": "tab",
-        "label": "Info Banner",
-        "sections": [
-            {
-                "label": "Settings",
-                "settings": [
-                    {
-                        "type": "boolean",
-                        "label": "Reverse",
-                        "id": "reverse",
-                        "default": false
-                    },
-                    {
-                        "type": "input",
-                        "label": "Link URL",
-                        "id": "url",
-                        "default": "/",
-                        "typeMeta": {
-                            "placeholder": "enter url"
-                        }
-                    },
-                    {
-                        "type": "input",
-                        "label": "Link Text",
-                        "id": "btn_text",
-                        "default": " ",
-                        "typeMeta": {
-                            "placeholder": "enter button text"
-                        }
-                    },
-                    {
-                        "label": "Title",
-                        "type": "code",
-                        "typeMeta": {
-                            "language": "html",
-                            "placeholder": "<div>Enter Column #1 Title markup</div>"
-                        },
-                        "id": "title_html",
-                        "default": "<div>Enter Column #1 Title markup</div>"
-                    },
-                    {
-                        "label": "Column #1 HTML",
-                        "type": "code",
-                        "typeMeta": {
-                            "language": "html",
-                            "placeholder": "<div>Column #1 HTML</div>"
-                        },
-                        "id": "content_html",
-                        "default": "<div>Column #1 HTML</div>"
-                    },
-                    {
-                        "label": "Column #2 HTML",
-                        "type": "code",
-                        "typeMeta": {
-                            "language": "html",
-                            "placeholder": "<div>Column #2 HTML</div>"
-                        },
-                        "id": "block_html",
-                        "default": "<div>Column #2 HTML</div>"
-                    }
-                ]
-            }
-        ]
-    }],
-    "template": "<div class='infoBanner infoBanner--{{_.id}}{{#if reverse}} reverse{{/if}}'> <section class='infoBanner-container'> <article class='infoBanner-block'> <h3>{{{title_html}}}</h3> {{{content_html}}} {{#if btn_text.length}} <a href='{{url}}'>{{btn_text}}</a> {{/if}} </article> <article class='infoBanner-block'> {{{block_html}}} </article> </section> </div>"
+	"name": "Three Cards",
+	"schema": [
+		{
+			"type": "tab",
+			"label": "Three Cards",
+			"sections": [
+				{
+					"label": "Settings",
+					"settings": [
+						{
+							"label": "Title",
+							"type": "code",
+							"typeMeta": {
+								"language": "html",
+								"placeholder": "Title"
+							},
+							"id": "title",
+							"default": "Title Text <strong>BOLD</strong>"
+						},
+						{
+							"type": "visibility",
+							"label": "Show Card #1",
+							"id": "show_card_01",
+							"default": "show"
+						},
+						{
+							"type": "imageManager",
+							"id": "image_01",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							},
+							"conditional": {
+								"key": "show_card_01",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image Description",
+							"id": "alt_01",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter image description"
+							},
+							"conditional": {
+								"key": "show_card_01",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #1 Title",
+							"id": "card_01_title",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter title"
+							},
+							"conditional": {
+								"key": "show_card_01",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #1 Text",
+							"id": "card_01_text",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter text"
+							},
+							"conditional": {
+								"key": "show_card_01",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #1 Button Text",
+							"id": "card_01_btn",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter button text"
+							},
+							"conditional": {
+								"key": "show_card_01",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #1 Button URL",
+							"id": "card_01_url",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter link"
+							},
+							"conditional": {
+								"key": "show_card_01",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "visibility",
+							"label": "Show Card #2",
+							"id": "show_card_02",
+							"default": "show"
+						},
+						{
+							"type": "imageManager",
+							"id": "image_02",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							},
+							"conditional": {
+								"key": "show_card_02",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image Description",
+							"id": "alt_02",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter image description"
+							},
+							"conditional": {
+								"key": "show_card_02",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #2 Title",
+							"id": "card_02_title",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter title"
+							},
+							"conditional": {
+								"key": "show_card_02",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},						
+						{
+							"type": "input",
+							"label": "Card #2 Text",
+							"id": "card_02_text",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter text"
+							},
+							"conditional": {
+								"key": "show_card_02",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #2 Button Text",
+							"id": "card_02_btn",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter button text"
+							},
+							"conditional": {
+								"key": "show_card_02",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #2 Button URL",
+							"id": "card_02_url",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter link"
+							},
+							"conditional": {
+								"key": "show_card_02",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "visibility",
+							"label": "Show Card #3",
+							"id": "show_card_03",
+							"default": "show"
+						},
+                        {
+							"type": "imageManager",
+							"id": "image_03",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							},
+							"conditional": {
+								"key": "show_card_03",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image Description",
+							"id": "alt_03",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter image description"
+							},
+							"conditional": {
+								"key": "show_card_03",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #3 Title",
+							"id": "card_03_title",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter title"
+							},
+							"conditional": {
+								"key": "show_card_03",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #3 Text",
+							"id": "card_03_text",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter text"
+							},
+							"conditional": {
+								"key": "show_card_03",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #3 Button Text",
+							"id": "card_03_btn",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter button text"
+							},
+							"conditional": {
+								"key": "show_card_03",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Card #3 Button URL",
+							"id": "card_03_url",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter link"
+							},
+							"conditional": {
+								"key": "show_card_03",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"template": "<div class='threeCard' id='threeCard--{{_.id}}'> <div class='threeCard-container'> <h2>{{{title}}}</h2> <ul class='threeCard-list'> {{#if show_card_01 '===' 'show'}} <li class='threeCard-item'> <div class='layout'> <div class='image-container'> <img src='{{image_01.src}}' alt='{{alt_01}}' /> <a href='{{card_01_url}}'></a> </div> <div class='content'> <h3>{{card_01_title}}</h3> <p>{{card_01_text}}</p> <a href='{{card_01_url}}'>{{card_01_btn}}</a> </div> </div> </li> {{/if}} {{#if show_card_02 '===' 'show'}} <li class='threeCard-item'> <div class='layout'> <div class='image-container'> <img src='{{image_02.src}}' alt='{{alt_02}}' /> <a href='{{card_01_url}}'></a> </div> <div class='content'> <h3>{{card_02_title}}</h3> <p>{{card_02_text}}</p> <a href='{{card_02_url}}'>{{card_02_btn}}</a> </div> </div> </li> {{/if}} {{#if show_card_03 '===' 'show'}} <li class='threeCard-item'> <div class='layout'> <div class='image-container'> <img src='{{image_03.src}}' alt='{{alt_03}}' /> <a href='{{card_01_url}}'></a> </div> <div class='content'> <h3>{{card_03_title}}</h3> <p>{{card_03_text}}</p> <a href='{{card_03_url}}'>{{card_03_btn}}</a> </div> </div> </li> {{/if}} </ul> </div> </div>"
 }

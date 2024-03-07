@@ -1,0 +1,89 @@
+div.threeCard {
+	width: 100%;
+	margin: 20px 0;
+	overflow-y: hidden;
+    overflow-x: scroll;
+
+	@media (min-width: 1024px) {
+		overflow: initial;
+		margin: 40px 0;
+	}
+
+	div.threeCard-container {
+		padding: 0 20px 0px 20px;
+		width: 192vw;
+
+		@media (min-width: 1024px) {
+			padding: 0 40px;
+			width: auto;
+		}
+
+		h2 {
+			color: stencilColor('color-text');
+			margin: 0 0 16px 0;
+			max-width: 100vw;
+			
+            @media (min-width: 1024px) {
+				max-width: initial;
+				margin-bottom: 20px;
+			}
+		}
+
+		ul.threeCard-list {
+			display: flex;
+			list-style: none;
+			margin: 0 -8px;
+
+			li.threeCard-item {
+				padding: 8px;
+				margin: 0;
+
+				div.layout {
+					background-color: stencilColor('color-cardBody');
+					border-radius: 2px;
+					overflow: hidden;
+					div.image-container {
+						img {
+							width: 100%;
+							height: auto;
+							object-fit: cover;
+						}
+					}
+					div.content {
+						padding: 20px;
+						h3 {
+							font-weight: 900;
+							color: stencilColor('color-primary');
+							margin: 0 0 20px 0;
+							font-size: remCalc(20px);
+						}
+						p {
+							margin: 0 0 20px 0;
+							color: stencilColor('color-text');
+							font-size: remCalc(14px);
+						}
+						a {
+							text-decoration: none;
+							color: stencilColor('color-text');
+							font-weight: 900;
+							font-size: remCalc(14px);
+							position: relative;
+							&::after {
+								content: '';
+								position: absolute;
+								top: 50%;
+								left: calc(100% + 5px);
+								transform: translate(0, -45%);
+								background-size: contain;
+								background-repeat: no-repeat;
+								height: 8px;
+								width: 8px;
+								background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' xmlns:xlink='http://www.w3.org/1999/xlink' height='' version='1.1' viewBox='0 0 9 12' width='' style='&%2310;'%3E%3Ctitle/%3E%3Cdesc/%3E%3Cdefs/%3E%3Cg fill='none' fill-rule='evenodd' id='Page-1' stroke='none' stroke-width='1'%3E%3Cg fill='%23000000' id='Core' transform='translate(-260.000000, -90.000000)'%3E%3Cg id='chevron-right' transform='translate(260.500000, 90.000000)'%3E%3Cpath d='M1,0 L-0.4,1.4 L4.2,6 L-0.4,10.6 L1,12 L7,6 L1,0 Z' id='Shape' style='&%2310; fill: %231a1a1a;&%2310;'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

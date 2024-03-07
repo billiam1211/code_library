@@ -1,0 +1,74 @@
+div.accordion {
+	border-radius: initial;
+	border: initial;
+
+	.accordionTitle {
+		color: stencilColor('color-black');
+		font-size: remCalc(18px);
+		font-weight: 600;
+	}
+
+	div.accordionBlock {
+		background-color: stencilColor('color-white');
+		border: 1px solid stencilColor('color-border');
+		border-radius: 2px;
+		padding: 16px;
+		margin-bottom: 16px;
+
+		button.accordionToggle {
+			color: stencilColor('color-black');
+			padding: 0;
+			font-family: Poppins;
+			font-size: 16px;
+			padding-left: 28px;
+			position: relative;
+
+			&::before {
+				content: '';
+				height: 16px;
+				width: 16px;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg id='Arrow'%3E%3Cpath id='Arrow_2' d='M13.131 6.46424L7.96773 11.5628L2.83674 6.43177' stroke='%231A1A1A' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+				transition: all 0.3s ease-in-out;
+			}
+		}
+
+		div.accordionContent {
+			display: none;
+			margin-top: 16px;
+			padding-left: 28px;
+		}
+
+		&.is-open {
+			background-color: stencilColor('color-menu-bg');
+
+			button.accordionToggle {
+				&::before {
+					transform: translate(0, -50%) rotate(180deg);
+				}
+			}
+
+			div.accordionContent {
+				display: block;
+				animation: fade-in-bottom 0.36s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+				@keyframes fade-in-bottom {
+					0% {
+						transform: translateY(10px);
+						opacity: 0;
+					}
+					100% {
+						transform: translateY(0);
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

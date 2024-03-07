@@ -1,0 +1,57 @@
+{
+    "name": "Accordion Widget",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Accordion",
+            "id": "block",
+            "defaultCount": 3,
+            "entryLabel": "Section",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Accordion Content",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "type": "input",
+                                    "label": "Heading",
+                                    "id": "heading",
+                                    "default": ""
+                                },
+                                {
+                                    "label": "Custom HTML",
+                                    "type": "code",
+                                    "typeMeta": {
+                                        "language": "html",
+                                        "placeholder": "Add content"
+                                    },
+                                    "id": "html",
+                                    "default": "<p>Add text</p>"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Settings",
+            "sections": [
+                {
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Title",
+                            "id": "title",
+                            "default": "enter title"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='accordion'> <h2 class='accordionTitle'>{{title}}</h2> {{#each block}} <div class='accordionBlock'> <button class='accordionToggle'>{{heading}}</button> <div class='accordionContent'> {{{html}}} </div> </div> {{/each}} </div>"
+}
