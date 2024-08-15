@@ -1,0 +1,295 @@
+{
+    "name": "Recipe List",
+    "schema": [
+        {
+            "type": "hidden",
+            "settings": [
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId1": {
+                                "reads": "productId1",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId2": {
+                                "reads": "productId2",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId3": {
+                                "reads": "productId3",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId4": {
+                                "reads": "productId4",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [
+                {
+                    "label": "Product 1",
+                    "settings": [
+                        {
+                            "type": "productId",
+                            "label": "Product",
+                            "id": "productId1",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Search by name or SKU"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "label": "Product 2",
+                    "settings": [
+                        {
+                            "type": "productId",
+                            "label": "Product",
+                            "id": "productId2",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Search by name or SKU"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "label": "Product 3",
+                    "settings": [
+                        {
+                            "type": "productId",
+                            "label": "Product",
+                            "id": "productId3",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Search by name or SKU"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "label": "Product 4",
+                    "settings": [
+                        {
+                            "type": "productId",
+                            "label": "Product",
+                            "id": "productId4",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Search by name or SKU"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Content",
+            "id": "recipt-title",
+            "sections": [
+                {
+                    "label": "Recipe Title",
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Title",
+                            "id": "title"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='product-freshest-section' data-te='On Sale!'> <div class='grid-header'> <h3 class='grid-title'>{{title}}</h3> <div class='title-underline'></div> </div> <ul class='product-grid'> <li> <figure> <a href='{{_.data.site.prod1.path}}' class='product-image'> <img src='{{_.data.site.prod1.defaultImage.url}}' alt='{{_.data.site.prod1.name}}'> </a> {{#each _.data.site.prod1.customFields.edges}} {{#if node.name '===' 'skill-level'}} <span class='badge'>{{node.value}}</span> {{/if}} {{/each}} </figure> <div class='product-contain'> <a href='{{_.data.site.prod1.path}}' class='product-title'>{{_.data.site.prod1.name}}</a> <div class='product-rating'> <div class='yotpo bottomLine hide-text' data-yotpo-product-id='{{_.data.site.prod1.entityId}}'> </div> </div> {{#each _.data.site.prod1.customFields.edges}} {{#if node.name '===' 'total-time'}} <div class='time-section'> <svg><use xlink:href='#icon-time' /></svg><span>{{node.value}}</span> </div> {{/if}} {{/each}} </div> </li> <li> <figure> <a href='{{_.data.site.prod2.path}}' class='product-image'> <img src='{{_.data.site.prod2.defaultImage.url}}' alt='{{_.data.site.prod2.name}}'> </a> {{#each _.data.site.prod2.customFields.edges}} {{#if node.name '===' 'skill-level'}} <span class='badge'>{{node.value}}</span> {{/if}} {{/each}} </figure> <div class='product-contain'> <a href='{{_.data.site.prod2.path}}' class='product-title'>{{_.data.site.prod2.name}}</a> <div class='product-rating'> <div class='yotpo bottomLine hide-text' data-yotpo-product-id='{{_.data.site.prod2.entityId}}'> </div> </div> {{#each _.data.site.prod2.customFields.edges}} {{#if node.name '===' 'total-time'}} <div class='time-section'><svg><use xlink:href='#icon-time' /></svg><span>{{node.value}}</span></div> {{/if}} {{/each}} </div> </li> <li> <figure> <a href='{{_.data.site.prod3.path}}' class='product-image'> <img src='{{_.data.site.prod3.defaultImage.url}}' alt='{{_.data.site.prod3.name}}'> </a> {{#each _.data.site.prod3.customFields.edges}} {{#if node.name '===' 'skill-level'}} <span class='badge'>{{node.value}}</span> {{/if}} {{/each}} </figure> <div class='product-contain'> <a href='{{_.data.site.prod3.path}}' class='product-title'>{{_.data.site.prod3.name}}</a> <div class='product-rating'> <div class='yotpo bottomLine hide-text' data-yotpo-product-id='{{_.data.site.prod3.entityId}}'> </div> </div> {{#each _.data.site.prod3.customFields.edges}} {{#if node.name '===' 'total-time'}} <div class='time-section'><svg><use xlink:href='#icon-time' /></svg><span>{{node.value}}</span></div> {{/if}} {{/each}} </div> </li> <li> <figure> <a href='{{_.data.site.prod4.path}}' class='product-image'> <img src='{{_.data.site.prod4.defaultImage.url}}' alt='{{_.data.site.prod4.name}}'> </a> {{#each _.data.site.prod4.customFields.edges}} {{#if node.name '===' 'skill-level'}} <span class='badge'>{{node.value}}</span> {{/if}} {{/each}} </figure> <div class='product-contain'> <a href='{{_.data.site.prod4.path}}' class='product-title'>{{_.data.site.prod4.name}}</a> <div class='product-rating'> <div class='yotpo bottomLine hide-text' data-yotpo-product-id='{{_.data.site.prod4.entityId}}'> </div> </div> {{#each _.data.site.prod4.customFields.edges}} {{#if node.name '===' 'total-time'}} <div class='time-section'><svg><use xlink:href='#icon-time' /></svg><span>{{node.value}}</span></div> {{/if}} {{/each}} </div> </li> </ul> </div>"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "name": "Recipe List",
+    "schema": [
+        {
+            "type": "hidden",
+            "settings": [
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId1": {
+                                "reads": "productId1",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId2": {
+                                "reads": "productId2",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId3": {
+                                "reads": "productId3",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId4": {
+                                "reads": "productId4",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [
+                {
+                    "label": "Product 1",
+                    "settings": [
+                        {
+                            "type": "productId",
+                            "label": "Product",
+                            "id": "productId1",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Search by name or SKU"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "label": "Product 2",
+                    "settings": [
+                        {
+                            "type": "productId",
+                            "label": "Product",
+                            "id": "productId2",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Search by name or SKU"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "label": "Product 3",
+                    "settings": [
+                        {
+                            "type": "productId",
+                            "label": "Product",
+                            "id": "productId3",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Search by name or SKU"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "label": "Product 4",
+                    "settings": [
+                        {
+                            "type": "productId",
+                            "label": "Product",
+                            "id": "productId4",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Search by name or SKU"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Content",
+            "id": "recipt-title",
+            "sections": [
+                {
+                    "label": "Recipe Title",
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Title",
+                            "id": "title"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class=\"product-freshest-section\" data-te=\"{{lang 'page_builder.pdp_sale_badge_label'}}\">\n<div class=\"grid-header\">\n<h3 class=\"grid-title\">{{title}}</h3>\n<div class=\"title-underline\"></div>\n</div>\n<ul class=\"product-grid\">\n<li>\n<figure>\n<a href=\"{{_.data.site.prod1.path}}\" class=\"product-image\">\n<img src=\"{{_.data.site.prod1.defaultImage.url}}\" alt=\"{{_.data.site.prod1.name}}\">\n</a>\n{{#if _.data.site.prod1.inventory.isInStock}}{{#if _.data.site.prod1.prices.salePrice}}<span class=\"sale-text\">{{lang 'page_builder.pdp_sale_badge_label'}}</span>{{/if}}{{else}}<span class=\"sold-out-text\">{{lang 'page_builder.pdp_sold_out_label'}}</span>{{/if}}{{#each _.data.site.prod1.customFields.edges}}{{#if node.name '===' 'skill-level'}}<span class=\"badge\">{{node.value}}</span>{{/if}}{{/each}}\n</figure>\n<div class=\"product-contain\">\n<a href=\"{{_.data.site.prod1.path}}\" class=\"product-title\">{{_.data.site.prod1.name}}</a>\n<div class=\"product-rating\">\n<div class=\"yotpo bottomLine hide-text\" data-yotpo-product-id=\"{{_.data.site.prod1.entityId}}\">\n</div>\n</div>\n{{#each _.data.site.prod1.customFields.edges}}{{#if node.name '===' 'total-time'}}<div class=\"time-section\">\n<svg>\n<use xlink:href=\"#icon-time\" />\n</svg>\n<span>{{node.value}}</span>\n</div>{{/if}}{{/each}}</div></li>\n<li>\n<figure>\n<a href=\"{{_.data.site.prod2.path}}\" class=\"product-image\">\n<img src=\"{{_.data.site.prod2.defaultImage.url}}\" alt=\"{{_.data.site.prod2.name}}\">\n</a>\n{{#if _.data.site.prod2.inventory.isInStock}}{{#if _.data.site.prod2.prices.salePrice}}<span class=\"sale-text\">{{lang 'page_builder.pdp_sale_badge_label'}}</span>{{/if}}{{else}}<span class=\"sold-out-text\">{{lang 'page_builder.pdp_sold_out_label'}}</span>{{/if}}{{#each _.data.site.prod2.customFields.edges}}{{#if node.name '===' 'skill-level'}}<span class=\"badge\">{{node.value}}</span>{{/if}}{{/each}}\n</figure>\n<div class=\"product-contain\">\n<a href=\"{{_.data.site.prod2.path}}\" class=\"product-title\">{{_.data.site.prod2.name}}</a>\n<div class=\"product-rating\">\n<div class=\"yotpo bottomLine hide-text\" data-yotpo-product-id=\"{{_.data.site.prod2.entityId}}\">\n</div>\n</div>\n{{#each _.data.site.prod2.customFields.edges}}{{#if node.name '===' 'total-time'}}<div class=\"time-section\">\n<svg>\n<use xlink:href=\"#icon-time\" />\n</svg>\n<span>{{node.value}}</span>\n</div>{{/if}}{{/each}}</div></li>\n<li>\n<figure>\n<a href=\"{{_.data.site.prod3.path}}\" class=\"product-image\">\n<img src=\"{{_.data.site.prod3.defaultImage.url}}\" alt=\"{{_.data.site.prod3.name}}\">\n</a>\n{{#if _.data.site.prod3.inventory.isInStock}}{{#if _.data.site.prod3.prices.salePrice}}<span class=\"sale-text\">{{lang 'page_builder.pdp_sale_badge_label'}}</span>{{/if}}{{else}}<span class=\"sold-out-text\">{{lang 'page_builder.pdp_sold_out_label'}}</span>{{/if}}{{#each _.data.site.prod3.customFields.edges}}{{#if node.name '===' 'skill-level'}}<span class=\"badge\">{{node.value}}</span>{{/if}}{{/each}}\n</figure>\n<div class=\"product-contain\">\n<a href=\"{{_.data.site.prod3.path}}\" class=\"product-title\">{{_.data.site.prod3.name}}</a>\n<div class=\"product-rating\">\n<div class=\"yotpo bottomLine hide-text\" data-yotpo-product-id=\"{{_.data.site.prod3.entityId}}\">\n</div>\n</div>\n{{#each _.data.site.prod3.customFields.edges}}{{#if node.name '===' 'total-time'}}<div class=\"time-section\">\n<svg>\n<use xlink:href=\"#icon-time\" />\n</svg>\n<span>{{node.value}}</span>\n</div>{{/if}}{{/each}}</div></li>\n<li>\n<figure>\n<a href=\"{{_.data.site.prod4.path}}\" class=\"product-image\">\n<img src=\"{{_.data.site.prod4.defaultImage.url}}\" alt=\"{{_.data.site.prod4.name}}\">\n</a>\n{{#if _.data.site.prod4.inventory.isInStock}}{{#if _.data.site.prod4.prices.salePrice}}<span class=\"sale-text\">{{lang 'page_builder.pdp_sale_badge_label'}}</span>{{/if}}{{else}}<span class=\"sold-out-text\">{{lang 'page_builder.pdp_sold_out_label'}}</span>{{/if}}{{#each _.data.site.prod4.customFields.edges}}{{#if node.name '===' 'skill-level'}}<span class=\"badge\">{{node.value}}</span>{{/if}}{{/each}}\n</figure>\n<div class=\"product-contain\">\n<a href=\"{{_.data.site.prod4.path}}\" class=\"product-title\">{{_.data.site.prod4.name}}</a>\n<div class=\"product-rating\">\n<div class=\"yotpo bottomLine hide-text\" data-yotpo-product-id=\"{{_.data.site.prod4.entityId}}\">\n</div>\n</div>\n{{#each _.data.site.prod4.customFields.edges}}{{#if node.name '===' 'total-time'}}<div class=\"time-section\">\n<svg>\n<use xlink:href=\"#icon-time\" />\n</svg>\n<span>{{node.value}}</span>\n</div>{{/if}}{{/each}}</div></li>\n</ul>\n</div>",
+}

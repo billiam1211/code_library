@@ -1,0 +1,36 @@
+<!--///////////////////
+// MUTATION OBSERVER //
+////////////////////-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    // Select the document as the node that will be observed for mutations
+
+    var targetNode = document;
+
+    // Set up options for the observer (which mutations to observe)
+    var config = {
+        childList: true,
+        characterData: true,
+        attributes: true,
+        subtree: true,
+        attributeOldValue: true,
+        characterDataOldValue: true
+    };
+
+    // Function to execute when mutations are observed
+    var callback = function (mutationsList, observer) {
+        // iterate over mutationslist
+        for (let index = 0; index < mutationsList.length; index++) {
+            const mutation = mutationsList[index];
+            // from here you can check the mutation for a certain attribute, ie:
+            if (mutation.target.classList.contains('someClass') && mutation.addedNodes.length && mutation.target.parentNode.classList.contains('parentClass')) {
+                // do something
+            }
+        }
+    };
+    // Create an observer instance linked to the callback function
+    var observer = new MutationObserver(callback);
+    // Start observing the target node for configured mutations
+    observer.observe(targetNode, config);
+</script>

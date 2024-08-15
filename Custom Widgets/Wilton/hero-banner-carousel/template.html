@@ -1,0 +1,69 @@
+{{#if activeSlide '===' '0'}}
+    {{assignVar 'slide1' 'active'}}
+{{/if}}
+    
+{{#if activeSlide '===' '1'}}
+    {{assignVar 'slide2' 'active'}} 
+{{/if}}
+    
+{{#if activeSlide '===' '2'}}
+    {{assignVar 'slide3' 'active'}}
+{{/if}}
+    
+{{#if activeSlide '===' '3'}}
+    {{assignVar 'slide4' 'active'}}
+{{/if}}
+
+<div class='homepage-hero-banner' data-activeSlide='{{activeSlide}}'>
+    <div class='single-hero-banner single-hero-banner--1 {{getVar 'slide1'}}'>
+        <div class='banner-image'>
+            <img src='{{image1.src}}' alt='{{alt_text1}}'/>
+        </div>
+        <div class='banner-details'>
+            <h4 class='hero-title'>{{title1}}</h4>
+            <div class='hero-description'>{{{description1}}}</div>{{#if cta_text1}}<a class='hero-link'
+                href='{{cta_link1}}'>{{cta_text1}}</a>{{/if}}
+        </div>
+    </div>
+    <div class='single-hero-banner single-hero-banner--2 {{getVar 'slide2'}}'>
+        <div class='banner-image'>
+            <img src='{{image2.src}}' alt='{{alt_text2}}'/>
+        </div>
+        <div class='banner-details'>
+            <h4 class='hero-title'>{{title2}}</h4>
+            <div class='hero-description'>{{{description2}}}</div>{{#if cta_text2}}<a class='hero-link'
+                href='{{cta_link2}}'>{{cta_text2}}</a>{{/if}}
+        </div>
+    </div>
+    <div class='single-hero-banner single-hero-banner--3 {{getVar 'slide3'}}'>
+        <div class='banner-image'>
+            <img src='{{image3.src}}' alt='{{alt_text3}}'/>
+        </div>
+        <div class='banner-details'>
+            <h4 class='hero-title'>{{title3}}</h4>
+            <div class='hero-description'>{{{description3}}}</div>{{#if cta_text3}}<a class='hero-link'
+                href='{{cta_link3}}'>{{cta_text3}}</a>{{/if}}
+        </div>
+    </div>
+    <div class='single-hero-banner single-hero-banner--4 {{getVar 'slide4'}}'>
+        <div class='banner-image'>
+            <img src='{{image4.src}}' alt='{{alt_text4}}'/>
+        </div>
+        <div class='banner-details'>
+            <h4 class='hero-title'>{{title4}}</h4>
+            <div class='hero-description'>{{{description4}}}</div>{{#if cta_text4}}<a class='hero-link'
+                href='{{cta_link4}}'>{{cta_text4}}</a>{{/if}}
+        </div>
+    </div>
+</div>
+
+<style>
+    .single-hero-banner.single-hero-banner--1 div.banner-details h4.hero-title,
+    .single-hero-banner.single-hero-banner--1 div.banner-details div.hero-description, 
+    .single-hero-banner.single-hero-banner--1 div.banner-details a.hero-link {
+        color: {{font_color_1}};
+    };
+    .single-hero-banner.single-hero-banner--1 div.banner-details {
+        background-color: {{bg_color_1}};
+    };
+</style>

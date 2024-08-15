@@ -1,0 +1,40 @@
+{
+    "name": "Featured Carousel Heading",
+    "schema": [{
+        "type": "tab",
+        "label": "Featured Carousel Heading",
+        "sections": [{
+            "label": "Featured Carousel Heading",
+            "settings": [
+                {
+                    "type": "input",
+                    "label": "Heading",
+                    "id": "heading",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter carousel title"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Carousel Text #1",
+                    "id": "text",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter carousel text"
+                    }
+                },
+                {
+                    "type": "input",
+                    "label": "Featured Carousel Text #2",
+                    "id": "text_2",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter carousel text"
+                    }
+                }
+            ]
+        }]
+    }],
+    "template": "<h2 class='featuredCarousel-heading'>{{heading}}</h2> {{#if text.length}} <p class='featuredCarousel-text'>{{text}}</p> {{/if}} {{#if text_2.length}} <p class='featuredCarousel-text'>{{text_2}}</p> {{/if}}"
+}

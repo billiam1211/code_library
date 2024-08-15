@@ -1,0 +1,51 @@
+{
+    "name": "Footer Column Widget",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Column Items",
+            "id": "footerColumn-item",
+            "defaultCount": 3,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+                {
+                "type": "tab",
+                "label": "Items Content",
+                "sections": [{
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Item Text",
+                            "id": "itemText",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Item Link",
+                            "id": "itemUrl",
+                            "default": ""
+                        }
+                    ]
+                }]
+            }]
+        },
+        {
+            "type": "tab",
+            "label": "Footer Column Title",
+            "sections": [{
+                "label": "Footer Column Title",
+                "settings": [{
+                    "type": "input",
+                    "label": "Footer Column Title",
+                    "id": "columnTitle",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "enter title"
+                    }
+                }]
+            }]
+        }  
+    ],
+    "template": "<article class='footerColumn' data-section-type='footer-webPages '> <h3 class='footer-info-heading '>{{columnTitle}} <svg class='icon mobile '> <use class='expand' xmlns:xlink='http://www.w3.org/1999/xlink ' xlink:href='#icon-expand-accordion '> </use> <use class='collapse' xmlns:xlink='http://www.w3.org/1999/xlink ' xlink:href='#icon-collapse-accordion '></use> </svg> </h3> <ul class='footerColumn-list '> {{each footerColumn-item}} <li class='footerColumn-item'> <a class='footerColumn-action' href='{{itemUrl}}'>{{itemText}}</a> </li> {{/each}} </ul> </article>"
+}

@@ -1,0 +1,12 @@
+<div class='footerLinks-container'>            
+    <ul class='footerLinks-list'>
+        <li class='footerLinks-item powered-by'>
+            <p class='powered-by'>© 2003-2022 Wilton Brands LLC  |  All Rights Reserved</p>
+        </li>        
+        {{#each footerLink-item}}
+            <li class='footerLinks-item'>
+                <a class='footerLinks-action' href='{{link}}' class='link'>{{text}}</a>
+            </li>
+        {{/each}}
+    </ul>
+</div>

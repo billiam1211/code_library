@@ -1,0 +1,262 @@
+{
+    "name": "HP-Hero Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Homepage Hero Banner",
+        "sections": [
+            {
+                "label": "Settings",
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Expand Slide:",
+                        "id": "activeSlide",
+                        "default": "1",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "Slide 1",
+                                    "value": "0"
+                                },
+                                {
+                                    "label": "Slide 2",
+                                    "value": "1"
+                                },
+                                {
+                                    "label": "Slide 3",
+                                    "value": "2"
+                                },
+                                {
+                                    "label": "Slide 4",
+                                    "value": "3"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Content 1",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image1",
+                        "default": {
+                            "src": "https://cdn11.bigcommerce.com/s-vm6doh2w4n/images/stencil/original/image-manager/content-1.png",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "alt_text1",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Title",
+                        "id": "title1",
+                        "default": ""
+                    },
+                    {
+                        "label": "Description",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "Insert HTML code here"
+                        },
+                        "id": "description1",
+                        "default": "Add description HTML"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Button Text",
+                        "id": "cta_text1",
+                        "default": "button",
+                        "typeMeta": {
+                            "placeholder": ""
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "CTA Link",
+                        "id": "cta_link1",
+                        "default": "#",
+                        "typeMeta": {
+                            "placeholder": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Content 2",
+                "settings": [{
+                        "type": "imageManager",
+                        "id": "image2",
+                        "default": {
+                            "src": "https://cdn11.bigcommerce.com/s-vm6doh2w4n/images/stencil/original/image-manager/content-2.png",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "alt_text2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Title",
+                        "id": "title2",
+                        "default": ""
+                    },
+                    {
+                        "label": "Description",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "Insert HTML code here"
+                        },
+                        "id": "description2",
+                        "default": "Add description HTML"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Button Text",
+                        "id": "cta_text2",
+                        "default": "button",
+                        "typeMeta": {
+                            "placeholder": ""
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "CTA Link",
+                        "id": "cta_link2",
+                        "default": "#",
+                        "typeMeta": {
+                            "placeholder": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Content 3",
+                "settings": [{
+                        "type": "imageManager",
+                        "id": "image3",
+                        "default": {
+                            "src": "https://cdn11.bigcommerce.com/s-vm6doh2w4n/images/stencil/original/image-manager/content-3.png",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "alt_text3",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Title",
+                        "id": "title3",
+                        "default": ""
+                    },
+                    {
+                        "label": "Description",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "Insert HTML code here"
+                        },
+                        "id": "description3",
+                        "default": "Add description HTML"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Button Text",
+                        "id": "cta_text3",
+                        "default": "button",
+                        "typeMeta": {
+                            "placeholder": ""
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "CTA Link",
+                        "id": "cta_link3",
+                        "default": "#",
+                        "typeMeta": {
+                            "placeholder": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "Content 4",
+                "settings": [{
+                        "type": "imageManager",
+                        "id": "image4",
+                        "default": {
+                            "src": "https://cdn11.bigcommerce.com/s-vm6doh2w4n/images/stencil/original/image-manager/content-4.png",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "alt_text4",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Title",
+                        "id": "title4",
+                        "default": ""
+                    },
+                    {
+                        "label": "Description",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "Insert HTML code here"
+                        },
+                        "id": "description4",
+                        "default": "Add description HTML"
+                    },
+                    {
+                        "type": "input",
+                        "label": "Button Text",
+                        "id": "cta_text4",
+                        "default": "button",
+                        "typeMeta": {
+                            "placeholder": ""
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "CTA Link",
+                        "id": "cta_link4",
+                        "default": "#",
+                        "typeMeta": {
+                            "placeholder": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "{{#if activeSlide '===' '0'}} {{assignVar 'slide1' 'active'}} {{/if}} {{#if activeSlide '===' '1'}} {{assignVar 'slide2' 'active'}} {{/if}} {{#if activeSlide '===' '2'}} {{assignVar 'slide3' 'active'}} {{/if}} {{#if activeSlide '===' '3'}} {{assignVar 'slide4' 'active'}} {{/if}} <ul> <li>{{getVar 'slide1'}}</li> <li>{{getVar 'slide2'}}</li> <li>{{getVar 'slide3'}}</li> <li>{{getVar 'slide4'}}</li> </ul> <div class='homepage-hero-banner' data-activeSlide='{{activeSlide}}'> <div class='single-hero-banner {{getVar 'slide1'}}'> <div class='banner-image'> <img src='{{image1.src}}' alt='{{alt_text1}}'/> </div> <div class='banner-details'> <h4 class='hero-title'>{{title1}}</h4> <div class='hero-description'>{{{description1}}}</div>{{#if cta_text1}}<a class='hero-link' href='{{cta_link1}}'>{{cta_text1}}</a>{{/if}} </div> </div> <div class='single-hero-banner {{getVar 'slide2'}}'> <div class='banner-image'> <img src='{{image2.src}}' alt='{{alt_text2}}'/> </div> <div class='banner-details'> <h4 class='hero-title'>{{title2}}</h4> <div class='hero-description'>{{{description2}}}</div>{{#if cta_text2}}<a class='hero-link' href='{{cta_link2}}'>{{cta_text2}}</a>{{/if}} </div> </div> <div class='single-hero-banner {{getVar 'slide3'}}'> <div class='banner-image'> <img src='{{image3.src}}' alt='{{alt_text3}}'/> </div> <div class='banner-details'> <h4 class='hero-title'>{{title3}}</h4> <div class='hero-description'>{{{description3}}}</div>{{#if cta_text3}}<a class='hero-link' href='{{cta_link3}}'>{{cta_text3}}</a>{{/if}} </div> </div> <div class='single-hero-banner {{getVar 'slide4'}}'> <div class='banner-image'> <img src='{{image4.src}}' alt='{{alt_text4}}'/> </div> <div class='banner-details'> <h4 class='hero-title'>{{title4}}</h4> <div class='hero-description'>{{{description4}}}</div>{{#if cta_text4}}<a class='hero-link' href='{{cta_link4}}'>{{cta_text4}}</a>{{/if}} </div> </div> </div>"
+}

@@ -1,0 +1,117 @@
+<div class='product-grid-widget'>
+    <div class='grid-header'>
+        <h3 class='grid-title'>{{heading}}</h3>
+        <div class='title-underline'></div>
+    </div>
+    <section class='product-carousel'>
+        <div class='carousel-product'> 
+            <a href='{{_.data.site.prod1.path}}'> 
+                <img src='{{_.data.site.prod1.defaultImage.url}}' alt='{{_.data.site.prod1.name}}'>
+            </a>
+            <div class='title'> 
+                    <a href='{{_.data.site.prod1.path}}'>
+                        {{_.data.site.prod1.name}}
+                    </a> 
+                </div>
+            <div class='price'>
+                <div class='prices'>
+                    {{#if _.data.site.prod1.prices.basePrice.value '>' _.data.site.prod1.prices.price.value}}
+                        <span class='original-price'>${{toFixed _.data.site.prod1.prices.basePrice.value 2}}</span>
+                    {{/if}} <span class='current-price'>${{toFixed _.data.site.prod1.prices.price.value 2}}</span>
+                </div>
+            </div>
+            <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod1.entityId }}'> </div>
+        </div>
+        <div class='carousel-product'> 
+            <a href='{{_.data.site.prod2.path}}'> 
+                <img src='{{_.data.site.prod2.defaultImage.url}}' alt='{{_.data.site.prod2.name}}'>
+            </a>
+            <div class='title'> 
+                    <a href='{{_.data.site.prod2.path}}'>
+                        {{_.data.site.prod2.name}}
+                    </a> 
+                </div>
+            <div class='price'>
+                <div class='prices'>
+                    {{#if _.data.site.prod2.prices.basePrice.value '>' _.data.site.prod2.prices.price.value}}
+                        <span class='original-price'>${{toFixed _.data.site.prod2.prices.basePrice.value 2}}</span>
+                    {{/if}} <span class='current-price'>${{toFixed _.data.site.prod2.prices.price.value 2}}</span>
+                </div>
+            </div>
+            <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod2.entityId }}'> </div>
+        </div>
+        <div class='carousel-product'> 
+            <a href='{{_.data.site.prod3.path}}'> 
+                <img src='{{_.data.site.prod3.defaultImage.url}}' alt='{{_.data.site.prod3.name}}'>
+            </a>
+            <div class='title'> 
+                    <a href='{{_.data.site.prod3.path}}'>
+                        {{_.data.site.prod3.name}}
+                    </a> 
+                </div>
+            <div class='price'>
+                <div class='prices'>
+                    {{#if _.data.site.prod3.prices.basePrice.value '>' _.data.site.prod3.prices.price.value}}
+                        <span class='original-price'>${{toFixed _.data.site.prod3.prices.basePrice.value 2}}</span>
+                    {{/if}} <span class='current-price'>${{toFixed _.data.site.prod3.prices.price.value 2}}</span>
+                </div>
+            </div>
+            <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod3.entityId }}'> </div>
+        </div>
+        <div class='carousel-product'> 
+            <a href='{{_.data.site.prod4.path}}'> 
+                <img src='{{_.data.site.prod4.defaultImage.url}}' alt='{{_.data.site.prod4.name}}'>
+            </a>
+            <div class='title'> 
+                    <a href='{{_.data.site.prod4.path}}'>
+                        {{_.data.site.prod4.name}}
+                    </a> 
+                </div>
+            <div class='price'>
+                <div class='prices'>
+                    {{#if _.data.site.prod4.prices.basePrice.value '>' _.data.site.prod4.prices.price.value}}
+                        <span class='original-price'>${{toFixed _.data.site.prod4.prices.basePrice.value 2}}</span>
+                    {{/if}} <span class='current-price'>${{toFixed _.data.site.prod4.prices.price.value 2}}</span>
+                </div>
+            </div>
+            <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod4.entityId }}'> </div>
+        </div>
+        <div class='carousel-product'> 
+            <a href='{{_.data.site.prod5.path}}'> 
+                <img src='{{_.data.site.prod5.defaultImage.url}}' alt='{{_.data.site.prod5.name}}'>
+            </a>
+            <div class='title'> 
+                    <a href='{{_.data.site.prod5.path}}'>
+                        {{_.data.site.prod5.name}}
+                    </a> 
+                </div>
+            <div class='price'>
+                <div class='prices'>
+                    {{#if _.data.site.prod5.prices.basePrice.value '>' _.data.site.prod5.prices.price.value}}
+                        <span class='original-price'>${{toFixed _.data.site.prod5.prices.basePrice.value 2}}</span>
+                    {{/if}} <span class='current-price'>${{toFixed _.data.site.prod5.prices.price.value 2}}</span>
+                </div>
+            </div>
+            <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod5.entityId }}'> </div>
+        </div>
+        <div class='carousel-product'> 
+            <a href='{{_.data.site.prod6.path}}'> 
+                <img src='{{_.data.site.prod6.defaultImage.url}}' alt='{{_.data.site.prod6.name}}'>
+            </a>
+            <div class='title'> 
+                    <a href='{{_.data.site.prod6.path}}'>
+                        {{_.data.site.prod6.name}}
+                    </a> 
+                </div>
+            <div class='price'>
+                <div class='prices'>
+                    {{#if _.data.site.prod6.prices.basePrice.value '>' _.data.site.prod6.prices.price.value}}
+                        <span class='original-price'>${{toFixed _.data.site.prod6.prices.basePrice.value 2}}</span>
+                    {{/if}} <span class='current-price'>${{toFixed _.data.site.prod6.prices.price.value 2}}</span>
+                </div>
+            </div>
+            <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod6.entityId }}'> </div>
+        </div>
+    </section>
+    <div class='grid-footer'> {{#if buttonVisible '===' 'show'}} <a href='{{button_link}}' class='button button--primary'>{{button_text}}</a> {{/if}} </div>
+</div>

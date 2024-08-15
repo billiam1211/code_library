@@ -1,0 +1,222 @@
+{
+    "name": "6 Products Widget",
+    "schema": [{
+            "type": "hidden",
+            "settings": [{
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId1": {
+                                "reads": "productId1",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId2": {
+                                "reads": "productId2",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId3": {
+                                "reads": "productId3",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId4": {
+                                "reads": "productId4",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId5": {
+                                "reads": "productId5",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "graphQl",
+                    "id": "graphQueries",
+                    "typeMeta": {
+                        "mappings": {
+                            "productId6": {
+                                "reads": "productId6",
+                                "type": "Int!"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [{
+                "label": "Header",
+                "settings": [{
+                    "type": "input",
+                    "label": "Heading",
+                    "id": "heading",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "Enter title"
+                    }
+                }]
+            }]
+        },
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [{
+                    "label": "Product 1",
+                    "settings": [{
+                        "type": "productId",
+                        "label": "Product",
+                        "id": "productId1",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Search by name or SKU"
+                        }
+                    }]
+                },
+                {
+                    "label": "Product 2",
+                    "settings": [{
+                        "type": "productId",
+                        "label": "Product",
+                        "id": "productId2",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Search by name or SKU"
+                        }
+                    }]
+                },
+                {
+                    "label": "Product 3",
+                    "settings": [{
+                        "type": "productId",
+                        "label": "Product",
+                        "id": "productId3",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Search by name or SKU"
+                        }
+                    }]
+                },
+                {
+                    "label": "Product 4",
+                    "settings": [{
+                        "type": "productId",
+                        "label": "Product",
+                        "id": "productId4",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Search by name or SKU"
+                        }
+                    }]
+                },
+                {
+                    "label": "Product 5",
+                    "settings": [{
+                        "type": "productId",
+                        "label": "Product",
+                        "id": "productId5",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Search by name or SKU"
+                        }
+                    }]
+                },
+                {
+                    "label": "Product 6",
+                    "settings": [{
+                        "type": "productId",
+                        "label": "Product",
+                        "id": "productId6",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Search by name or SKU"
+                        }
+                    }]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Content",
+            "sections": [{
+                "label": "Footer",
+                "settings": [{
+                        "type": "visibility",
+                        "label": "Button",
+                        "id": "buttonVisible",
+                        "default": "show"
+                    },
+                    {
+                        "type": "input",
+                        "label": "CTA Link",
+                        "id": "button_link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "Enter button link"
+                        },
+                        "conditional": {
+                            "key": "buttonVisible",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "CTA Text",
+                        "id": "button_text",
+                        "default": "CTA",
+                        "typeMeta": {
+                            "placeholder": "Enter button text"
+                        },
+                        "conditional": {
+                            "key": "buttonVisible",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            }]
+        }
+    ],
+    "template": "<div class='product-grid-widget'> <div class='grid-header'> <h3 class='grid-title'>{{heading}}</h3> <div class='title-underline'></div> </div> <section class='product-carousel'> <div class='carousel-product'> <a href='{{_.data.site.prod1.path}}'> <img src='{{_.data.site.prod1.defaultImage.url}}' alt='{{_.data.site.prod1.name}}'> </a> <div class='title'> <a href='{{_.data.site.prod1.path}}'> {{_.data.site.prod1.name}} </a> </div> <div class='price'> <div class='prices'> {{#if _.data.site.prod1.prices.basePrice.value '>' _.data.site.prod1.prices.price.value}} <span class='original-price'>${{toFixed _.data.site.prod1.prices.basePrice.value 2}}</span> {{/if}} <span class='current-price'>${{toFixed _.data.site.prod1.prices.price.value 2}}</span> </div> </div> <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod1.entityId }}'> </div> </div> <div class='carousel-product'> <a href='{{_.data.site.prod2.path}}'> <img src='{{_.data.site.prod2.defaultImage.url}}' alt='{{_.data.site.prod2.name}}'> </a> <div class='title'> <a href='{{_.data.site.prod2.path}}'> {{_.data.site.prod2.name}} </a> </div> <div class='price'> <div class='prices'> {{#if _.data.site.prod2.prices.basePrice.value '>' _.data.site.prod2.prices.price.value}} <span class='original-price'>${{toFixed _.data.site.prod2.prices.basePrice.value 2}}</span> {{/if}} <span class='current-price'>${{toFixed _.data.site.prod2.prices.price.value 2}}</span> </div> </div> <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod2.entityId }}'> </div> </div> <div class='carousel-product'> <a href='{{_.data.site.prod3.path}}'> <img src='{{_.data.site.prod3.defaultImage.url}}' alt='{{_.data.site.prod3.name}}'> </a> <div class='title'> <a href='{{_.data.site.prod3.path}}'> {{_.data.site.prod3.name}} </a> </div> <div class='price'> <div class='prices'> {{#if _.data.site.prod3.prices.basePrice.value '>' _.data.site.prod3.prices.price.value}} <span class='original-price'>${{toFixed _.data.site.prod3.prices.basePrice.value 2}}</span> {{/if}} <span class='current-price'>${{toFixed _.data.site.prod3.prices.price.value 2}}</span> </div> </div> <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod3.entityId }}'> </div> </div> <div class='carousel-product'> <a href='{{_.data.site.prod4.path}}'> <img src='{{_.data.site.prod4.defaultImage.url}}' alt='{{_.data.site.prod4.name}}'> </a> <div class='title'> <a href='{{_.data.site.prod4.path}}'> {{_.data.site.prod4.name}} </a> </div> <div class='price'> <div class='prices'> {{#if _.data.site.prod4.prices.basePrice.value '>' _.data.site.prod4.prices.price.value}} <span class='original-price'>${{toFixed _.data.site.prod4.prices.basePrice.value 2}}</span> {{/if}} <span class='current-price'>${{toFixed _.data.site.prod4.prices.price.value 2}}</span> </div> </div> <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod4.entityId }}'> </div> </div> <div class='carousel-product'> <a href='{{_.data.site.prod5.path}}'> <img src='{{_.data.site.prod5.defaultImage.url}}' alt='{{_.data.site.prod5.name}}'> </a> <div class='title'> <a href='{{_.data.site.prod5.path}}'> {{_.data.site.prod5.name}} </a> </div> <div class='price'> <div class='prices'> {{#if _.data.site.prod5.prices.basePrice.value '>' _.data.site.prod5.prices.price.value}} <span class='original-price'>${{toFixed _.data.site.prod5.prices.basePrice.value 2}}</span> {{/if}} <span class='current-price'>${{toFixed _.data.site.prod5.prices.price.value 2}}</span> </div> </div> <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod5.entityId }}'> </div> </div> <div class='carousel-product'> <a href='{{_.data.site.prod6.path}}'> <img src='{{_.data.site.prod6.defaultImage.url}}' alt='{{_.data.site.prod6.name}}'> </a> <div class='title'> <a href='{{_.data.site.prod6.path}}'> {{_.data.site.prod6.name}} </a> </div> <div class='price'> <div class='prices'> {{#if _.data.site.prod6.prices.basePrice.value '>' _.data.site.prod6.prices.price.value}} <span class='original-price'>${{toFixed _.data.site.prod6.prices.basePrice.value 2}}</span> {{/if}} <span class='current-price'>${{toFixed _.data.site.prod6.prices.price.value 2}}</span> </div> </div> <div class='yotpo bottomLine' data-yotpo-product-id='{{ _.data.site.prod6.entityId }}'> </div> </div> </section> <div class='grid-footer'> {{#if buttonVisible '===' 'show'}} <a href='{{button_link}}' class='button button--primary'>{{button_text}}</a> {{/if}} </div> </div>"
+}
+
+

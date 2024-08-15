@@ -1,0 +1,34 @@
+{
+    "name": "Footer Link Widget",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Footer Link Items",
+            "id": "footerLink-item",
+            "defaultCount": 4,
+            "entryLabel": "Footer Link Item",
+            "schema": [
+                {
+                "type": "tab",
+                "label": "Footer Link Item",
+                "sections": [{
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Link",
+                            "id": "link",
+                            "default": "enter link url"
+                        },
+                        {
+                            "type": "input",
+                            "label": "text",
+                            "id": "text",
+                            "default": "enter link text"
+                        }
+                    ]
+                }]
+            }]
+        }          
+    ],
+    "template": "<div class='footerLinks-container'><ul class='footerLinks-list'><li class='footerLinks-item powered-by'><p class='powered-by'>© 2003-2022 Wilton Brands LLC  |  All Rights Reserved</p></li>{{#each footerLink-item}}<li class='footerLinks-item'><a class='footerLinks-action' href='{{link}}' class='link'>{{text}}</a></li>{{/each}}</ul></div>"
+}

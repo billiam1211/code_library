@@ -1,0 +1,50 @@
+{
+    "name": "Nav Upsell Item",
+    "schema": [{
+        "type": "tab",
+        "label": "Upsell Item",
+        "sections": [
+            {
+                "label": "Upsell Item",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image Description",
+                        "id": "alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "image description"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Link",
+                        "id": "link",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter link"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Button Text",
+                        "id": "button",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<li class='navPage-upsell-item'><a href='{{link}}' class='navPage-upsell-link'> <img src='{{image.src}}' alt='{{alt}}' class='navPage-upsell-image'> <button class='navPage-upsell-button'>{{button}}</button> </a></li>"
+}
