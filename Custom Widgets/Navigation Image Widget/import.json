@@ -1,0 +1,61 @@
+{	
+	"name": "Menu Image Widget",
+	"schema": [
+		{
+			"type": "tab",
+			"label": "Widget Settings",
+			"sections": [
+				{
+					"label": "Content",
+					"settings": [
+						{
+							"type": "imageManager",
+							"id": "image",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image Description",
+							"id": "alt",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Image description"
+							}
+						},
+						{
+							"type": "input",
+							"label": "URL",
+							"id": "url",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter url"
+							}
+						},
+						{
+							"type": "input",
+							"label": "Link text",
+							"id": "link",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Link text"
+							}
+						},
+						{
+							"type": "input",
+							"label": "Title",
+							"id": "title",
+							"default": "enter title",
+							"typeMeta": {
+								"placeholder": "Enter title"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"template": "<div class='menuWidget-image'> <div class='image-container'> <a href='{{url}}'> <img src='{{image.src}}' alt='{{alt}}' /> </a> </div> <div class='content'> <p class='title'>{{title}}</p> <a href='{{url}}' class='action'>{{link}}</a> </div> </div>"
+}

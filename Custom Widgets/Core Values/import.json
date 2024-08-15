@@ -1,0 +1,284 @@
+{
+	"name": "5 Points",
+	"schema": [
+		{
+			"type": "tab",
+			"label": "5 Points",
+			"sections": [
+				{
+					"label": "5 Points",
+					"settings": [
+						{
+							"type": "input",
+							"label": "Header Text",
+							"id": "header_text",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							}
+						},
+						{
+							"type": "input",
+							"label": "Header title",
+							"id": "header_title",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter title"
+							}
+						},
+
+						{
+							"type": "visibility",
+							"label": "Show Point 1?",
+							"id": "show_pt_1",
+							"default": "show"
+						},
+						{
+							"label": "Point 1 HTML",
+							"type": "code",
+							"typeMeta": {
+								"language": "html",
+								"placeholder": "Insert HTML"
+							},
+							"id": "html_1",
+							"default": "Add HTML",
+							"conditional": {
+								"key": "show_pt_1",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 1 title",
+							"id": "point_1_title",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter title"
+							},
+							"conditional": {
+								"key": "show_pt_1",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 1 text",
+							"id": "point_1_text",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							},
+							"conditional": {
+								"key": "show_pt_1",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+
+						{
+							"type": "visibility",
+							"label": "Show Point 2?",
+							"id": "show_pt_2",
+							"default": "show"
+						},
+						{
+							"label": "Point 2 HTML",
+							"type": "code",
+							"typeMeta": {
+								"language": "html",
+								"placeholder": "Insert HTML"
+							},
+							"id": "html_2",
+							"default": "Add HTML",
+							"conditional": {
+								"key": "show_pt_2",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 2 title",
+							"id": "point_2_title",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter title"
+							},
+							"conditional": {
+								"key": "show_pt_2",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 2 text",
+							"id": "point_2_text",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							},
+							"conditional": {
+								"key": "show_pt_2",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+
+						{
+							"type": "visibility",
+							"label": "Show Point 3?",
+							"id": "show_pt_3",
+							"default": "show"
+						},
+						{
+							"label": "Point 3 HTML",
+							"type": "code",
+							"typeMeta": {
+								"language": "html",
+								"placeholder": "Insert HTML"
+							},
+							"id": "html_3",
+							"default": "Add HTML",
+							"conditional": {
+								"key": "show_pt_3",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 3 title",
+							"id": "point_3_title",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter title"
+							},
+							"conditional": {
+								"key": "show_pt_3",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 3 text",
+							"id": "point_3_text",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							},
+							"conditional": {
+								"key": "show_pt_3",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "visibility",
+							"label": "Show Point 4?",
+							"id": "show_pt_4",
+							"default": "show"
+						},
+						{
+							"label": "Point 4 HTML",
+							"type": "code",
+							"typeMeta": {
+								"language": "html",
+								"placeholder": "Insert HTML"
+							},
+							"id": "html_4",
+							"default": "Add HTML",
+							"conditional": {
+								"key": "show_pt_4",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 4 title",
+							"id": "point_4_title",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter title"
+							},
+							"conditional": {
+								"key": "show_pt_4",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 4 text",
+							"id": "point_4_text",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							},
+							"conditional": {
+								"key": "show_pt_4",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+
+						{
+							"type": "visibility",
+							"label": "Show Point 5?",
+							"id": "show_pt_5",
+							"default": "show"
+						},
+						{
+							"label": "Point 5 HTML",
+							"type": "code",
+							"typeMeta": {
+								"language": "html",
+								"placeholder": "Insert HTML"
+							},
+							"id": "html_5",
+							"default": "Add HTML",
+							"conditional": {
+								"key": "show_pt_5",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 5 title",
+							"id": "point_5_title",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter title"
+							},
+							"conditional": {
+								"key": "show_pt_5",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Point 5 text",
+							"id": "point_5_text",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							},
+							"conditional": {
+								"key": "show_pt_5",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"template": "<div class='fivePoints'> <div class='fivePoints-header'> <p>{{header_text}}</p> <h2>{{header_title}}</h2> </div> <ul class='fivePoints-list'> {{#if show_pt_1 '===' 'show'}} <li class='fivePoints-item'> <div class='container'> {{{html_1}}} <p class='title'>{{point_1_title}}</p> <p class='text'>{{point_1_text}}</p> </div> </li> {{/if}} {{#if show_pt_2 '===' 'show'}} <li class='fivePoints-item'> <div class='container'> {{{html_2}}} <p class='title'>{{point_2_title}}</p> <p class='text'>{{point_2_text}}</p> </div> </li> {{/if}} {{#if show_pt_3 '===' 'show'}} <li class='fivePoints-item'> <div class='container'> {{{html_3}}} <p class='title'>{{point_3_title}}</p> <p class='text'>{{point_3_text}}</p> </div> </li> {{/if}} {{#if show_pt_4 '===' 'show'}} <li class='fivePoints-item'> <div class='container'> {{{html_4}}} <p class='title'>{{point_4_title}}</p> <p class='text'>{{point_4_text}}</p> </div> </li> {{/if}} {{#if show_pt_5 '===' 'show'}} <li class='fivePoints-item'> <div class='container'> {{{html_5}}} <p class='title'>{{point_5_title}}</p> <p class='text'>{{point_5_text}}</p> </div> </li> {{/if}} </ul> </div>"
+}

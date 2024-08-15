@@ -1,0 +1,57 @@
+<style>
+    div#categoryCard--{{_.id}}.categoryCard div.categoryCard-container {
+        background-color: {{card_bg_color}};
+    }
+    #categoryCard--{{_.id}} .categoryCard-header {
+        background-color: {{header_bg_color}};
+    }
+    #categoryCard--{{_.id}} .categoryCard-header button.categoryCard-toggle p {
+        color: {{title_color}};
+    }
+    #categoryCard--{{_.id}} .categoryCard-header button.categoryCard-toggle svg {
+        fill: {{title_color}};
+    }
+    #categoryCard--{{_.id}} .categoryCard-body ul li a {
+        color: {{link_color}};
+    }
+    #categoryCard--{{_.id}} .categoryCard-body ul li a svg {
+        fill: {{link_color}};
+    }
+    #categoryCard--{{_.id}} .categoryCard-footer a {
+        color: {{footer_link_color}};
+    }
+</style>
+
+<div class='categoryCard' id='categoryCard--{{_.id}}'>
+<div class='categoryCard-container'>
+    <div class='categoryCard-header'>
+        <button class='categoryCard-toggle'>
+            <p>
+                {{{html}}}
+            </p>
+            <i class='chevron'>
+                <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'>
+                    <path d='M18 9.70492L16.59 8.29492L12 12.8749L7.41 8.29492L6 9.70492L12 15.7049L18 9.70492Z'  />
+                </svg>
+            </i>
+        </button>
+    </div>
+    <div class='categoryCard-body'>
+        <ul class='categoryCard-links'>
+            {{#each links}}
+                <li>
+                    <a href='{{link_url}}'>
+                        {{link_text}}
+                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' >
+                            <path d='M9.70492 6L8.29492 7.41L12.8749 12L8.29492 16.59L9.70492 18L15.7049 12L9.70492 6Z' />
+                        </svg>
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class='categoryCard-footer'>
+        <a href='{{footer_link_url}}'>{{footer_link_text}}</a>
+    </div>
+</div>
+</div>

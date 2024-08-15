@@ -1,0 +1,22 @@
+&.processing {
+	position: relative;
+	max-height: 600px;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: rgba(255, 255, 255, 0.8);
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle fill='%2313997C' stroke='%2313997C' stroke-width='2' r='15' cx='40' cy='65'%3E%3Canimate attributeName='cy' calcMode='spline' dur='2' values='65;135;65;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='-.4'%3E%3C/animate%3E%3C/circle%3E%3Ccircle fill='%2313997C' stroke='%2313997C' stroke-width='2' r='15' cx='100' cy='65'%3E%3Canimate attributeName='cy' calcMode='spline' dur='2' values='65;135;65;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='-.2'%3E%3C/animate%3E%3C/circle%3E%3Ccircle fill='%2313997C' stroke='%2313997C' stroke-width='2' r='15' cx='160' cy='65'%3E%3Canimate attributeName='cy' calcMode='spline' dur='2' values='65;135;65;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='0'%3E%3C/animate%3E%3C/circle%3E%3C/svg%3E");
+		backdrop-filter: blur(10px);
+		background-size: 100px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}

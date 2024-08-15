@@ -1,17 +1,55 @@
 <style>
-        #splitBanner--{{_.id}} img.box-shadow {
-            box-shadow: -20px 20px 0px 0px {{color}};
-        }
+	#splitBanner--{{_.id}} img.box-shadow {
+	       box-shadow: -20px 20px 0px 0px {{color}};
+	   }
+	#splitBanner--{{_.id}} img {
+	       border-radius: {{image_radius}}px;
+	       min-height: {{image_min_height}}px;
+	       padding: {{image_padding}}px;
+	   }
+	#splitBanner--{{_.id}}.splitBanner {
+	       background-color: {{banner_bg}};
+	   }
+	#splitBanner--{{_.id}}.splitBanner div.splitBanner-content div.layout {
+			{{#if content_max_width_bool '===' 'true'}}
+				max-width: {{content_max_width}}px;
+			{{/if}}
+	       padding: {{content_padding}}px;
+	   }
+	#splitBanner--{{_.id}}.splitBanner div.splitBanner-container {
+            padding-left: {{container_padding_mobile_x}}px;
+            padding-right: {{container_padding_mobile_x}}px;
+            padding-top: {{container_padding_mobile_y}}px;
+            padding-bottom: {{container_padding_mobile_y}}px;                      
+            @media (min-width: 1024px) {
+                padding-top: {{container_padding_desktop_y}}px;
+                padding-bottom: {{container_padding_desktop_y}}px;           
+                padding-left: {{container_padding_desktop_x}}px;
+                padding-right: {{container_padding_desktop_x}}px;
+            }
+	   }
+	#splitBanner--{{_.id}}.splitBanner div.splitBanner-container a {
+	      color: {{btn_text_color}};
+	      background-color: {{btn_color}};
+	      font-size: {{btn_font_size_mobile}}px;
+          padding: {{button_padding}}px;
+	      @media (min-width: 1024px) {
+	          font-size: {{btn_font_size_desktop}}px;
+	      }
+	   }
+
+	   #splitBanner--{{_.id}}.splitBanner div.splitBanner-container a:hover {
+	       color: {{btn_text_color_hover}};
+	       background-color: {{btn_color_hover}};
+	   }
 </style>
-<div class='splitBanner' id='splitBanner--{{_.id}}'>
-    <div class='splitBanner-container'>
-        <div class='splitBanner-image'>
-            <div class='image-container'>
-                <img class='{{image-shadow}}' src='{{image.src}}' alt='{{alt}}'>
-            </div>
-        </div>
-        <div class='splitBanner-content'>
-            {{html}}
-        </div>
-    </div>
+<div class='splitBanner {{custom-class}} {{flip}} {{panelSizes}} align-content-{{text_align}}' id='splitBanner--{{_.id}}'>
+	<div class='splitBanner-container'>
+		<div class='splitBanner-image {{imageFit}}'>
+			<div class='image-container {{imageFit}}'><img class='{{shadow}}' src='{{image.src}}' alt='{{alt}}' /></div>
+		</div>
+		<div class='splitBanner-content'>
+			<div class='layout'>{{{html}}}</div>
+		</div>
+	</div>
 </div>

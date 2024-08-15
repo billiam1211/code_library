@@ -1,0 +1,22 @@
+<div class='logoArray'>
+    <div class='logoArray__header'>
+        <p class='logoArray__title'>{{{html}}}</p>
+    </div>
+    <ul class='logoArray__list'>
+        {{#each logos}}
+            <li class='logoArray__item'>
+                <div class='logoArray__item-content'>
+                    {{#if link.length}}
+                        <a href='{{link}}' class='logoArray__link'>
+                            <img src='{{image.src}}' alt='{{alt}}' class='logoArray__image'>
+                        </a>
+                    {{else}}
+                        <div class='logoArray__image-container'>
+                            <img src='{{image.src}}' alt='{{alt}}' class='logoArray__image'>
+                        </div>
+                    {{/if}}
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

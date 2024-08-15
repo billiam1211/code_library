@@ -1,0 +1,73 @@
+{
+    "name": "Menu Column Widget",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Items",
+            "id": "items",
+            "defaultCount": 3,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+
+                {
+                    "type": "tab",
+                    "label": "Item Content",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "type": "input",
+                                    "label": "Text",
+                                    "id": "text",
+                                    "default": ""
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "URL",
+                                    "id": "url",
+                                    "default": ""
+                                },
+                                {
+                                    "type": "select",
+                                    "label": "underline?",
+                                    "id": "underline",
+                                    "default": "hide",
+                                    "typeMeta": {
+                                        "selectOptions": [
+                                            {
+                                                "label": "show",
+                                                "value": "underline"
+                                            },
+                                            {
+                                                "label": "hide",
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Title",
+            "sections": [
+                {
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Title",
+                            "id": "title",
+                            "default": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='menuWidget-column'> <ul class='menuWidget-list'> {{#if title.length}} <li class='menuWidget-item'> <p class='menuWidget-title'>{{title}}</p> </li> {{/if}} {{#each items}} <li class='menuWidget-item {{underline}}'> <a class='menuWidget-action' href='{{url}}'>{{text}}</a> </li> {{/each}} </ul> </div>"
+}

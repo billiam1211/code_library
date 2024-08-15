@@ -1,0 +1,203 @@
+div[data-layout-name='Category Cards'] {
+    div[data-sub-layout] {
+        width: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+
+        @media (min-width: 1024px) {
+            width: 33.33%;
+            flex-basis: 33.33%;
+            max-width: 33.33%;
+            flex-grow: 1;
+        }
+    }
+}
+
+.categoryCard {
+    padding: 8px 16px;
+    margin: 0 auto;
+    border-radius: 2px;
+    overflow: hidden;
+
+    @media (min-width: 1024px) {
+        padding: 12px;
+    }
+
+    &-container {
+        border-radius: 2px;
+        background-color: stencilColor('color-cardBody');
+    }
+
+    &-header {
+        background-color: stencilColor('color-secondary');
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-radius: 2px 2px 0 0;
+
+        button.categoryCard-toggle {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            flex-grow: 1;
+
+            @media (min-width: 1024px) {
+                pointer-events: none;
+            }
+
+            p {
+                color: stencilColor('color-white');
+                font-family: stencilFontFamily('heading-500');
+                font-size: remCalc(14px);
+                font-style: normal;
+                font-weight: 600;
+                margin: 0;
+                flex-grow: 1;
+                text-align: left;
+                display: flex;
+                align-items: center;
+
+                @include breakpoint('large') {
+                    font-weight: 500;
+                    font-size: remCalc(18px);
+                }
+
+                svg {
+                    height: 24px;
+                    width: 24px;
+
+                    @include breakpoint('large') {
+                        height: 32px;
+                        width: 32px;
+                    }
+                }
+            }
+
+            i.chevron {
+                display: flex;
+                align-items: center;
+
+                @media (min-width: 1024px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-body {
+        padding: 8px;
+        display: none;
+
+        @media (min-width: 1024px) {
+            display: block;
+        }
+
+        ul.categoryCard-links {
+            list-style: none;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 50%;
+                margin: 0;
+                padding: 8px;
+
+                a {
+                    text-decoration: none;
+                    color: stencilColor('color-secondary');
+                    font-family: stencilFontFamily('body-400');
+                    font-size: remCalc(14px);
+                    font-style: normal;
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: space-between;
+
+                    svg {
+                        display: none;
+
+                        @media (min-width: 1261px) {
+                            display: block;
+                        }
+                    }
+
+                    @include breakpoint('large') {
+                        font-size: remCalc(16px);
+                    }
+                }
+            }
+        }
+    }
+
+    &-footer {
+        display: none;
+
+        @media (min-width: 1024px) {
+            display: block;
+        }
+
+        a {
+            display: inline-block;
+            padding: 0 16px 16px 16px;
+            color: stencilColor('color-text');
+            font-family: stencilFontFamily('body-700');
+            font-size: remCalc(12px);
+            font-style: normal;
+            font-weight: 700;
+            text-decoration: none;
+            position: relative;
+
+            &::before {
+                content: '';
+                height: 1px;
+                width: calc(100% - 32px);
+                background-color: stencilColor('color-text');
+                position: absolute;
+                bottom: 16px;
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+
+            @include breakpoint('large') {
+                font-size: remCalc(14px);
+            }
+        }
+    }
+
+    &.is-open {
+        .categoryCard-header {
+            .categoryCard-toggle {
+                i.chevron {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        .categoryCard-body,
+        .categoryCard-footer {
+            display: block;
+            animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+            @keyframes fade-in {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

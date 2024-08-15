@@ -1,0 +1,14 @@
+<div class='menuWidget-column'>
+    <ul class='menuWidget-list'>
+        {{#if title.length}}
+            <li class='menuWidget-item'>
+                <p class='menuWidget-title'>{{title}}</p>
+            </li>
+        {{/if}}
+        {{#each items}}
+            <li class='menuWidget-item {{underline}}'>
+                <a class='menuWidget-action' href='{{url}}'>{{text}}</a>
+            </li>
+        {{/each}}
+    </ul>
+</div>

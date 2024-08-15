@@ -1,0 +1,53 @@
+<div class='fivePoints'>
+    <div class='fivePoints-header'>
+        <p>{{header_text}}</p>
+        <h2>{{header_title}}</h2>
+    </div>
+    <ul class='fivePoints-list'>
+        {{#if show_pt_1 '===' 'show'}}
+            <li class='fivePoints-item'>
+                <div class='container'>
+                    {{{html_1}}}
+                    <p class='title'>{{point_1_title}}</p>
+                    <p class='text'>{{point_1_text}}</p>
+                </div>
+            </li>
+        {{/if}}
+        {{#if show_pt_2 '===' 'show'}}
+            <li class='fivePoints-item'>
+                <div class='container'>
+                    {{{html_2}}}
+                    <p class='title'>{{point_2_title}}</p>
+                    <p class='text'>{{point_2_text}}</p>
+                </div>
+            </li>
+        {{/if}}
+        {{#if show_pt_3 '===' 'show'}}
+            <li class='fivePoints-item'>
+                <div class='container'>
+                    {{{html_3}}}
+                    <p class='title'>{{point_3_title}}</p>
+                    <p class='text'>{{point_3_text}}</p>
+                </div>
+            </li>
+        {{/if}}
+        {{#if show_pt_4 '===' 'show'}}
+            <li class='fivePoints-item'>
+                <div class='container'>
+                    {{{html_4}}}
+                    <p class='title'>{{point_4_title}}</p>
+                    <p class='text'>{{point_4_text}}</p>
+                </div>
+            </li>
+        {{/if}}
+        {{#if show_pt_5 '===' 'show'}}
+            <li class='fivePoints-item'>
+                <div class='container'>
+                    {{{html_5}}}
+                    <p class='title'>{{point_5_title}}</p>
+                    <p class='text'>{{point_5_text}}</p>
+                </div>
+            </li>
+        {{/if}}
+    </ul>
+</div>

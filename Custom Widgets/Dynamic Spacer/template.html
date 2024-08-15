@@ -1,0 +1,13 @@
+<style>
+    div#dynamicSpace--{{_.id}} {
+        width: 100%;
+        min-height: {{mobile_space}}px;
+    }
+    @media (min-width: 1024px) {
+        div#dynamicSpace--{{_.id}} {
+            min-height: {{desktop_space}}px;
+        } 
+    }
+</style>
+
+<div id='dynamicSpace--{{_.id}}'></div>

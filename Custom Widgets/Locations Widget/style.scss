@@ -1,0 +1,150 @@
+div.locationWidget {
+	margin: 0 auto;
+	overflow: hidden;
+
+	div.splitSection {
+		padding: 16px;
+		max-width: 1210px;
+
+		@include breakpoint('medium') {
+			display: flex;
+			margin: 0 auto;
+			padding: 16px 20px;
+		}
+
+		@include breakpoint('large') {
+			padding: 16px 40px;
+		}
+
+		div.content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			@include breakpoint('medium') {
+				width: 55%;
+			}
+
+			p.title {
+				color: stencilColor('color-text-alt');
+				font-family: stencilFontFamily('heading-400');
+				font-size: remCalc(32px);
+				font-style: normal;
+				font-weight: 400;
+				line-height: 48px; /* 150% */
+
+				strong {
+					color: stencilColor('color-gold-2');
+					font-family: stencilFontFamily('heading-700');
+					font-size: remCalc(32px);
+					font-style: normal;
+					font-weight: 700;
+					line-height: 48px;
+				}
+			}
+			p.text {
+				color: stencilColor('color-text-alt');
+				font-family: stencilFontFamily('body-400');
+				font-size: remCalc(18px);
+				font-style: normal;
+				font-weight: 400;
+				line-height: 28px;
+			}
+		}
+		div.image {
+			@include breakpoint('medium') {
+				width: 45%;
+			}
+			div.image-container {
+				padding: 40px;
+				img {
+					width: 100%;
+					object-fit: contain;
+
+					@include breakpoint('medium') {
+						max-height: 500px;
+					}
+				}
+			}
+		}
+	}
+
+	ul.locationList {
+		max-width: 1440px;
+		list-style: none;
+		margin: 0 auto;
+		display: flex;
+		overflow-x: scroll;
+
+		&::-webkit-scrollbar {
+			width: 0px;
+			background: transparent;
+		}
+
+		@include breakpoint('large') {
+			flex-wrap: wrap;
+			justify-content: center;
+			overflow: initial;
+			padding: 0 40px;
+		}
+
+		li.locationItem {
+			padding: 8px;
+			min-width: 320px;
+
+			@include breakpoint('large') {
+				width: 25%;
+				min-width: initial;
+
+				&:nth-child(n + 5) {
+					width: 20%;
+				}
+			}
+
+			div.layout {
+				text-align: center;
+				background-color: stencilColor('color-cardBody');
+				padding: 32px 16px;
+
+				div.icon {
+					display: block;
+					width: auto;
+					height: auto;
+					display: flex;
+					justify-content: center;
+
+					svg {
+						height: 36px;
+						width: 36px;
+					}
+				}
+
+				p.title {
+					color: stencilColor('color-text-alt');
+					text-align: center;
+					font-family: stencilFontFamily('heading-700');
+					font-size: remCalc(18px);
+					font-style: normal;
+					font-weight: 700;
+					line-height: 28px;
+					margin: 16px 0 4px 0;
+				}
+
+				address,
+				.contact {
+					color: stencilColor('color-text-alt');
+					text-align: center;
+					font-family: stencilFontFamily('body-400');
+					font-size: remCalc(16px);
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px;
+
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}

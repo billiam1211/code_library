@@ -1,0 +1,735 @@
+{
+	"name": "Banner + Cards",
+	"schema": [
+		{
+			"type": "tab",
+			"label": "Banner",
+			"sections": [
+				{
+					"label": "Background Settings",
+					"settings": [
+						{
+							"type": "select",
+							"label": "Banner Background",
+							"id": "banner-bg",
+							"default": "image",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "image",
+										"value": "image"
+									},
+									{
+										"label": "color",
+										"value": "color"
+									}
+								]
+							}
+						},
+						{
+							"type": "imageManager",
+							"id": "image",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							},
+							"conditional": {
+								"key": "banner-bg",
+								"operator": "IN",
+								"value": ["image"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image Description",
+							"id": "image_description",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter image description"
+							},
+							"conditional": {
+								"key": "banner-bg",
+								"operator": "IN",
+								"value": ["image"]
+							}
+						},
+						{
+							"type": "color",
+							"label": "Background Color",
+							"id": "bg-color",
+							"default": "rgba(55, 30, 205, 1)",
+							"conditional": {
+								"key": "banner-bg",
+								"operator": "IN",
+								"value": ["color"]
+							}
+						},
+						{
+							"type": "select",
+							"label": "Show Overlay?",
+							"id": "overlay",
+							"default": "",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "true",
+										"value": "overlay"
+									},
+									{
+										"label": "false",
+										"value": ""
+									}
+								]
+							}
+						},
+						{
+							"type": "color",
+							"label": "Overlay Color",
+							"id": "overlay-color",
+							"default": "rgba(0, 0, 0, .6)",
+							"conditional": {
+								"key": "overlay",
+								"operator": "IN",
+								"value": ["overlay"]
+							}
+						},
+						{
+							"type": "range",
+							"label": "Overlay Direction",
+							"id": "overlay-degrees",
+							"default": 90,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 360,
+									"step": 1,
+									"unit": "°"
+								}
+							},
+							"conditional": {
+								"key": "overlay",
+								"operator": "IN",
+								"value": ["overlay"]
+							}
+						},
+						{
+							"type": "range",
+							"label": "Overlay Width",
+							"id": "overlay-percent",
+							"default": 50,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 100,
+									"step": 1,
+									"unit": "%"
+								}
+							},
+							"conditional": {
+								"key": "overlay",
+								"operator": "IN",
+								"value": ["overlay"]
+							}
+						}
+					]
+				},
+				{
+					"label": "Text Settings",
+					"settings": [
+						{
+							"type": "select",
+							"label": "Text Alignment",
+							"id": "alignment",
+							"default": "",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "left",
+										"value": ""
+									},
+									{
+										"label": "center",
+										"value": "center"
+									},
+									{
+										"label": "right",
+										"value": "right"
+									}
+								]
+							}
+						},
+						{
+							"label": "Heading #1",
+							"type": "code",
+							"typeMeta": {
+								"language": "html",
+								"placeholder": "Insert heading text or HTML"
+							},
+							"id": "heading",
+							"default": "add title"
+						},
+						{
+							"label": "Heading #2",
+							"type": "code",
+							"typeMeta": {
+								"language": "html",
+								"placeholder": "Insert heading text or HTML"
+							},
+							"id": "sub_heading",
+							"default": "add sub-title"
+						},
+						{
+							"type": "range",
+							"label": "Heading Font Size (Mobile)",
+							"id": "font_size_heading_mobile",
+							"default": 36,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 1,
+									"max": 100,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Heading Font Size (Tablet)",
+							"id": "font_size_heading_tablet",
+							"default": 40,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 1,
+									"max": 100,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Heading Font Size (Desktop)",
+							"id": "font_size_heading_desktop",
+							"default": 50,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 1,
+									"max": 100,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Subheading Font Size (Mobile)",
+							"id": "font_size_subheading_mobile",
+							"default": 20,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 1,
+									"max": 100,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Subheading Font Size (Tablet)",
+							"id": "font_size_subheading_tablet",
+							"default": 30,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 1,
+									"max": 100,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Subheading Font Size (Desktop)",
+							"id": "font_size_subheading_desktop",
+							"default": 40,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 1,
+									"max": 100,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "color",
+							"label": "Text Color",
+							"id": "text_color",
+							"default": "#FFF"
+						}
+					]
+				},
+				{
+					"label": "Button Settings",
+					"settings": [
+						{
+							"type": "visibility",
+							"label": "Show Button",
+							"id": "show_btn_1",
+							"default": "hide"
+						},
+						{
+							"type": "input",
+							"label": "Button URL",
+							"id": "link_url_1",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter url"
+							},
+							"conditional": {
+								"key": "show_btn_1",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Button Text",
+							"id": "action_text_1",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter text"
+							},
+							"conditional": {
+								"key": "show_btn_1",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},						
+						{
+							"type": "select",
+							"label": "Show Banner Button Arrows?",
+							"id": "banner-show-arrow",
+							"default": "",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "true",
+										"value": "show-arrow"
+									},
+									{
+										"label": "false",
+										"value": ""
+									}
+								]
+							}
+						},
+						{
+							"type": "range",
+							"label": "Button Radius",
+							"id": "border_radius",
+							"default": 5,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 50,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "color",
+							"label": "Button Text Color",
+							"id": "button_text_color",
+							"default": "#FFF"
+						},
+						{
+							"type": "color",
+							"label": "Button Text Color (Hover)",
+							"id": "button_text_color_hover",
+							"default": "#000"
+						},
+						{
+							"type": "color",
+							"label": "Button Color",
+							"id": "button_bg_color",
+							"default": "#000"
+						},
+						{
+							"type": "color",
+							"label": "Button Color (Hover)",
+							"id": "button_bg_color_hover",
+							"default": "#000"
+						},
+						{
+							"type": "range",
+							"label": "Button Padding X",
+							"id": "button_padding_x",
+							"default": 14,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 100,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Button Padding Y",
+							"id": "button_padding_y",
+							"default": 14,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 100,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+        {
+            "type": "tab",
+            "label": "Cards Settings",
+            "sections": [
+                {
+                    "label": "Cards Settings",
+                    "settings": [
+
+                        {
+                            "label": "Heading HTML",
+                            "type": "code",
+                            "typeMeta": {
+                                "language": "html",
+                                "placeholder": "Enter Title Text OR HTML"
+                            },
+                            "id": "cards_html",
+                            "default": "Add HTML"
+                        },
+                        {
+                            "type": "visibility",
+                            "label": "Show Card #1",
+                            "id": "show_card_1",
+                            "default": "show"
+                        },
+                        
+
+                        {
+                            "type": "input",
+                            "label": "Card Title #1",
+                            "id": "card_title_1",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Title"
+                            },
+                            "conditional": {
+                                "key": "show_card_1",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Card Text #1",
+                            "id": "card_text_1",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Text"
+                            },
+                            "conditional": {
+                                "key": "show_card_1",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link URL #1",
+                            "id": "link_1",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Link URL"
+                            },
+                            "conditional": {
+                                "key": "show_card_1",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link Text #1",
+                            "id": "linkText_1",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter link text"
+                            },
+                            "conditional": {
+                                "key": "show_card_1",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "visibility",
+                            "label": "Show Card #2",
+                            "id": "show_card_2",
+                            "default": "show"
+                        },
+                        
+                        {
+                            "type": "input",
+                            "label": "Card Title #2",
+                            "id": "card_title_2",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Title"
+                            },
+                            "conditional": {
+                                "key": "show_card_2",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Card Text #2",
+                            "id": "card_text_2",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Text"
+                            },
+                            "conditional": {
+                                "key": "show_card_2",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link URL #2",
+                            "id": "link_2",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Link URL"
+                            },
+                            "conditional": {
+                                "key": "show_card_2",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link Text #2",
+                            "id": "linkText_2",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter link text"
+                            },
+                            "conditional": {
+                                "key": "show_card_2",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "visibility",
+                            "label": "Show Card #3",
+                            "id": "show_card_3",
+                            "default": "show"
+                        },
+                       
+                        {
+                            "type": "input",
+                            "label": "Card Title #3",
+                            "id": "card_title_3",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Title"
+                            },
+                            "conditional": {
+                                "key": "show_card_3",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Card Text #3",
+                            "id": "card_text_3",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Text"
+                            },
+                            "conditional": {
+                                "key": "show_card_3",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link URL #3",
+                            "id": "link_3",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Link URL"
+                            },
+                            "conditional": {
+                                "key": "show_card_3",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link Text #3",
+                            "id": "linkText_3",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter link text"
+                            },
+                            "conditional": {
+                                "key": "show_card_3",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "visibility",
+                            "label": "Show Card #4",
+                            "id": "show_card_4",
+                            "default": "show"
+                        },
+                        {
+                            "type": "input",
+                            "label": "Card Title #4",
+                            "id": "card_title_4",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Title"
+                            },
+                            "conditional": {
+                                "key": "show_card_4",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Card Text #4",
+                            "id": "card_text_4",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Text"
+                            },
+                            "conditional": {
+                                "key": "show_card_4",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link URL #4",
+                            "id": "link_4",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Link URL"
+                            },
+                            "conditional": {
+                                "key": "show_card_4",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link Text #4",
+                            "id": "linkText_4",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter link text"
+                            },
+                            "conditional": {
+                                "key": "show_card_4",
+                                "operator": "IN",
+                                "value": ["show"]
+                            }
+                        },
+
+                        {
+                            "type": "range",
+                            "label": "Heading Font Size (Mobile)",
+                            "id": "heading_font_size_mobile",
+                            "default": 20,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Heading Font Size (Tablet)",
+                            "id": "heading_font_size_tablet",
+                            "default": 24,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Heading Font Size (Desktop)",
+                            "id": "heading_font_size_desktop",
+                            "default": 36,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Show Card Button Arrows?",
+                            "id": "cards-show-arrow",
+                            "default": "",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "true",
+                                        "value": "show-arrow"
+                                    },
+                                    {
+                                        "label": "false",
+                                        "value": ""
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+	],
+	"template": "<style> #featuredServices--{{_.id}} .serviceBanner .serviceBanner-subHeading, #featuredServices--{{_.id}} .serviceBanner .serviceBanner-heading { color: {{text_color}}; } #featuredServices--{{_.id}} .serviceBanner .serviceBanner-heading { font-size: {{font_size_heading_mobile}}px; } @media (min-width: 801px) { #featuredServices--{{_.id}} .serviceBanner .serviceBanner-heading { font-size: {{font_size_heading_tablet}}px; } } @media (min-width: 1261px) { #featuredServices--{{_.id}} .serviceBanner .serviceBanner-heading { font-size: {{font_size_heading_desktop}}px; } } #featuredServices--{{_.id}} .serviceBanner .serviceBanner-subHeading { font-size: {{font_size_subheading_mobile}}px; } @media (min-width: 801px) { #featuredServices--{{_.id}} .serviceBanner .serviceBanner-subHeading { font-size: {{font_size_subheading_tablet}}px; } } @media (min-width: 1261px) { #featuredServices--{{_.id}} .serviceBanner .serviceBanner-subHeading { font-size: {{font_size_subheading_desktop}}px; } } #featuredServices--{{_.id}} .serviceBanner .serviceBanner-bg.overlay::before { background: linear-gradient({{overlay-degrees}} deg, {{overlay-color}} {{overlay-percent}}%, transparent 100%); } #featuredServices--{{_.id}} .serviceBanner .serviceBanner-bg.color { background-color: {{bg-color}}; img { display: none; } } #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action { background: {{button_bg_color}}; color: {{button_text_color}}; border-radius: {{border_radius}}px; padding: {{button_padding_y}}px {{button_padding_x}}px; } #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action:focus { color: {{button_text_color_hover}}; background-color: {{button_bg_color_hover}}; } #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action:hover { color: {{button_text_color_hover}}; background-color: {{button_bg_color_hover}}; } #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action svg { stroke: {{button_text_color}}; } #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action:hover svg, #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action:focus svg { stroke: {{button_text_color_hover}}; } #featuredServices--{{_.id}} .fourCards .fourCards-title { font-size: {{heading_font_size_mobile}}px; } @media (min-width: 801px) { #featuredServices--{{_.id}} .fourCards .fourCards-title { font-size: {{heading_font_size_tablet}}px; } } @media (min-width: 1261px) { #featuredServices--{{_.id}} .fourCards .fourCards-title { font-size: {{heading_font_size_desktop}}px; } } </style> <div class='featuredServices' id='featuredServices--{{_.id}}'> <div class='serviceBanner'> <div class='serviceBanner-bg {{overlay}} {{banner-bg}}'> {{#if image.src.length}} <img src='{{image.src}}' alt='{{image_description}}'> {{/if}} </div> <div class='serviceBanner-content {{alignment}} {{banner-show-arrow}} {{banner_size}}'> <h2 class='serviceBanner-heading'> {{{heading}}} </h2> <p class='serviceBanner-subHeading'>{{{sub_heading}}}</p> <ul class='serviceBanner-actionList'> {{#if show_btn_1 '===' 'show'}} <li class='serviceBanner-actionItem'> <a href='{{link_url_1}}' class='serviceBanner-action'> {{action_text_1}} <svg viewBox='0 0 20 16' fill='none'> <path d='M12 1L19 8M19 8L12 15M19 8L1 8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /> </svg> </a> </li> {{/if}} </ul> </div> </div> <div class='fourCards grid {{cards-show-arrow}} cardNumber--four'> <h3 class='fourCards-title'>{{{cards_html}}}</h3> <ul class='fourCards-list'> {{#if show_card_1 'show'}} <li class='fourCards-item'> <div class='fourCards-layout'> <div class='fourCards-content'> <p class='title'>{{card_title_1}}</p> <p class='text'>{{card_text_1}}</p> <a href='{{link_1}}' class='fourCards-action'> <span> {{linkText_1}} <svg viewBox='0 0 24 24' id='icon-chevron-right'> <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' /> </svg> </span> </a> </div> </div> </li> {{/if}} {{#if show_card_2 'show'}} <li class='fourCards-item'> <div class='fourCards-layout'> <div class='fourCards-content'> <p class='title'>{{card_title_2}}</p> <p class='text'>{{card_text_2}}</p> <a href='{{link_2}}' class='fourCards-action'> <span> {{linkText_2}} <svg viewBox='0 0 24 24' id='icon-chevron-right'> <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' /> </svg> </span> </a> </div> </div> </li> {{/if}} {{#if show_card_3 'show'}} <li class='fourCards-item'> <div class='fourCards-layout'> <div class='fourCards-content'> <p class='title'>{{card_title_3}}</p> <p class='text'>{{card_text_3}}</p> <a href='{{link_3}}' class='fourCards-action'> <span> {{linkText_3}} <svg viewBox='0 0 24 24' id='icon-chevron-right'> <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' /> </svg> </span> </a> </div> </div> </li> {{/if}} {{#if show_card_4 'show'}} <li class='fourCards-item'> <div class='fourCards-layout'> <div class='fourCards-content'> <p class='title'>{{card_title_4}}</p> <p class='text'>{{card_text_4}}</p> <a href='{{link_4}}' class='fourCards-action'> <span> {{linkText_4}} <svg viewBox='0 0 24 24' id='icon-chevron-right'> <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' /> </svg> </span> </a> </div> </div> </li> {{/if}} </ul> </div> </div>"
+}

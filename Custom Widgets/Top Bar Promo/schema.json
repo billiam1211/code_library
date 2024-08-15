@@ -1,0 +1,35 @@
+{
+    "name": "Top Promo Bar",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Slides",
+            "id": "slides",
+            "defaultCount": 3,
+            "entryLabel": "Section",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Slide Content",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "label": "HTML",
+                                    "type": "code",
+                                    "typeMeta": {
+                                        "language": "html",
+                                        "placeholder": "Add content"
+                                    },
+                                    "id": "html",
+                                    "default": "Add HTML"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='promo-bar text-center d-flex items-stretch' data-banner-location='top'> <div class='wrapper flex-1'> <div class='d-flex flex-col h-full'> <div class='swiper w-full min-h-full' data-swiper='{ autoplay: { delay: 4000 }, loop: true, slidesPerView: 1, slidesPerGroup: 1 }'> <div class='swiper-wrapper'> {{#each slides}} <div class='swiper-slide'> <div class='promo-text'> {{{html}}} </div> </div> {{/each}} </div> <button type='button' class='swiper-button-prev'> <svg class='icon icon--carousel-arrow'> <use xlink:href='#icon-chevron-left' /> </svg> </button> <button type='button' class='swiper-button-next'> <svg class='icon icon--carousel-arrow'> <use xlink:href='#icon-chevron-right' /> </svg> </button> </div> </div> </div> </div>"
+}

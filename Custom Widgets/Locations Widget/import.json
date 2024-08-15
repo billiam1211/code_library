@@ -1,0 +1,103 @@
+{
+    "name": "Locations Widget",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Locations",
+            "id": "locations",
+            "defaultCount": 3,
+            "entryLabel": "Locations",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Locations",
+                    "sections": [
+                        {
+                            "settings": [
+
+                                {
+                                    "label": "Icon HTML",
+                                    "type": "code",
+                                    "typeMeta": {
+                                        "language": "html",
+                                        "placeholder": "Add content"
+                                    },
+                                    "id": "icon",
+                                    "default": "add icon, image, or svg"
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Title",
+                                    "id": "title",
+                                    "default": ""
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Address",
+                                    "id": "address",
+                                    "default": ""
+                                },
+                                {
+                                    "label": "Contact HTML",
+                                    "type": "code",
+                                    "typeMeta": {
+                                        "language": "html",
+                                        "placeholder": ""
+                                    },
+                                    "id": "contact",
+                                    "default": "<p>Add text</p>"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Settings",
+            "sections": [
+                {
+                    "settings": [
+                        {
+                            "label": "Title HTML",
+                            "type": "code",
+                            "typeMeta": {
+                                "language": "html",
+                                "placeholder": ""
+                            },
+                            "id": "title_html",
+                            "default": "<p>Add text</p>"
+                        },
+                        {
+                            "label": "Text HTML",
+                            "type": "code",
+                            "typeMeta": {
+                                "language": "html",
+                                "placeholder": ""
+                            },
+                            "id": "text_html",
+                            "default": "<p>Add text</p>"
+                        },
+                        {
+                            "type": "imageManager",
+                            "id": "image",
+                            "default": {
+                                "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                                "type": "IMAGE_MANAGER"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Image ALT",
+                            "id": "alt",
+                            "default": "Enter image description"
+                        }
+                        
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='locationWidget'> <div class='splitSection'> <div class='content'> <p class='title'> {{{title_html}}} </p> <p class='text'> {{{text_html}}} </p> </div> <div class='image'> <div class='image-container'> <img src='{{image.src}}' alt='{{alt}}'> </div> </div> </div> <ul class='locationList'> {{#each (limit locations 9)}} <li class='locationItem'> <div class='layout'> <div class='icon'> {{{icon}}} </div> <p class='title'> {{title}} </p> <address> {{{address}}} </address> <div class='contact'> {{{contact}}} </div> </div> </li> {{/each}} </ul> </div>"
+}

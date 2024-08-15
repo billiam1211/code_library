@@ -1,0 +1,73 @@
+{
+    "name": "Logo Array",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Logo Array",
+            "id": "logos",
+            "defaultCount": 3,
+            "entryLabel": "Logo Array",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Settings",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "type": "imageManager",
+                                    "id": "image",
+                                    "default": {
+                                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                                        "type": "IMAGE_MANAGER"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Image Description",
+                                    "id": "alt",
+                                    "default": "",
+                                    "typeMeta": {
+                                        "placeholder": "Enter image description"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "LinK URL",
+                                    "id": "link",
+                                    "default": "",
+                                    "typeMeta": {
+                                        "placeholder": "Enter Link URL"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Settings",
+            "sections": [
+                {
+                    "label": "Settings",
+                    "settings": [
+                        {
+                            "label": "Title HTML",
+                            "type": "code",
+                            "typeMeta": {
+                                "language": "html",
+                                "placeholder": "Insert heading text or HTML"
+                            },
+                            "id": "html",
+                            "default": "Add HTML"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='logoArray'> <div class='logoArray__header'> <p class='logoArray__title'>{{{html}}}</p> </div> <ul class='logoArray__list'> {{#each logos}} <li class='logoArray__item'> <div class='logoArray__item-content'> {{#if link.length}} <a href='{{link}}' class='logoArray__link'> <img src='{{image.src}}' alt='{{alt}}' class='logoArray__image'> </a> {{else}} <div class='logoArray__image-container'> <img src='{{image.src}}' alt='{{alt}}' class='logoArray__image'> </div> {{/if}} </div> </li> {{/each}} </ul> </div>"
+}
+

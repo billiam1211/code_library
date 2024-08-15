@@ -1,0 +1,45 @@
+
+<div class='locationWidget'>
+    <div class='splitSection'>
+        <div class='content'>
+            <p class='title'>
+                {{title_html}}
+            </p>
+            <p class='text'>
+                {{text_html}}
+            </p>
+        </div>
+        <div class='image'>
+            <div class='image-container'>
+
+                <img src='{{image.src}}' alt='{{alt}}'>
+            </div>
+        </div>
+    </div>
+    <ul class='locationList'>
+        {{#each (limit locations 9)}}
+            <li class='locationItem'>
+                <div class='layout'>                        
+                    <div class='icon'>
+                        {{icon}}
+                    </div>
+                    <p class='title'>
+                        {{title}}
+                    </p>
+                    <address>
+                        {{address}}
+                    </address>
+                    <div class='contact'>
+                        {{contact}}
+                    </div>
+                </div>
+            </li>
+        {{/each}}  
+    </ul>
+</div>
+
+
+
+
+<!-- FORMATTED -->
+<div class='locationWidget'> <div class='splitSection'> <div class='content'> <p class='title'> {{title_html}} </p> <p class='text'> {{text_html}} </p> </div> <div class='image'> <div class='image-container'> <img src='{{image.src}}' alt='{{alt}}'> </div> </div> </div> <ul class='locationList'> {{#each (limit locations 9)}} <li class='locationItem'> <div class='layout'> <div class='icon'> {{icon}} </div> <p class='title'> {{title}} </p> <address> {{address}} </address> <div class='contact'> {{contact}} </div> </div> </li> {{/each}} </ul> </div>

@@ -1,123 +1,391 @@
 {
-    "name": "Split Banner",
-    "schema": [{
-        "type": "tab",
-        "label": "Split Banner",
-        "sections": [
-            {
-                "label": "Settings",
-                "settings": [
-                    {
-                        "type": "select",
-                        "label": "Image Shadow?",
-                        "id": "shadow",
-                        "default": "on",
-                        "typeMeta": {
-                            "selectOptions": [
-                                {
-                                    "label": "on",
-                                    "value": "box-shadow"
-                                },
-                                {
-                                    "label": "off",
-                                    "value": ""
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "type": "color",
-                        "label": "Shadow Color",
-                        "id": "color",
-                        "default": "#ffc700"
-                    },
-                    {
-                        "type": "imageManager",
-                        "id": "image",
-                        "default": {
-                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
-                            "type": "IMAGE_MANAGER"
-                        }
-                    },
-                    {
-                        "type": "input",
-                        "label": "Image ALT",
-                        "id": "alt",
-                        "default": "",
-                        "typeMeta": {
-                            "placeholder": "enter image description"
-                        }
-                    },
-                    {
-                        "label": "HTML",
-                        "type": "code",
-                        "typeMeta": {
-                            "language": "html",
-                            "placeholder": "Insert heading text or HTML"
-                        },
-                        "id": "html",
-                        "default": "Add HTML"
-                    }
-                ]
-            },
-            {
-                "label": "Button Settings",
-                "settings": [
-                    {
-                        "type": "color",
-                        "label": "Button Text Color",
-                        "id": "btn_text_color",
-                        "default": "rgba(255, 255, 255, 1)"
-                    },
-                    {
-                        "type": "color",
-                        "label": "Button Text Color (hover)",
-                        "id": "btn_text_color_hover",
-                        "default": "rgba(255, 255, 255, 1)"
-                    },
-                    {
-                        "type": "color",
-                        "label": "Button Color",
-                        "id": "btn_color",
-                        "default": "rgba(29, 66, 150, 1)"
-                    },                    
-                    {
-                        "type": "color",
-                        "label": "Button Color (hover)",
-                        "id": "btn_color_hover",
-                        "default": "rgba(29, 66, 150, 1)"
-                    },                    
-                    {
-                        "type": "range",
-                        "label": "Button Font Size (Mobile)",
-                        "id": "btn_font_size_mobile",
-                        "default": 14,
-                        "typeMeta": {
-                            "rangeValues": {
-                                "min": 0,
-                                "max": 50,
-                                "step": 1,
-                                "unit": "px"
-                            }
-                        }
-                    },
-                    {
-                        "type": "range",
-                        "label": "Button Font Size (Desktop)",
-                        "id": "btn_font_size_desktop",
-                        "default": 14,
-                        "typeMeta": {
-                            "rangeValues": {
-                                "min": 0,
-                                "max": 50,
-                                "step": 1,
-                                "unit": "px"
-                            }
-                        }
-                    }
-                ]
-            }
-        ]
-    }],
-    "template": "<style> #splitBanner--{{_.id}} img.box-shadow { box-shadow: -20px 20px 0px 0px {{color}}; } </style> <div class='splitBanner' id='splitBanner--{{_.id}}'> <div class='splitBanner-container'> <div class='splitBanner-image'> <div class='image-container'> <img class='{{shadow}}' src='{{image.src}}' alt='{{alt}}'> </div> </div> <div class='splitBanner-content'> {{{html}}} </div> </div> </div>"
+	"name": "Split Banner",
+	"schema": [
+		{
+			"type": "tab",
+			"label": "Split Banner",
+			"sections": [
+				{
+					"label": "Image Settings",
+					"settings": [
+						{
+							"type": "imageManager",
+							"id": "image",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image ALT",
+							"id": "alt",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter image description"
+							}
+						},
+
+						{
+							"type": "range",
+							"label": "Image Radius",
+							"id": "image_radius",
+							"default": 5,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 50,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Image Min Height",
+							"id": "image_min_height",
+							"default": 5,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 500,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+
+						{
+							"type": "select",
+							"label": "Fit Image to Content?",
+							"id": "imageFit",
+							"default": "static",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "true",
+										"value": "fit-to-content"
+									},
+									{
+										"label": "false",
+										"value": "static"
+									}
+								]
+							}
+						},
+						{
+							"type": "range",
+							"label": "Image Padding",
+							"id": "image_padding",
+							"default": 0,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 100,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "select",
+							"label": "Image Shadow?",
+							"id": "shadow",
+							"default": "",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "on",
+										"value": "box-shadow"
+									},
+									{
+										"label": "off",
+										"value": ""
+									}
+								]
+							}
+						},
+						{
+							"type": "color",
+							"label": "Shadow Color",
+							"id": "color",
+							"default": "#ffc700",
+							"conditional": {
+								"key": "shadow",
+								"operator": "IN",
+								"value": ["box-shadow"]
+							}
+						}
+					]
+				},
+				{
+					"label": "Banner Settings",
+					"settings": [
+                        {
+							"type": "input",
+							"label": "Custom Class Name",
+							"id": "custom-class",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "enter css class name"
+							}
+						},
+						{
+							"type": "color",
+							"label": "Banner Background Color",
+							"id": "banner_bg",
+							"default": ""
+						},
+						{
+							"type": "select",
+							"label": "Panel Size Ratio",
+							"id": "panelSizes",
+							"default": "fifty-fifty",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "50/50",
+										"value": "fifty-fifty"
+									},
+									{
+										"label": "60/40",
+										"value": "sixty-forty"
+									}
+								]
+							}
+						},
+						{
+							"type": "select",
+							"label": "Flip Content?",
+							"id": "flip",
+							"default": "",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "true",
+										"value": "flip"
+									},
+									{
+										"label": "false",
+										"value": ""
+									}
+								]
+							}
+						},
+						{
+							"type": "select",
+							"label": "Content Max Width?",
+							"id": "content_max_width_bool",
+							"default": "false",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "true",
+										"value": "true"
+									},
+									{
+										"label": "false",
+										"value": "false"
+									}
+								]
+							}
+						},
+						{
+							"type": "range",
+							"label": "Content Max Width",
+							"id": "content_max_width",
+							"default": 500,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 500,
+									"step": 1,
+									"unit": "px"
+								}
+							},
+							"conditional": {
+								"key": "content_max_width_bool",
+								"operator": "IN",
+								"value": ["true"]
+							}
+						},
+						{
+							"type": "select",
+							"label": "Text Alignment",
+							"id": "text_align",
+							"default": "left",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "Left",
+										"value": "left"
+									},
+									{
+										"label": "Center",
+										"value": "center"
+									},
+									{
+										"label": "Right",
+										"value": "right"
+									}
+								]
+							}
+						},
+						{
+							"label": "HTML",
+							"type": "code",
+							"typeMeta": {
+								"language": "html",
+								"placeholder": "Insert heading text or HTML"
+							},
+							"id": "html",
+							"default": "Add HTML"
+						},
+						{
+							"type": "range",
+							"label": "Mobile Padding X",
+							"id": "container_padding_mobile_x",
+							"default": 0,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 200,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Mobile Padding Y",
+							"id": "container_padding_mobile_y",
+							"default": 0,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 200,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Desktop Padding X",
+							"id": "container_padding_desktop_x",
+							"default": 0,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 200,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Desktop Padding Y",
+							"id": "container_padding_desktop_y",
+							"default": 0,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 200,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Content Padding",
+							"id": "content_padding",
+							"default": 0,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 200,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						}
+					]
+				},
+				{
+					"label": "Button Settings",
+					"settings": [
+						{
+							"type": "color",
+							"label": "Button Text Color",
+							"id": "btn_text_color",
+							"default": "rgba(255, 255, 255, 1)"
+						},
+						{
+							"type": "color",
+							"label": "Button Text Color (hover)",
+							"id": "btn_text_color_hover",
+							"default": "rgba(255, 255, 255, 1)"
+						},
+						{
+							"type": "color",
+							"label": "Button Color",
+							"id": "btn_color",
+							"default": "rgba(29, 66, 150, 1)"
+						},
+						{
+							"type": "color",
+							"label": "Button Color (hover)",
+							"id": "btn_color_hover",
+							"default": "rgba(29, 66, 150, 1)"
+						},
+						{
+							"type": "range",
+							"label": "Button Font Size (Mobile)",
+							"id": "btn_font_size_mobile",
+							"default": 14,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 50,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Button Font Size (Desktop)",
+							"id": "btn_font_size_desktop",
+							"default": 14,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 50,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+                        {
+							"type": "range",
+							"label": "Button Padding",
+							"id": "button_padding",
+							"default": 0,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 50,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"template": "<style> #splitBanner--{{_.id}} img.box-shadow { box-shadow: -20px 20px 0px 0px {{color}}; } #splitBanner--{{_.id}} img { border-radius: {{image_radius}}px; min-height: {{image_min_height}}px; padding: {{image_padding}}px; } #splitBanner--{{_.id}}.splitBanner { background-color: {{banner_bg}}; } #splitBanner--{{_.id}}.splitBanner div.splitBanner-content div.layout { {{#if content_max_width_bool '===' 'true'}} max-width: {{content_max_width}}px; {{/if}} padding: {{content_padding}}px; } #splitBanner--{{_.id}}.splitBanner div.splitBanner-container { padding-left: {{container_padding_mobile_x}}px; padding-right: {{container_padding_mobile_x}}px; padding-top: {{container_padding_mobile_y}}px; padding-bottom: {{container_padding_mobile_y}}px; @media (min-width: 1024px) { padding-top: {{container_padding_desktop_y}}px; padding-bottom: {{container_padding_desktop_y}}px; padding-left: {{container_padding_desktop_x}}px; padding-right: {{container_padding_desktop_x}}px; } } #splitBanner--{{_.id}}.splitBanner div.splitBanner-container a { color: {{btn_text_color}}; background-color: {{btn_color}}; font-size: {{btn_font_size_mobile}}px; padding: {{button_padding}}px; @media (min-width: 1024px) { font-size: {{btn_font_size_desktop}}px; } } #splitBanner--{{_.id}}.splitBanner div.splitBanner-container a:hover { color: {{btn_text_color_hover}}; background-color: {{btn_color_hover}}; } </style> <div class='splitBanner {{custom-class}} {{flip}} {{panelSizes}} align-content-{{text_align}}' id='splitBanner--{{_.id}}'> <div class='splitBanner-container'> <div class='splitBanner-image {{imageFit}}'> <div class='image-container {{imageFit}}'><img class='{{shadow}}' src='{{image.src}}' alt='{{alt}}' /></div> </div> <div class='splitBanner-content'> <div class='layout'>{{{html}}}</div> </div> </div> </div>"
 }

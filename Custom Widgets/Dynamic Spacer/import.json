@@ -1,0 +1,45 @@
+{
+    "name": "Dynmaic Spacer",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Settings",
+            "sections": [
+                {
+                    "label": "Space Settings",
+                    "settings": [
+						{
+							"type": "range",
+							"label": "Mobile Space",
+							"id": "mobile_space",
+							"default": 20,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 1000,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						},
+						{
+							"type": "range",
+							"label": "Desktop Space",
+							"id": "desktop_space",
+							"default": 20,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 1000,
+									"step": 1,
+									"unit": "px"
+								}
+							}
+						}
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<style> div#dynamicSpace--{{_.id}} { width: 100%; height: {{mobile_space}}px; } @media (min-width: 1024px) { div#dynamicSpace--{{_.id}} { height: {{desktop_space}}px; } } </style> <div id='dynamicSpace--{{_.id}}'></div>"
+}

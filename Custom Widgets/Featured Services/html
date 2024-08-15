@@ -1,0 +1,203 @@
+<style>
+    #featuredServices--{{_.id}} .serviceBanner .serviceBanner-subHeading,
+    #featuredServices--{{_.id}} .serviceBanner .serviceBanner-heading {
+        color: {{text_color}};
+    }
+
+    #featuredServices--{{_.id}} .serviceBanner .serviceBanner-heading {
+        font-size: {{font_size_heading_mobile}}px;
+    }
+
+    @media (min-width: 801px) {
+        #featuredServices--{{_.id}} .serviceBanner .serviceBanner-heading {
+            font-size: {{font_size_heading_tablet}}px;
+        }
+    }
+
+    @media (min-width: 1261px) {
+        #featuredServices--{{_.id}} .serviceBanner .serviceBanner-heading {
+            font-size: {{font_size_heading_desktop}}px;
+        }
+    }
+
+    #featuredServices--{{_.id}} .serviceBanner .serviceBanner-subHeading {
+        font-size: {{font_size_subheading_mobile}}px;
+    }
+
+    @media (min-width: 801px) {
+        #featuredServices--{{_.id}} .serviceBanner .serviceBanner-subHeading {
+            font-size: {{font_size_subheading_tablet}}px;
+        }
+    }
+
+    @media (min-width: 1261px) {
+        #featuredServices--{{_.id}} .serviceBanner .serviceBanner-subHeading {
+            font-size: {{font_size_subheading_desktop}}px;
+        }
+    }
+
+    #featuredServices--{{_.id}} .serviceBanner .serviceBanner-bg.overlay::before {
+        background: linear-gradient({{overlay-degrees}} deg, {{overlay-color}} {{overlay-percent}}%, transparent 100%);
+    }
+
+    #featuredServices--{{_.id}} .serviceBanner .serviceBanner-bg.color {
+        background-color: {{bg-color}};
+        img {
+            display: none;
+        }
+    }
+
+    #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action {
+        background: {{button_bg_color}};
+        color: {{button_text_color}};
+        border-radius: {{border_radius}}px;
+        padding: {{button_padding_y}}px {{button_padding_x}}px;
+    }
+
+    #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action:focus {
+        color: {{button_text_color_hover}};
+        background-color: {{button_bg_color_hover}};
+    }
+
+    #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action:hover {
+        color: {{button_text_color_hover}};
+
+        background-color: {{button_bg_color_hover}};
+    }
+
+    #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action svg {
+        stroke: {{button_text_color}};
+    }
+
+    #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action:hover svg,
+    #featuredServices--{{_.id}} .serviceBanner a.serviceBanner-action:focus svg {
+        stroke: {{button_text_color_hover}};
+    }
+
+    #featuredServices--{{_.id}} .fourCards .fourCards-title {
+        font-size: {{heading_font_size_mobile}}px;
+    }
+
+
+    @media (min-width: 801px) {
+        #featuredServices--{{_.id}} .fourCards .fourCards-title {
+            font-size: {{heading_font_size_tablet}}px;
+        }
+    }
+
+    @media (min-width: 1261px) {
+        #featuredServices--{{_.id}} .fourCards .fourCards-title {
+            font-size: {{heading_font_size_desktop}}px;
+        }
+    }
+</style>
+
+<div class='featuredServices' id='featuredServices--{{_.id}}'>
+
+    <div class='serviceBanner'>
+        <div class='serviceBanner-bg {{overlay}} {{banner-bg}}'> 
+            {{#if image.src.length}} 
+                <img 
+                    src='{{image.src}}'
+                    alt='{{image_description}}'> 
+            {{/if}} 
+        </div>
+        <div class='serviceBanner-content {{alignment}} {{banner-show-arrow}} {{banner_size}}'>
+            <h2 class='serviceBanner-heading'>
+                {{{heading}}}
+            </h2>
+    
+            <p class='serviceBanner-subHeading'>{{{sub_heading}}}</p>
+    
+            <ul class='serviceBanner-actionList'> 
+                {{#if show_btn_1 '===' 'show'}} 
+                <li class='serviceBanner-actionItem'> 
+                    <a href='{{link_url_1}}' class='serviceBanner-action'> {{action_text_1}} 
+                        <svg viewBox='0 0 20 16' fill='none'>
+                            <path d='M12 1L19 8M19 8L12 15M19 8L1 8' stroke-width='2' stroke-linecap='round'
+                                stroke-linejoin='round' />
+                        </svg>
+                    </a> 
+                </li> 
+                {{/if}} 
+            </ul>
+        </div>
+    </div>
+    <div class='fourCards grid {{cards-show-arrow}} cardNumber--four'>
+        <h3 class='fourCards-title'>{{{cards_html}}}</h3>
+        <ul class='fourCards-list'>
+            {{#if show_card_1 'show'}}
+                <li class='fourCards-item'>
+                    <div class='fourCards-layout'>
+                        <div class='fourCards-content'>
+                            <p class='title'>{{card_title_1}}</p>
+                            <p class='text'>{{card_text_1}}</p>
+                            <a href='{{link_1}}' class='fourCards-action'> 
+                                <span>
+                                    {{linkText_1}}
+                                    <svg viewBox='0 0 24 24' id='icon-chevron-right'>
+                                        <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {{/if}}
+            {{#if show_card_2 'show'}}
+                <li class='fourCards-item'>
+                    <div class='fourCards-layout'>
+                        <div class='fourCards-content'>
+                            <p class='title'>{{card_title_2}}</p>
+                            <p class='text'>{{card_text_2}}</p>
+                            <a href='{{link_2}}' class='fourCards-action'> 
+                                <span>
+                                    {{linkText_2}}
+                                    <svg viewBox='0 0 24 24' id='icon-chevron-right'>
+                                        <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {{/if}}
+            {{#if show_card_3 'show'}}
+                <li class='fourCards-item'>
+                    <div class='fourCards-layout'>
+                        <div class='fourCards-content'>
+                            <p class='title'>{{card_title_3}}</p>
+                            <p class='text'>{{card_text_3}}</p>
+                            <a href='{{link_3}}' class='fourCards-action'> 
+                                <span>
+                                    {{linkText_3}}
+                                    <svg viewBox='0 0 24 24' id='icon-chevron-right'>
+                                        <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {{/if}}
+            {{#if show_card_4 'show'}}
+                <li class='fourCards-item'>
+                    <div class='fourCards-layout'>
+                        <div class='fourCards-content'>
+                            <p class='title'>{{card_title_4}}</p>
+                            <p class='text'>{{card_text_4}}</p>
+                            <a href='{{link_4}}' class='fourCards-action'> 
+                                <span>
+                                    {{linkText_4}}
+                                    <svg viewBox='0 0 24 24' id='icon-chevron-right'>
+                                        <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {{/if}}
+        </ul>
+    </div>    
+</div>
