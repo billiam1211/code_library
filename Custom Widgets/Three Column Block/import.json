@@ -1,0 +1,417 @@
+{
+    "name": "3 Column Bar",
+    "schema": [{
+        "type": "tab",
+        "label": "3 Column Bar",
+        "sections": [{
+                "label": "Background Settings",
+                "settings": [
+                    {
+                        "type": "visibility",
+                        "label": "Show Column #1",
+                        "id": "show_col_1",
+                        "default": "show"
+                    },
+                    {
+                        "type": "visibility",
+                        "label": "Show Column #2",
+                        "id": "show_col_2",
+                        "default": "show"
+                    },
+                    {
+                        "type": "visibility",
+                        "label": "Show Column #3",
+                        "id": "show_col_3",
+                        "default": "show"
+                    },
+                    {
+                        "label": "Column #1 Title",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "Column #1 Title"
+                        },
+                        "id": "col_1_html",
+                        "default": "Add HTML",
+                        "conditional": {
+                            "key": "show_col_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Column #1 Button Text",
+                        "id": "col_1_btn_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "show_col_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Column #1 Button URL",
+                        "id": "col_1_btn_url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "show_col_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "col_1_img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "show_col_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Column #1 Img ALT",
+                        "id": "col_1_img_alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        },
+                        "conditional": {
+                            "key": "show_col_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "label": "Column #2 Title",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "Column #2 Title"
+                        },
+                        "id": "col_2_html",
+                        "default": "Add HTML",
+                        "conditional": {
+                            "key": "show_col_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Column #2 Button Text",
+                        "id": "col_2_btn_text",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter text"
+                        },
+                        "conditional": {
+                            "key": "show_col_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Column #2 Button URL",
+                        "id": "col_2_btn_url",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter url"
+                        },
+                        "conditional": {
+                            "key": "show_col_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "col_2_img",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        },
+                        "conditional": {
+                            "key": "show_col_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Column #2 Img ALT",
+                        "id": "col_2_img_alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        },
+                        "conditional": {
+                            "key": "show_col_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "label": "Column #3 HTML",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "Column #3 Title"
+                        },
+                        "id": "col_3_html",
+                        "default": "Add HTML",
+                        "conditional": {
+                            "key": "show_col_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "General Settings",
+                "settings": [
+                    {
+                        "type": "color",
+                        "label": "Column #1 Color",
+                        "id": "col_bg_color",
+                        "default": "rgba(255, 0, 0, 1)",
+                        "conditional": {
+                            "key": "show_col_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Column #1 Text Color",
+                        "id": "col_1_text_color",
+                        "default": "#1a1a1a",
+                        "conditional": {
+                            "key": "show_col_1",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Column #2 Color",
+                        "id": "col_2_bg_color",
+                        "default": "rgba(255, 255, 255, 1)",
+                        "conditional": {
+                            "key": "show_col_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Column #2 Text Color",
+                        "id": "col_2_text_color",
+                        "default": "#1a1a1a",
+                        "conditional": {
+                            "key": "show_col_2",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Column #3 Color",
+                        "id": "col_3_bg_color",
+                        "default": "rgba(0, 0, 255, 1)",
+                        "conditional": {
+                            "key": "show_col_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Column #3 Text Color",
+                        "id": "col_3_text_color",
+                        "default": "#1a1a1a",
+                        "conditional": {
+                            "key": "show_col_3",
+                            "operator": "IN",
+                            "value": [
+                                "show"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "label": "Font Size (Mobile)",
+                        "id": "font_size_mobile",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 1,
+                                "max": 100,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "label": "Font Size (Tablet)",
+                        "id": "font_size_tablet",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 1,
+                                "max": 100,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "label": "Font Size (Desktop)",
+                        "id": "font_size_desktop",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 1,
+                                "max": 100,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    }                 
+                ]
+            },
+            {
+                "label": "Button Settings",
+                "settings": [
+                    {
+                        "type": "range",
+                        "label": "Button Font Size (Mobile)",
+                        "id": "btn_font_size_mobile",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 1,
+                                "max": 100,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "label": "Button Font Size (Tablet)",
+                        "id": "btn_font_size_tablet",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 1,
+                                "max": 100,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "label": "Font Size (Desktop)",
+                        "id": "btn_font_size_desktop",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 1,
+                                "max": 100,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    }    ,
+                    {
+                        "type": "color",
+                        "label": "Button Color",
+                        "id": "btn_bg_color",
+                        "default": "rgba(55, 30, 205, 1)"                 
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Border Color",
+                        "id": "border_color",
+                        "default": "rgba(255, 255, 255, 0)"                 
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Text Color",
+                        "id": "btn_text_color",
+                        "default": "rgba(255, 255, 255, 1)"                 
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Color (Hover)",
+                        "id": "btn_bg_color_hover",
+                        "default": "rgba(0, 0, 0, 1)"                       
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Border Color (Hover)",
+                        "id": "border_color_hover",
+                        "default": "rgba(255, 255, 255, 0)"                 
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Text Color (Hover)",
+                        "id": "btn_text_color_hover",
+                        "default": "rgba(255, 255, 255, 1)"                       
+                    }                 
+                ]
+            }
+        ]
+    }],
+    "template": "<style> #threeColumnBar-{{_.id}} li.column div.content { background-color: {{col_bg_color}}; color: {{col_1_text_color}}; } #threeColumnBar-{{_.id}} li.column div.content h2 { color: {{col_1_text_color}}; } #threeColumnBar-{{_.id}} li.column.alt div.content { background-color: {{col_2_bg_color}}; } #threeColumnBar-{{_.id}} li.column.alt div.content h2 { color: {{col_2_text_color}}; } #threeColumnBar-{{_.id}} li.column.custom div.content{ background-color: {{col_3_bg_color}}; color: {{col_3_text_color}}; } #threeColumnBar-{{_.id}} li.column.custom div.content h2{ color: {{col_3_text_color}}; } #threeColumnBar-{{_.id}} li.column { font-size: {{font_size_mobile}}px; } @media (min-width: 1024px) { #threeColumnBar-{{_.id}} li.column { font-size: {{font_size_tablet}}px; } } @media (min-width: 1440px) { #threeColumnBar-{{_.id}} li.column { font-size: {{font_size_desktop}}px; } } #threeColumnBar-{{_.id}} li.column a.action { border: 2px solid {{border_color}}; font-size: {{btn_font_size_mobile}}px; background-color: {{btn_bg_color}}; color: {{btn_text_color}}; } #threeColumnBar-{{_.id}} li.column a.action:hover, #threeColumnBar-{{_.id}} li.column a.action:focus { border: 2px solid {{border_color_hover}}; color: {{btn_text_color_hover}}; background-color: {{btn_bg_color_hover}}; } @media (min-width: 1024px) { #threeColumnBar-{{_.id}} li.column a.action { font-size: {{btn_font_size_tablet}}px; } } @media (min-width: 1440px) { #threeColumnBar-{{_.id}} li.column a.action { font-size: {{btn_font_size_desktop}}px; } } </style> <div class='threeColumnBar' id='threeColumnBar-{{_.id}}'> <ul class='columns'> {{#if show_col_1 'show'}} <li class='column'> <div class='content'> <div class='text-content'> <h2 class='title'>{{{col_1_html}}}</h2> <a href='{{col_1_btn_url}}' class='action'>{{col_1_btn_text}}</a> </div> <div class='image-container'> <img src='{{col_1_img.src}}' alt='{{col_1_img_alt}}' /> </div> </div> </li> {{/if}} {{#if show_col_2 'show'}} <li class='column alt'> <div class='content'> <div class='text-content'> <h2 class='title'>{{{col_2_html}}}</h2> <a href='{{col_2_btn_url}}' class='action'>{{col_2_btn_text}}</a> </div> <div class='image-container'> <img src='{{col_2_img.src}}' alt='{{col_2_img_alt}}' /> </div> </div> </li> {{/if}} {{#if show_col_3 'show'}} <li class='column custom'> <div class='content'> <div class='text-content'>{{{col_3_html}}}</div> </div> </li> {{/if}} </ul> </div> "
+}

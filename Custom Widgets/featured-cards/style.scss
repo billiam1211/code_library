@@ -1,0 +1,199 @@
+.featuredCards {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+
+    .featuredCards-title {
+        font-weight: 900;
+        font-size: 30px;
+        margin: 0 0 30px 0;
+    }
+
+    ul.featuredCards-list {
+        display: flex;
+        margin: 0;
+        list-style: none;
+
+        li.featuredCards-item {
+            padding: 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: all .3s ease-in-out;
+
+            .featuredCards-img {
+                flex-grow: 1;
+                position: relative;
+                width: 100%;
+                min-height: 300px;
+
+                @media (min-width: 551px) {
+                    min-height: 150px;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .featuredCards-content {
+                margin: 20px 0 0 0;
+
+                a.featuredCards-action {
+                    font-size: 20px;
+                    font-weight: 900;
+                    text-decoration: none;
+                    width: 100%;
+                    display: block;
+                    padding: 16px 0;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+
+    }
+
+    &.grid {
+
+        ul.featuredCards-list {
+            margin: 0 -20px;
+
+            li.featuredCards-item+li {
+                margin-top: 20px;
+
+                @media (min-width: 551px) {
+                    margin-top: 0;
+                }
+            }
+
+            li.featuredCards-item {
+                @media (min-width: 551px) {
+                    margin-bottom: 20px;
+                }
+
+                @media (min-width: 1024px) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &.cardNumber--six {
+            ul.featuredCards-list {
+                flex-wrap: wrap;
+
+                li.featuredCards-item {
+                    width: 100%;
+                    flex: initial;
+
+                    @media (min-width: 551px) {
+                        width: 50%;
+                    }
+
+                    @media (min-width: 768px) {
+                        width: 33.33%;
+                    }
+
+                    @media (min-width: 901px) {
+                        width: 25%;
+                    }
+
+                    @media (min-width: 1024px) {
+                        width: 20%;
+                    }
+
+                    @media (min-width: 1261px) {
+                        width: 16.667%;
+                    }
+                }
+            }
+        }
+
+        &.cardNumber--five {
+            ul.featuredCards-list {
+                flex-wrap: wrap;
+
+                li.featuredCards-item {
+                    width: 100%;
+                    flex: initial;
+
+                    @media (min-width: 551px) {
+                        width: 50%;
+                    }
+
+                    @media (min-width: 768px) {
+                        width: 33.33%;
+                    }
+
+                    @media (min-width: 901px) {
+                        width: 25%;
+                    }
+
+                    @media (min-width: 1024px) {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+
+        &.cardNumber--four {
+            ul.featuredCards-list {
+                flex-wrap: wrap;
+
+                li.featuredCards-item {
+                    width: 100%;
+                    flex: initial;
+
+                    @media (min-width: 551px) {
+                        width: 50%;
+                    }
+
+                    @media (min-width: 801px) {
+                        width: 33.33%;
+                    }
+
+                    @media (min-width: 1024px) {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+        
+        &.cardNumber--three {
+            ul.featuredCards-list {
+                flex-wrap: wrap;
+
+                li.featuredCards-item {
+                    width: 100%;
+                    flex: initial;
+
+                    @media (min-width: 551px) {
+                        width: 50%;
+                    }
+
+                    @media (min-width: 801px) {
+                        width: 33.33%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.carousel {
+        ul.featuredCards-list.slick-slider {
+            width: 100%;
+            display: block;
+
+            div.slick-list.draggable {
+                width: 100%;
+
+                li.featuredCards-item {
+                    flex: initial;
+                }
+            }
+        }
+    }
+}

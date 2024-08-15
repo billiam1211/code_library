@@ -1,0 +1,17 @@
+<style>
+        #splitBanner--{{_.id}} img.box-shadow {
+            box-shadow: -20px 20px 0px 0px {{color}};
+        }
+</style>
+<div class='splitBanner' id='splitBanner--{{_.id}}'>
+    <div class='splitBanner-container'>
+        <div class='splitBanner-image'>
+            <div class='image-container'>
+                <img class='{{image-shadow}}' src='{{image.src}}' alt='{{alt}}'>
+            </div>
+        </div>
+        <div class='splitBanner-content'>
+            {{html}}
+        </div>
+    </div>
+</div>

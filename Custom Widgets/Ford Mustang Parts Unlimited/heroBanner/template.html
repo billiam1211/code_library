@@ -1,0 +1,77 @@
+<style>
+    #heroBanner--{{_.id}} {
+        background-color: {{banner_bg_color}};
+    }
+
+    #heroBanner--{{_.id}}.color div.heroBanner-image-wrapper {
+       display: none;
+    }
+    #heroBanner--{{_.id}} h2,
+    #heroBanner--{{_.id}} p {
+        color: {{text_color}};
+    }
+    #heroBanner--{{_.id}} div.heroBanner-content {
+        background-color: {{content_bg_color_mobile}};
+        border: 1px solid {{content_border_color}};
+        backdrop-filter: blur({{blur}}px);
+    }
+    @media (min-width: 1024px) {
+        #heroBanner--{{_.id}} div.heroBanner-content {
+            background-color: {{content_bg_color_desktop}};
+        }
+    }
+    #heroBanner--{{_.id}} a.heroBanner-action {
+        background-color: {{button_color}};
+        color: {{button_text_color}};
+        border: 1px solid {{button_border_color}};
+    }
+    #heroBanner--{{_.id}} a.heroBanner-action:hover,
+    #heroBanner--{{_.id}} a.heroBanner-action:focus {
+        background-color: {{button_color_hover}};
+        color: {{button_text_color_hover}};
+        border: 1px solid {{button_border_color_hover}};
+    }
+    
+    #heroBanner--{{_.id}}.overlay div.heroBanner-image-wrapper:before {
+        content: '';
+       height: 100%;
+       width: 100%;
+       background-color: {{overlay-color}}; 
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+    }
+</style>
+
+<section class='heroBanner alignment-{{alignment}} {{overlay}} {{bg_type}} {{bg_size}}' id='heroBanner--{{_.id}}'>
+    <div class='heroBanner-slide'>
+        <div class='heroBanner-image-wrapper'>
+            <img src='{{image.src}}' alt='{{alt}}' class='heroBanner-image'>
+        </div>
+        {{#or title.length description.length link_text.length description_2.length}}
+            <div class='heroBanner-content'>
+                {{#if title.length}}
+                    <h2 class='heroBanner-title'>{{title}}</h2>
+                {{/if}}
+                {{#if description.length}}
+                    <p class='heroBanner-description'>
+                        {{description}}
+                    </p>
+                {{/if}}
+                {{#if description_2.length}}
+                    <p class='heroBanner-description'>
+                        {{description_2}}
+                    </p>
+                {{/if}}
+                {{#if link_text.length}}
+                    <a href='{{link_url}}' class='heroBanner-action'>{{link_text}}</a>
+                {{/if}}
+            </div>
+        {{/or}}
+    </div>
+</section>
+
+
+
+

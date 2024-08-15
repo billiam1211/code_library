@@ -1,0 +1,95 @@
+<style>
+	#threeColumnBar-{{_.id}} li.column div.content {
+	    background-color: {{col_bg_color}};        
+        color: {{col_1_text_color}};
+	}
+	#threeColumnBar-{{_.id}} li.column div.content h2 {
+        color: {{col_1_text_color}};
+	}
+	#threeColumnBar-{{_.id}} li.column.alt div.content {
+        background-color: {{col_2_bg_color}};
+	}
+	#threeColumnBar-{{_.id}} li.column.alt div.content h2 {
+        color: {{col_2_text_color}};
+	}
+	#threeColumnBar-{{_.id}} li.column.custom div.content{
+        background-color: {{col_3_bg_color}};
+        color: {{col_3_text_color}};
+	}
+	#threeColumnBar-{{_.id}} li.column.custom div.content h2{
+        color: {{col_3_text_color}};
+	}
+	#threeColumnBar-{{_.id}} li.column {
+	    font-size: {{font_size_mobile}}px;
+	}
+	@media (min-width: 1024px) {
+	    #threeColumnBar-{{_.id}} li.column {
+	        font-size: {{font_size_tablet}}px;
+	    }
+	}
+	@media (min-width: 1440px) {
+	    #threeColumnBar-{{_.id}} li.column {
+	        font-size: {{font_size_desktop}}px;
+	    }
+	}
+	#threeColumnBar-{{_.id}} li.column a.action {
+        border: 2px solid {{border_color}};
+	    font-size: {{btn_font_size_mobile}}px;
+	    background-color: {{btn_bg_color}};
+        color: {{btn_text_color}};
+	}
+	#threeColumnBar-{{_.id}} li.column a.action:hover,
+	#threeColumnBar-{{_.id}} li.column a.action:focus {
+        border: 2px solid {{border_color_hover}};
+        color: {{btn_text_color_hover}};
+	    background-color: {{btn_bg_color_hover}};
+	}
+	@media (min-width: 1024px) {
+	    #threeColumnBar-{{_.id}} li.column a.action {
+	        font-size: {{btn_font_size_tablet}}px;
+	    }
+	}
+	@media (min-width: 1440px) {
+	    #threeColumnBar-{{_.id}} li.column a.action {
+	        font-size: {{btn_font_size_desktop}}px;
+	    }
+	}
+</style>
+
+<div class='threeColumnBar' id='threeColumnBar-{{_.id}}'>
+	<ul class='columns'>
+        {{#if show_col_1 'show'}}
+            <li class='column'>
+                <div class='content'>
+                    <div class='text-content'>
+                        <h2 class='title'>{{{col_1_html}}}</h2>
+                        <a href='{{col_1_btn_url}}' class='action'>{{col_1_btn_text}}</a>
+                    </div>
+                    <div class='image-container'>
+                        <img src='{{col_1_img.src}}' alt='{{col_1_img_alt}}' />
+                    </div>
+                </div>
+            </li>
+        {{/if}}
+        {{#if show_col_2 'show'}}
+            <li class='column alt'>
+                <div class='content'>
+                    <div class='text-content'>
+                        <h2 class='title'>{{{col_2_html}}}</h2>
+                        <a href='{{col_2_btn_url}}' class='action'>{{col_2_btn_text}}</a>
+                    </div>
+                    <div class='image-container'>
+                        <img src='{{col_2_img.src}}' alt='{{col_2_img_alt}}' />
+                    </div>
+                </div>
+            </li>
+        {{/if}}
+        {{#if show_col_3 'show'}}
+            <li class='column custom'>
+                <div class='content'>
+                    <div class='text-content'>{{{col_3_html}}}</div>
+                </div>
+            </li>
+        {{/if}}
+	</ul>
+</div>

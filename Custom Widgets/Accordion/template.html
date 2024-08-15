@@ -1,0 +1,11 @@
+<div class='accordion'>
+    <h2 class='accordionTitle'>{{title}}</h2>
+    {{#each block}}
+        <div class='accordionBlock'>
+            <button class='accordionToggle'>{{heading}}</button>
+            <div class='accordionContent'>
+                {{code}}
+            </div>
+        </div>
+    {{/each}}
+</div>

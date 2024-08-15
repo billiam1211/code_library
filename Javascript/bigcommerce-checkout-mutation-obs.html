@@ -1,0 +1,102 @@
+<script>
+    const updateProductInfo = () => {
+        let cartId = '{{cart_id}}';
+        fetch(`/api/storefront/checkout/${cartId}`, {
+            credentials: 'include',
+        })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(data => {
+
+                const itemsArr = data.cart.lineItems.physicalItems;
+                var productElementsNode = document.querySelector('.optimizedCheckout-orderSummary .productList') || document.querySelector('.modal.optimizedCheckout-contentPrimary.modal--afterOpen');
+                if (productElementsNode) {
+                    var itemEl = document.createElement('div');
+                    itemEl.setAttribute('class', 'products-items');
+                    if (itemsArr.length == 1) {
+                        itemEl.innerHTML = '1 Item';
+                    } else {
+                        itemEl.innerHTML = itemsArr.length + ' Items';
+                    }
+                    if (document.querySelector('.optimizedCheckout-cart-modal')) {
+                        document.querySelector('.optimizedCheckout-cart-modal .modal-body .cart-section').prepend(itemEl);
+                    }
+                    var productElements = productElementsNode.children;
+                    var elementIndex = 0;
+                    for (const el of productElements) {
+                        if (!el.querySelector('span.product-sku')) {
+                            el.querySelector('span')
+                            var prodTitle = el.querySelector('.product-title.optimizedCheckout-contentPrimary').innerHTML;
+                            var prodColumn = el.querySelector('.product-column.product-body');
+                            var indexof = prodTitle.indexOf(' x ');
+                            el.querySelector('.product-title.optimizedCheckout-contentPrimary').innerHTML = prodTitle.substring(indexof + 3);
+                            var sku = Object.values(itemsArr)[elementIndex];
+                            let skuEl = document.createElement('span');
+                            skuEl.setAttribute('class', 'product-sku');
+                            skuEl.innerHTML = "{{lang 'cart.part_number'}} " + sku.sku;
+                            prodColumn.prepend(skuEl);
+                        }
+                    }
+                }
+            });
+    };
+	document.addEventListener('DOMContentLoaded', event => {
+
+		// set up variable for the element that will have the mutations to listen for
+		const targetNode = document.getElementById('checkout-app');
+
+		// set up the method
+		const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+		// init new observer constructor and pass in the callback
+		const myObserver = new MutationObserver(mutationHandler);
+
+		// set up options
+		const obsConfig = {
+			childList: true,
+			characterData: true,
+			attributes: true,
+			subtree: true,
+			attributeOldValue: true,
+			characterDataOldValue: true,
+		};
+
+		// add target node to the oberver	
+        myObserver.observe(targetNode, obsConfig);
+
+
+
+		// set up mutation handler function to be passed in as a callback
+		function mutationHandler(mutationRecords) {
+			// iterate over each mutation on the aside
+			mutationRecords.forEach(mutation => {
+                
+                // check the mautation record target for the class of the cards list
+                
+                if (mutation.target.classList?.contains('layout-cart') && mutation.addedNodes.length) {
+                    updateProductInfo();
+                }
+                
+                if (mutation.target.classList?.contains('productList') && mutation.addedNodes) {
+                    updateProductInfo();
+                }
+
+
+				// other available methods to use:
+				// .disconnect() top the observer until .observe() is called again
+				// .observe()  configure the observe to begin watching for DOM Tree changes
+				// .takeRecords() Removes all pending notifications from the MutationObserver's notification queue and returns them in a new Array of MutationRecord objects.
+			});
+		}
+
+        document.body.addEventListener('click', (e) => {
+            if (e.target.classList?.contains('cartDrawer-body') || e.target.parentElement.classList?.contains('cartDrawer-body')) {
+                updateProductInfo();
+            }
+            if (e.target.classList?.contains('button') && e.target.parentElement.parentElement.classList?.contains('cart-section')) {
+                updateProductInfo();
+            }
+        });
+	});
+</script>

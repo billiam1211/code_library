@@ -1,0 +1,123 @@
+{
+    "name": "Split Banner",
+    "schema": [{
+        "type": "tab",
+        "label": "Split Banner",
+        "sections": [
+            {
+                "label": "Settings",
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Image Shadow?",
+                        "id": "shadow",
+                        "default": "on",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "on",
+                                    "value": "box-shadow"
+                                },
+                                {
+                                    "label": "off",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "color",
+                        "label": "Shadow Color",
+                        "id": "color",
+                        "default": "#ffc700"
+                    },
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Image ALT",
+                        "id": "alt",
+                        "default": "",
+                        "typeMeta": {
+                            "placeholder": "enter image description"
+                        }
+                    },
+                    {
+                        "label": "HTML",
+                        "type": "code",
+                        "typeMeta": {
+                            "language": "html",
+                            "placeholder": "Insert heading text or HTML"
+                        },
+                        "id": "html",
+                        "default": "Add HTML"
+                    }
+                ]
+            },
+            {
+                "label": "Button Settings",
+                "settings": [
+                    {
+                        "type": "color",
+                        "label": "Button Text Color",
+                        "id": "btn_text_color",
+                        "default": "rgba(255, 255, 255, 1)"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Text Color (hover)",
+                        "id": "btn_text_color_hover",
+                        "default": "rgba(255, 255, 255, 1)"
+                    },
+                    {
+                        "type": "color",
+                        "label": "Button Color",
+                        "id": "btn_color",
+                        "default": "rgba(29, 66, 150, 1)"
+                    },                    
+                    {
+                        "type": "color",
+                        "label": "Button Color (hover)",
+                        "id": "btn_color_hover",
+                        "default": "rgba(29, 66, 150, 1)"
+                    },                    
+                    {
+                        "type": "range",
+                        "label": "Button Font Size (Mobile)",
+                        "id": "btn_font_size_mobile",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 50,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "label": "Button Font Size (Desktop)",
+                        "id": "btn_font_size_desktop",
+                        "default": 14,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 50,
+                                "step": 1,
+                                "unit": "px"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "template": "<style> #splitBanner--{{_.id}} img.box-shadow { box-shadow: -20px 20px 0px 0px {{color}}; } </style> <div class='splitBanner' id='splitBanner--{{_.id}}'> <div class='splitBanner-container'> <div class='splitBanner-image'> <div class='image-container'> <img class='{{shadow}}' src='{{image.src}}' alt='{{alt}}'> </div> </div> <div class='splitBanner-content'> {{{html}}} </div> </div> </div>"
+}

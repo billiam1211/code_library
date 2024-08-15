@@ -1,0 +1,57 @@
+{{assignVar 'id' (random 1 100000)}}
+
+<style>
+    div.splitBanner.splitBanner--{{getVar 'id'}} {
+        background-image: linear-gradient({{color_1}}, {{color_2}} {{gradient}});
+    }
+    @media (min-width: 801px) {
+        div.splitBanner.splitBanner--{{getVar 'id'}} {
+            background-image: linear-gradient(to right, {{color_1}}, {{color_2}} {{gradient}});
+        }
+        div.splitBanner.splitBanner--{{getVar 'id'}}.reversed {
+            background-image: linear-gradient(to left, {{color_1}}, {{color_2}} {{gradient}});
+        }
+        #splitBanner--{{getVar 'id'}} div.splitBanner-image img {
+            padding:{{#if image_padding '===' 'true'}}50px{{else}}0{{/if}};
+        }
+    }
+    
+    .splitBanner--{{getVar 'id'}} div.splitBanner-image {
+        z-index: {{#if image_position '===' 'behind'}}-1{{else}}1{{/if}};
+    }
+    .splitBanner--{{getVar 'id'}} a.splitBanner-action {
+        background-color: {{button_color}};
+        border: 1px solid {{button_border_color}};
+        color: {{button_text_color}};
+    }
+    .splitBanner--{{getVar 'id'}} a.splitBanner-action:hover,
+    .splitBanner--{{getVar 'id'}} a.splitBanner-action:focus {
+        background-color: {{button_color_hover}};
+        border: 1px solid {{button_border_color_hover}};
+        color: {{button_text_color_hover}};
+        box-shadow: 2px 2px 15px {{box_shadow}};
+    }
+    .splitBanner--{{getVar 'id'}} h2.splitBanner-heading,
+    .splitBanner--{{getVar 'id'}} p.splitBanner-text {
+        color: {{text_color}};
+    }
+</style>
+<div class='splitBanner splitBanner--{{getVar 'id'}} {{invert}}' id='splitBanner--{{getVar 'id'}}'>
+    <div class='splitBanner-container'>
+        <div class='splitBanner-image'>
+            <img src='{{image.src}}' alt='{{image-alt}}'>
+        </div>
+        <div class='splitBanner-content'>
+                <h2 class='splitBanner-heading'>{{title}}</h2>
+            {{#if text-1.length}}
+                <p class='splitBanner-text'>{{text-1}}</p>
+            {{/if}}
+            {{#if text-2.length}}
+                <p class='splitBanner-text'>{{text-2}}</p>
+            {{/if}}
+            {{#if link-text.length}}
+                <a href='{{link-url}}' class='splitBanner-action'>{{link-text}}</a>
+            {{/if}}
+        </div>
+    </div>
+</div>

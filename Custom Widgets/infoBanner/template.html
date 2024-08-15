@@ -1,0 +1,57 @@
+<div class='threeCard' id='threeCard--{{_.id}}'>
+	<div class='threeCard-container'>		
+        <h2>{{{title}}}</h2>		
+        <ul class='threeCard-list'>		
+            
+            {{#if show_card_01 '===' 'show'}}
+			<li class='threeCard-item'>
+				<div class='layout'>
+					<div class='image-container'>
+                        <img src='{{image_01.src}}' alt='{{alt_01}}' />
+                            <a href='{{card_01_url}}'></a>
+					</div>
+					<div class='content'>
+						<h3>{{card_01_title}}</h3>
+						<p>{{card_01_text}}</p>
+						<a href='{{card_01_url}}'>{{card_01_btn}}</a>
+					</div>
+				</div>
+			</li>
+			{{/if}} 
+            
+            {{#if show_card_02 '===' 'show'}}
+			<li class='threeCard-item'>
+				<div class='layout'>
+					<div class='image-container'>
+                        <img src='{{image_02.src}}' alt='{{alt_02}}' />
+                            <a href='{{card_01_url}}'></a>
+					</div>
+					<div class='content'>
+						<h3>{{card_02_title}}</h3>
+						<p>{{card_02_text}}</p>
+						<a href='{{card_02_url}}'>{{card_02_btn}}</a>
+					</div>
+				</div>
+			</li>
+			{{/if}}
+            
+            {{#if show_card_03 '===' 'show'}}
+			<li class='threeCard-item'>
+				<div class='layout'>
+					<div class='image-container'>
+                        <img src='{{image_03.src}}' alt='{{alt_03}}' />
+                            <a href='{{card_01_url}}'></a>
+					</div>
+					<div class='content'>
+						<h3>{{card_03_title}}</h3>
+						<p>{{card_03_text}}</p>
+						<a href='{{card_03_url}}'>{{card_03_btn}}</a>
+					</div>
+				</div>
+			</li>
+			{{/if}}
+
+            
+		</ul>
+	</div>
+</div>

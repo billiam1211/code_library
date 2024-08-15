@@ -1,0 +1,27 @@
+{
+    "name": "Footer Links HTML",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Column Settings",
+            "sections": [
+                {
+                    "label": "Content",
+                    "settings": [
+                        {
+                            "label": "Custom HTML",
+                            "type": "code",
+                            "typeMeta": {
+                                "language": "html",
+                                "placeholder": "Insert HTML markup"
+                            },
+                            "id": "html",
+                            "default": "Add HTML"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<article class='footerBlock footerBlock-custom'>{{{html}}}</article>"
+}

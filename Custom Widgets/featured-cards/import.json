@@ -1,0 +1,353 @@
+{
+    "name": "Featured Cards",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Featured Card",
+            "id": "featuredCard",
+            "defaultCount": 4,
+            "entryLabel": "Featured Card",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Card Info",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "type": "imageManager",
+                                    "id": "image",
+                                    "default": {
+                                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                                        "type": "IMAGE_MANAGER"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Image Description",
+                                    "id": "alt",
+                                    "default": "",
+                                    "typeMeta": {
+                                        "placeholder": "Enter image description"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "LinK URL",
+                                    "id": "link",
+                                    "default": "",
+                                    "typeMeta": {
+                                        "placeholder": "Enter Link URL"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Link Text",
+                                    "id": "linkText",
+                                    "default": "",
+                                    "typeMeta": {
+                                        "placeholder": "Enter link text"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Featured Cards Heading",
+            "sections": [
+                {
+                    "label": "Featured Card Heading",
+                    "settings": [
+                        {
+                            "type": "select",
+                            "label": "Grid or Carousel?",
+                            "id": "layout",
+                            "default": "grid",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "grid",
+                                        "value": "grid"
+                                    },
+                                    {
+                                        "label": "carousel",
+                                        "value": "carousel"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Cards per row (Desktop)",
+                            "id": "cards-per-row",
+                            "default": "four",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "six",
+                                        "value": "six"
+                                    },
+                                    {
+                                        "label": "five",
+                                        "value": "five"
+                                    },
+                                    {
+                                        "label": "four",
+                                        "value": "four"
+                                    },
+                                    {
+                                        "label": "three",
+                                        "value": "three"
+                                    }
+                                ]
+                            },
+                            "conditional": {
+                                "key": "layout",
+                                "operator": "IN",
+                                "value": [
+                                    "grid"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Main Heading Tag",
+                            "id": "main_heading",
+                            "default": "h2",
+                            "typeMeta": {
+                                "selectOptions": [{
+                                        "label": "h1",
+                                        "value": "h1"
+                                    },
+                                    {
+                                        "label": "h2",
+                                        "value": "h2"
+                                    },
+                                    {
+                                        "label": "h3",
+                                        "value": "h3"
+                                    },
+                                    {
+                                        "label": "h4",
+                                        "value": "h4"
+                                    },
+                                    {
+                                        "label": "h5",
+                                        "value": "h5"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "label": "Heading HTML",
+                            "type": "code",
+                            "typeMeta": {
+                                "language": "html",
+                                "placeholder": "Insert heading text or HTML"
+                            },
+                            "id": "html",
+                            "default": "Add HTML"
+                        },
+                        {
+                            "type": "range",
+                            "label": "Heading Font Size (Mobile)",
+                            "id": "heading_font_size_mobile",
+                            "default": 20,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Heading Font Size (Tablet)",
+                            "id": "heading_font_size_tablet",
+                            "default": 24,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Heading Font Size (Desktop)",
+                            "id": "heading_font_size_desktop",
+                            "default": 36,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "color",
+                            "label": "Text Color",
+                            "id": "text_color",
+                            "default": "#000"
+                        },
+                        {
+                            "type": "range",
+                            "label": "Button Font Size (Mobile)",
+                            "id": "button_font_size_mobile",
+                            "default": 20,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Button Font Size (Tablet)",
+                            "id": "button_font_size_tablet",
+                            "default": 24,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Button Font Size (Desktop)",
+                            "id": "button_font_size_desktop",
+                            "default": 36,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "color",
+                            "label": "Button Color",
+                            "id": "button_color",
+                            "default": "#000"
+                        },
+                        {
+                            "type": "color",
+                            "label": "Button Text Color",
+                            "id": "button_text_color",
+                            "default": "#FFF"
+                        },
+                        {
+                            "type": "color",
+                            "label": "Button Color (Hover)",
+                            "id": "button_color_hover",
+                            "default": "#333"
+                        },
+                        {
+                            "type": "color",
+                            "label": "Button Text Color (Hover)",
+                            "id": "button_text_color_hover",
+                            "default": "#FFF"
+                        },
+                        {
+                            "type": "range",
+                            "label": "Image Radius",
+                            "id": "image_radius",
+                            "default": 5,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 0,
+                                    "max": 50,
+                                    "step": 1,
+                                    "unit": "%"
+                                }
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Image Fitment",
+                            "id": "object_fit",
+                            "default": "contain",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "cover",
+                                        "value": "cover"
+                                    },
+                                    {
+                                        "label": "contain",
+                                        "value": "contain"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Button Radius",
+                            "id": "button_radius",
+                            "default": 5,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 0,
+                                    "max": 50,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Button Padding",
+                            "id": "button_padding",
+                            "default": 5,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 0,
+                                    "max": 50,
+                                    "step": 1,
+                                    "unit": "px"
+                                }
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Show Button Arrows?",
+                            "id": "show-arrow",
+                            "default": "",
+                            "typeMeta": {
+                                "selectOptions": [{
+                                        "label": "true",
+                                        "value": "show-arrow"
+                                    },
+                                    {
+                                        "label": "false",
+                                        "value": ""
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<style> #featuredCards--{{_.id}} .featuredCards-title { font-size: {{heading_font_size_mobile}}px; color: {{text_color}}; } #featuredCards--{{_.id}} .featuredCards-img img { border-radius: {{image_radius}}%; object-fit: {{object_fit}}; } #featuredCards--{{_.id}} .featuredCards-action { font-size: {{button_font_size_mobile}}px; color: {{button_text_color}}; background-color: {{button_color}}; border-radius: {{button_radius}}px; padding: {{button_padding}}px; } #featuredCards--{{_.id}} .featuredCards-action svg { fill: {{button_text_color}}; height: {{button_font_size_mobile}}px; width: {{button_font_size_mobile}}px; } #featuredCards--{{_.id}} .featuredCards-action:hover, #featuredCards--{{_.id}} .featuredCards-action:focus { color: {{button_text_color_hover}}; background-color: {{button_color_hover}}; } @media (min-width: 801px) { #featuredCards--{{_.id}} .featuredCards-title { font-size: {{heading_font_size_tablet}}px; } #featuredCards--{{_.id}} .featuredCards-action { font-size: {{button_font_size_tablet}}px; } } @media (min-width: 1261px) { #featuredCards--{{_.id}} .featuredCards-title { font-size: {{heading_font_size_desktop}}px; } #featuredCards--{{_.id}} .featuredCards-action { font-size: {{button_font_size_desktop}}px; } } </style> <div class='featuredCards {{layout}} {{show-arrow}} cardNumber--{{cards-per-row}}' id='featuredCards--{{_.id}}'> <{{#if main_heading.length}}{{main_heading}}{{else}}h2{{/if}} class='featuredCards-title'>{{{html}}}</{{#if main_heading.length}}{{main_heading}}{{else}}h2{{/if}}><ul class='featuredCards-list'> {{#each featuredCard}} <li class='featuredCards-item'> <div class='featuredCards-layout'> <div class='featuredCards-img'> <a href='{{link}}'> <img src='{{image.src}}' alt='{{alt}}'> </a> </div> <div class='featuredCards-content'> <a href='{{link}}' class='featuredCards-action'> <span> {{linkText}} <svg viewBox='0 0 24 24' id='icon-chevron-right'> <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z' /> </svg> </span> </a> </div> </div> </li> {{/each}} </ul> </div>"
+}
+
