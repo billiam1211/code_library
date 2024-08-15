@@ -1,0 +1,568 @@
+{
+    "uuid": "cd350266-8f78-4576-bda5-dce954364793",
+    "name": "Carousel",
+    "schema": [{
+        "type": "array",
+        "label": "Carousel",
+        "id": "slides",
+        "defaultCount": 2,
+        "entryLabel": "Slide",
+        "thumbnail": {
+            "conditionKey": "background.type",
+            "thumbnailConditions": {
+                "image": {
+                    "type": "image",
+                    "valueKey": "background.imageUrl.src"
+                },
+                "color": {
+                    "type": "color",
+                    "valueKey": "background.color"
+                }
+            }
+        },
+        "schema": [{
+                "type": "hidden",
+                "settings": [{
+                        "id": "displayTitle",
+                        "default": "Carousel Title"
+                    },
+                    {
+                        "id": "displaySubtitle",
+                        "default": "Add a description for your carousel slide. You can use this to promote multiple sales."
+                    },
+                    {
+                        "id": "displayButtonText",
+                        "default": "Shop now"
+                    }
+                ]
+            },
+            {
+                "type": "tab",
+                "label": "Content",
+                "sections": [{
+                    "settings": [{
+                            "type": "input",
+                            "id": "slideLink",
+                            "label": "Slide link",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "https://"
+                            }
+                        },
+                        {
+                            "type": "alignment",
+                            "label": "Content align",
+                            "id": "contentAlignment",
+                            "default": {
+                                "horizontal": "center",
+                                "vertical": "middle"
+                            },
+                            "typeMeta": {
+                                "display": "horizontal"
+                            }
+                        },
+                        {
+                            "type": "color",
+                            "label": "Text color",
+                            "id": "textColor",
+                            "default": "#444444"
+                        },
+                        {
+                            "type": "element",
+                            "label": "Background",
+                            "id": "background",
+                            "typeMeta": {
+                                "controls": {
+                                    "advanced": {
+                                        "label": "Background",
+                                        "settings": [{
+                                                "type": "select",
+                                                "label": "Background",
+                                                "id": "type",
+                                                "default": "image",
+                                                "typeMeta": {
+                                                    "selectOptions": [{
+                                                            "label": "Image",
+                                                            "value": "image"
+                                                        },
+                                                        {
+                                                            "label": "Color",
+                                                            "value": "color"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "color",
+                                                "label": "Background color",
+                                                "id": "color",
+                                                "default": "#444444",
+                                                "conditional": {
+                                                    "key": "type",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "color"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "imageManager",
+                                                "id": "imageUrl",
+                                                "default": {
+                                                    "src": "https://images.unsplash.com/photo-1517840600399-c7c2ff4c0fb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+                                                    "type": "IMAGE_MANAGER"
+                                                },
+                                                "conditional": {
+                                                    "key": "type",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "image"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "select",
+                                                "label": "Image fit",
+                                                "id": "imageFit",
+                                                "default": "fill",
+                                                "typeMeta": {
+                                                    "selectOptions": [{
+                                                            "label": "Fill to box",
+                                                            "value": "fill"
+                                                        },
+                                                        {
+                                                            "label": "Fit to box",
+                                                            "value": "fit"
+                                                        }
+                                                    ]
+                                                },
+                                                "conditional": {
+                                                    "key": "type",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "image"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "alignment",
+                                                "label": "Image align",
+                                                "id": "imageAlignment",
+                                                "default": {
+                                                    "horizontal": "center",
+                                                    "vertical": "middle"
+                                                },
+                                                "typeMeta": {
+                                                    "display": "both"
+                                                },
+                                                "conditional": {
+                                                    "key": "type",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "image"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "range",
+                                                "label": "Image opacity",
+                                                "id": "imageOpacity",
+                                                "default": 100,
+                                                "typeMeta": {
+                                                    "rangeValues": {
+                                                        "min": 0,
+                                                        "max": 100,
+                                                        "step": 1,
+                                                        "unit": "%"
+                                                    }
+                                                },
+                                                "conditional": {
+                                                    "key": "type",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "image"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "element",
+                            "label": "Box",
+                            "id": "textBox",
+                            "typeMeta": {
+                                "controls": {
+                                    "visibility": {
+                                        "default": "show"
+                                    },
+                                    "advanced": {
+                                        "label": "Box style",
+                                        "settings": [{
+                                            "type": "color",
+                                            "label": "Box color",
+                                            "id": "backgroundColor",
+                                            "default": "#FFFFFF"
+                                        }]
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "element",
+                            "label": "Title",
+                            "id": "title",
+                            "typeMeta": {
+                                "controls": {
+                                    "visibility": {
+                                        "default": "show"
+                                    },
+                                    "advanced": {
+                                        "label": "Title style",
+                                        "settings": [{
+                                                "type": "typography",
+                                                "label": "Title",
+                                                "id": "textStyle",
+                                                "default": "default"
+                                            },
+                                            {
+                                                "type": "select",
+                                                "label": "Font family",
+                                                "id": "fontFamily",
+                                                "default": "inherit",
+                                                "typeMeta": {
+                                                    "selectOptions": [{
+                                                            "label": "Theme Default",
+                                                            "value": "inherit"
+                                                        },
+                                                        {
+                                                            "label": "Arial",
+                                                            "value": "Arial, sans-serif"
+                                                        },
+                                                        {
+                                                            "label": "Tahoma",
+                                                            "value": "Tahoma, sans-serif"
+                                                        },
+                                                        {
+                                                            "label": "Verdana",
+                                                            "value": "Verdana, sans-serif"
+                                                        },
+                                                        {
+                                                            "label": "Lucida",
+                                                            "value": "Lucida, sans-serif"
+                                                        },
+                                                        {
+                                                            "label": "Times New Roman",
+                                                            "value": "Times New Roman, serif"
+                                                        },
+                                                        {
+                                                            "label": "Courier",
+                                                            "value": "Courier, serif"
+                                                        },
+                                                        {
+                                                            "label": "Georgia",
+                                                            "value": "Georgia, serif"
+                                                        },
+                                                        {
+                                                            "label": "Palatino",
+                                                            "value": "Palatino, serif"
+                                                        }
+                                                    ]
+                                                },
+                                                "conditional": {
+                                                    "key": "textStyle",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "custom"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "select",
+                                                "label": "Font weight",
+                                                "id": "fontWeight",
+                                                "default": "400",
+                                                "typeMeta": {
+                                                    "selectOptions": [{
+                                                            "label": "Thin",
+                                                            "value": "100"
+                                                        },
+                                                        {
+                                                            "label": "Extra Light (Ultra Light)",
+                                                            "value": "200"
+                                                        },
+                                                        {
+                                                            "label": "Light",
+                                                            "value": "300"
+                                                        },
+                                                        {
+                                                            "label": "Normal",
+                                                            "value": "400"
+                                                        },
+                                                        {
+                                                            "label": "Medium",
+                                                            "value": "500"
+                                                        },
+                                                        {
+                                                            "label": "Semi Bold (Demi Bold)",
+                                                            "value": "600"
+                                                        },
+                                                        {
+                                                            "label": "Bold",
+                                                            "value": "700"
+                                                        },
+                                                        {
+                                                            "label": "Extra Bold (Ultra Bold)",
+                                                            "value": "800"
+                                                        },
+                                                        {
+                                                            "label": "Black (Heavy)",
+                                                            "value": "900"
+                                                        }
+                                                    ]
+                                                },
+                                                "conditional": {
+                                                    "key": "textStyle",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "custom"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "number",
+                                                "label": "Font size",
+                                                "id": "fontSize",
+                                                "default": {
+                                                    "value": 36,
+                                                    "type": "px"
+                                                },
+                                                "typeMeta": {
+                                                    "parseType": "integer"
+                                                },
+                                                "conditional": {
+                                                    "key": "textStyle",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "custom"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "element",
+                            "label": "Description",
+                            "id": "description",
+                            "typeMeta": {
+                                "controls": {
+                                    "visibility": {
+                                        "default": "show"
+                                    },
+                                    "advanced": {
+                                        "label": "Description style",
+                                        "settings": [{
+                                                "type": "typography",
+                                                "label": "Description",
+                                                "id": "textStyle",
+                                                "default": "default"
+                                            },
+                                            {
+                                                "type": "select",
+                                                "label": "Font family",
+                                                "id": "fontFamily",
+                                                "default": "inherit",
+                                                "typeMeta": {
+                                                    "selectOptions": [{
+                                                            "label": "Theme Default",
+                                                            "value": "inherit"
+                                                        },
+                                                        {
+                                                            "label": "Arial",
+                                                            "value": "Arial, sans-serif"
+                                                        },
+                                                        {
+                                                            "label": "Tahoma",
+                                                            "value": "Tahoma, sans-serif"
+                                                        },
+                                                        {
+                                                            "label": "Verdana",
+                                                            "value": "Verdana, sans-serif"
+                                                        },
+                                                        {
+                                                            "label": "Lucida",
+                                                            "value": "Lucida, sans-serif"
+                                                        },
+                                                        {
+                                                            "label": "Times New Roman",
+                                                            "value": "Times New Roman, serif"
+                                                        },
+                                                        {
+                                                            "label": "Courier",
+                                                            "value": "Courier, serif"
+                                                        },
+                                                        {
+                                                            "label": "Georgia",
+                                                            "value": "Georgia, serif"
+                                                        },
+                                                        {
+                                                            "label": "Palatino",
+                                                            "value": "Palatino, serif"
+                                                        }
+                                                    ]
+                                                },
+                                                "conditional": {
+                                                    "key": "textStyle",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "custom"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "select",
+                                                "label": "Font weight",
+                                                "id": "fontWeight",
+                                                "default": "400",
+                                                "typeMeta": {
+                                                    "selectOptions": [{
+                                                            "label": "Thin",
+                                                            "value": "100"
+                                                        },
+                                                        {
+                                                            "label": "Extra Light (Ultra Light)",
+                                                            "value": "200"
+                                                        },
+                                                        {
+                                                            "label": "Light",
+                                                            "value": "300"
+                                                        },
+                                                        {
+                                                            "label": "Normal",
+                                                            "value": "400"
+                                                        },
+                                                        {
+                                                            "label": "Medium",
+                                                            "value": "500"
+                                                        },
+                                                        {
+                                                            "label": "Semi Bold (Demi Bold)",
+                                                            "value": "600"
+                                                        },
+                                                        {
+                                                            "label": "Bold",
+                                                            "value": "700"
+                                                        },
+                                                        {
+                                                            "label": "Extra Bold (Ultra Bold)",
+                                                            "value": "800"
+                                                        },
+                                                        {
+                                                            "label": "Black (Heavy)",
+                                                            "value": "900"
+                                                        }
+                                                    ]
+                                                },
+                                                "conditional": {
+                                                    "key": "textStyle",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "custom"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "number",
+                                                "label": "Font size",
+                                                "id": "fontSize",
+                                                "default": {
+                                                    "value": 21,
+                                                    "type": "px"
+                                                },
+                                                "typeMeta": {
+                                                    "parseType": "integer"
+                                                },
+                                                "conditional": {
+                                                    "key": "textStyle",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "custom"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "element",
+                            "label": "Button",
+                            "id": "button",
+                            "typeMeta": {
+                                "controls": {
+                                    "visibility": {
+                                        "default": "show"
+                                    },
+                                    "advanced": {
+                                        "label": "Button style",
+                                        "settings": [{
+                                                "type": "select",
+                                                "label": "Button shape",
+                                                "id": "shape",
+                                                "default": "round",
+                                                "typeMeta": {
+                                                    "selectOptions": [{
+                                                            "label": "Round",
+                                                            "value": "round"
+                                                        },
+                                                        {
+                                                            "label": "Square",
+                                                            "value": "square"
+                                                        },
+                                                        {
+                                                            "label": "Pill",
+                                                            "value": "pill"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "color",
+                                                "label": "Button color",
+                                                "id": "buttonColor",
+                                                "default": "#444444"
+                                            },
+                                            {
+                                                "type": "color",
+                                                "label": "Button text color",
+                                                "id": "buttonTextColor",
+                                                "default": "#FFFFFF"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }]
+            }
+        ]
+    }],
+    "template": "<div id=\"sd-carousel-{{_.id}}\"></div>\n<script type=\"text/javascript\">\n  (function() {\n\n    function loadScript(src, onload) {\n      const scriptTag = document.createElement('script');\n      scriptTag.type = 'text/javascript';\n      scriptTag.defer = true;\n      scriptTag.src = src;\n      if (onload) {\n        scriptTag.onload = onload;\n      }\n      document.head.appendChild(scriptTag);\n    }\n\n    var widgetOptions = {{{json .}}};\n\n    {{#if _.context.isEditorMode '===' true}}\n      var scriptPath = (build) => `https://microapps.bigcommerce.com/carousel-widget-v2-js/8fdf96db7173ca6e46533e7196c77d5fe6888777/${build}-bundle.js`;\n\n      if (window.BigCommerce && window.BigCommerce.initializeCarouselV2 && typeof window.BigCommerce.initializeCarouselV2 === 'function' && window.BigCommerce.initializeCarouselPageBuilderComm && typeof window.BigCommerce.initializeCarouselPageBuilderComm === 'function') {\n        const carousel = window.BigCommerce.initializeCarouselV2(widgetOptions);\n        window.BigCommerce.initializeCarouselPageBuilderComm(carousel);\n      } else {\n        loadScript(scriptPath('storefront'), () => {\n          const carousel = window.BigCommerce.initializeCarouselV2(widgetOptions);\n          loadScript(scriptPath('pageBuilder'), () => {\n            window.BigCommerce.initializeCarouselPageBuilderComm(carousel);\n          });\n        });\n      }\n    {{else}}\n      var storefrontScriptPath = \"https://microapps.bigcommerce.com/carousel-widget-v2-js/8fdf96db7173ca6e46533e7196c77d5fe6888777/storefront-bundle.js\";\n      if (window.BigCommerce && window.BigCommerce.initializeCarouselV2 && typeof window.BigCommerce.initializeCarouselV2 === 'function') {\n        window.BigCommerce.initializeCarouselV2(widgetOptions).setup();\n      } else {\n        loadScript(storefrontScriptPath, () => window.BigCommerce.initializeCarouselV2(widgetOptions).setup());\n      }\n    {{/if}}\n  })();\n</script>\n",
+    "date_created": "2020-06-23T18:07:33.080Z",
+    "date_modified": "2020-07-09T18:14:58.862Z",
+    "kind": "sd-carousel-v2",
+    "storefront_api_query": "",
+    "icon_name": "sd-carousel",
+    "template_engine": "handlebars_v3",
+    "client_rerender": true,
+    "current_version_uuid": "1006fae6-4aad-4823-9ca9-de578976702e",
+    "channel_id": 0,
+    "schema_translations": {}
+}

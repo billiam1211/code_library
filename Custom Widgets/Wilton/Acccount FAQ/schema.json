@@ -1,0 +1,82 @@
+{
+    "name": "Account FAQ",
+    "schema": [
+        {
+            "type": "array",
+            "label": "FAQ Items",
+            "id": "accountFaq-item",
+            "defaultCount": 4,
+            "entryLabel": "FAQ Item",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "FAQ Items",
+                    "sections": [
+                        {
+                            "label": "FAQ Item",
+                            "settings": [
+                                {
+                                    "type": "input",
+                                    "label": "Question",
+                                    "id": "question",
+                                    "default": "",
+                                    "typeMeta": {
+                                        "placeholder": "Enter question"
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Answer",
+                                    "id": "answer",
+                                    "default": "",
+                                    "typeMeta": {
+                                        "placeholder": "Enter answer"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "FAQ Settings",
+            "sections": [
+                {
+                    "label": "FAQ Settings",
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Heading",
+                            "id": "heading",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Title"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link text",
+                            "id": "link",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter link text"
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Link url",
+                            "id": "url",
+                            "default": "",
+                            "typeMeta": {
+                                "placeholder": "Enter Link URL"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='accountFaq'> <h2 class='accountFaq-heading'>{{heading}}</h2> <ul class='accountFaq-list'> {{#each accountFaq-item}} <li class='accountFaq-item'> <p class='accountFaq-question'>{{this.question}}</p> <p class='accountFaw-answer'>{{this.answer}}</p> </li> {{/each}} </ul> <a href='{{url}}' class='accountFaq-link'>{{link}}</a> </div> "
+}

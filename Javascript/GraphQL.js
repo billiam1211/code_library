@@ -54,6 +54,7 @@ const data = {
           }`
     }),
 };
+
 // make call to graphQL to get the product entity ID from the SKU
 $.ajax(data).done((response) => {
     console.log('response ======> ', response);

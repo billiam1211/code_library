@@ -1,0 +1,164 @@
+{{#if activeSlide '===' '0'}}
+    {{assignVar 'slide1' 'active'}}
+{{/if}}
+    
+{{#if activeSlide '===' '1'}}
+    {{assignVar 'slide2' 'active'}} 
+{{/if}}
+    
+{{#if activeSlide '===' '2'}}
+    {{assignVar 'slide3' 'active'}}
+{{/if}}
+    
+{{#if activeSlide '===' '3'}}
+    {{assignVar 'slide4' 'active'}}
+{{/if}}
+
+{{#if bg_blur_1 '===' 'true'}}
+    {{assignVar 'blur_1' 'blur(5px)'}}
+{{else}}
+    {{assignVar 'blur_1' 'blur(0px)'}}
+{{/if}}
+
+{{#if bg_blur_2 '===' 'true'}}
+    {{assignVar 'blur_2' 'blur(5px)'}}
+{{else}}
+    {{assignVar 'blur_2' 'blur(0px)'}}
+{{/if}}
+
+{{#if bg_blur_3 '===' 'true'}}
+    {{assignVar 'blur_3' 'blur(5px)'}}
+{{else}}
+    {{assignVar 'blur_3' 'blur(0px)'}}
+{{/if}}
+
+{{#if bg_blur_4 '===' 'true'}}
+    {{assignVar 'blur_4' 'blur(5px)'}}
+{{else}}
+    {{assignVar 'blur_4' 'blur(0px)'}}
+{{/if}}
+
+<div class='homepage-hero-banner' data-activeSlide='{{activeSlide}}'>
+    <div class='single-hero-banner single-hero-banner--1 {{getVar 'slide1'}}'>
+        <div class='banner-image'>
+            <img src='{{image1.src}}' alt='{{alt_text1}}'/>
+        </div>
+        <div class='banner-details'>
+            <h4 class='hero-title'>{{title1}}</h4>
+            <div class='hero-description'>{{{description1}}}</div>{{#if cta_text1}}<a class='hero-link'
+                href='{{cta_link1}}'>{{cta_text1}}</a>{{/if}}
+        </div>
+    </div>
+    <div class='single-hero-banner single-hero-banner--2 {{getVar 'slide2'}}'>
+        <div class='banner-image'>
+            <img src='{{image2.src}}' alt='{{alt_text2}}'/>
+        </div>
+        <div class='banner-details'>
+            <h4 class='hero-title'>{{title2}}</h4>
+            <div class='hero-description'>{{{description2}}}</div>{{#if cta_text2}}<a class='hero-link'
+                href='{{cta_link2}}'>{{cta_text2}}</a>{{/if}}
+        </div>
+    </div>
+    <div class='single-hero-banner single-hero-banner--3 {{getVar 'slide3'}}'>
+        <div class='banner-image'>
+            <img src='{{image3.src}}' alt='{{alt_text3}}'/>
+        </div>
+        <div class='banner-details'>
+            <h4 class='hero-title'>{{title3}}</h4>
+            <div class='hero-description'>{{{description3}}}</div>{{#if cta_text3}}<a class='hero-link'
+                href='{{cta_link3}}'>{{cta_text3}}</a>{{/if}}
+        </div>
+    </div>
+    <div class='single-hero-banner single-hero-banner--4 {{getVar 'slide4'}}'>
+        <div class='banner-image'>
+            <img src='{{image4.src}}' alt='{{alt_text4}}'/>
+        </div>
+        <div class='banner-details'>
+            <h4 class='hero-title'>{{title4}}</h4>
+            <div class='hero-description'>{{{description4}}}</div>{{#if cta_text4}}<a class='hero-link'
+                href='{{cta_link4}}'>{{cta_text4}}</a>{{/if}}
+        </div>
+    </div>
+</div>
+<style scope>
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--1 div.banner-details h4.hero-title,
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--1 div.banner-details div.hero-description, 
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--1 div.banner-details a.hero-link {
+        color: {{font_color_1}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--1 div.banner-details h4.hero-title::after {
+        background-color: {{font_color_1}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--1 div.banner-details a.hero-link {
+        border-color: {{font_color_1}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--1 div.banner-details a.hero-link:hover,
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--1 div.banner-details a.hero-link:focus {
+        border: 2px dashed {{font_color_1}};
+        color: {{font_color_1}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--1 div.banner-details {
+        backdrop-filter: {{getVar 'blur_1'}};
+        background-color: {{bg_color_1}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--2 div.banner-details h4.hero-title,
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--2 div.banner-details div.hero-description, 
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--2 div.banner-details a.hero-link {
+        color: {{font_color_2}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--2 div.banner-details h4.hero-title::after {
+        background-color: {{font_color_2}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--2 div.banner-details a.hero-link {
+        border-color: {{font_color_2}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--2 div.banner-details a.hero-link:hover,
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--2 div.banner-details a.hero-link:focus {
+        border: 2px dashed {{font_color_2}};
+        color: {{font_color_2}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--2 div.banner-details {
+        backdrop-filter: {{getVar 'blur_2'}};
+        background-color: {{bg_color_2}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--3 div.banner-details h4.hero-title,
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--3 div.banner-details div.hero-description, 
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--3 div.banner-details a.hero-link {
+        color: {{font_color_3}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--3 div.banner-details h4.hero-title::after {
+        background-color: {{font_color_3}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--3 div.banner-details a.hero-link {
+        border-color: {{font_color_3}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--3 div.banner-details a.hero-link:hover,
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--3 div.banner-details a.hero-link:focus {
+        border: 2px dashed {{font_color_3}};
+        color: {{font_color_3}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--3 div.banner-details {
+        backdrop-filter: {{getVar 'blur_3'}};
+        background-color: {{bg_color_3}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--4 div.banner-details h4.hero-title,
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--4 div.banner-details div.hero-description, 
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--4 div.banner-details a.hero-link {
+        color: {{font_color_4}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--4 div.banner-details h4.hero-title::after {
+        background-color: {{font_color_4}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--4 div.banner-details a.hero-link {
+        border-color: {{font_color_4}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--4 div.banner-details a.hero-link:hover,
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--4 div.banner-details a.hero-link:focus {
+        border: 2px dashed {{font_color_4}};
+        color: {{font_color_4}};
+    }
+    div[data-content-region=home_below_menu] div.homepage-hero-banner .single-hero-banner.single-hero-banner--4 div.banner-details {
+        backdrop-filter: {{getVar 'blur_4'}};
+        background-color: {{bg_color_4}};
+    }
+</style>
