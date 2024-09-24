@@ -1,0 +1,200 @@
+<style>
+    .section__decoration {
+        margin: 0;
+        position: relative;
+    }
+
+    @media(max-width: 765px) {
+        .a{{truncate _.id 5}}.section-bisco {
+            margin-bottom: 6rem;
+        }
+    }
+
+    .a{{truncate _.id 5}}.section-bisco .shell {
+        z-index: 10;
+        position: relative;
+    }
+
+    {{#if bg_color}}
+        .a{{truncate _.id 5}}.section__decoration:before {
+            content: ' ';
+            position: absolute;
+            display: flex;
+            height: 100%;
+            width: 35%;
+            left: 0;
+            z-index: 9;
+            background: linear-gradient(to right, {{bg_color}} 0%, rgba(0, 121, 193, 0) 100%);
+        }
+        .a{{truncate _.id 5}}.section-bisco .section__inner .shell:after {
+            content: ' ';
+            position: absolute;
+            display: flex;
+            height: 25%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9;
+            background: linear-gradient(to bottom, {{bg_color}} 0%, rgba(0, 121, 193, 0) 100%);
+        }
+        .a{{truncate _.id 5}}.section-bisco .section__inner .shell:before {
+            content: ' ';
+            position: absolute;
+            display: flex;
+            height: 25%;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9;
+            background: linear-gradient(to top, {{bg_color}}0%, rgba(0, 121, 193, 0) 100%);
+        }
+        .a{{truncate _.id 5}}.section__decoration:after {
+            content: ' ';
+            position: absolute;
+            display: flex;
+            height: 100%;
+            right: 0;
+            width: 35%;
+            top: 0;
+            z-index: 9;
+            background: linear-gradient(to left, {{bg_color}} 0%, rgba(0, 121, 193, 0) 100%);
+        }
+    {{/if}}
+
+    {{#if eyebrow_type '===' 'font'}}
+        section#{_.id} .section__subtitle.eyebrow-tag {
+            color: {{eyebrow_color}};
+        }
+        section#{_.id} .section__subtitle.eyebrow-tag::before {
+            background-color: {{eyebrow_color}};
+        }
+    {{/if}}
+
+    .section-bisco .section__decoration {
+        z-index: 0;
+    }
+
+    .section-bisco .section__actions a {
+        z-index: 99;
+        color: {{cta_color}};
+    }
+
+    .section-bisco .section__actions a svg {
+        margin-left: 7px;
+    }
+    
+    .section-bisco .section__actions.pill a.btn-arrow {
+        border: 1px solid {{cta_color}};
+        padding: 7px 14px;
+        border-radius: 30px;
+    }
+
+    .section-bisco .section__actions.underline a.btn-arrow {
+        text-decoration: underline;
+    }
+
+    .a{{truncate _.id 5}}.section-bisco .section__content p.section__content-title {
+        font-family: 'trade-gothic-next' !important;
+        font-style: normal;
+        font-weight: 300;
+    }
+
+    .a{{truncate _.id 5}}.section-bisco .section__content-title,
+    .a{{truncate _.id 5}}.section-bisco,
+    .a{{truncate _.id 5}}.section-bisco .section__subtitle,
+    .a{{truncate _.id 5}}.section-bisco .section__content .feature h6,
+    .a{{truncate _.id 5}}.section-bisco .section__entry p {
+        {{#if font_color}}
+            color: {{font_color}};
+        {{/if}}
+    }
+
+    .a{{truncate _.id 5}}.section-bisco .section__subtitle::before {
+        background-color: {{font_color}};
+    }
+
+    .a{{truncate _.id 5}}.section-bisco .section__content h6 {
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    .a{{truncate _.id 5}}.section-bisco .section__content p {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: {{description_color}};
+    }
+
+    .a{{truncate _.id 5}}.section-bisco .section__entry p {
+        font-size: 15px;
+    }
+    section.section-bisco div.section__inner div.section__content {
+        text-align: {{text_align}};
+    }
+    section.a{{truncate _.id 5}} .section__content-title {
+        color: {{title_1_color}};
+    }
+    section.a{{truncate _.id 5}} .section__content-title strong {
+        color: {{title_2_color}};
+    }
+    section.a{{truncate _.id 5}} .custom-content {
+        color: {{custom_content_color}};
+    }
+</style>
+
+
+
+
+
+<section id='{{_.id}}' class=\"a{{truncate _.id 5}} section-bisco {{#if content_position '==' \"left\"}}section-bisco--adjust{{/if}}\">
+    <figure class=\"section__image\">
+        {{#and image_mobile.src image.src }}           
+            <picture>
+                <source srcset=\"{{image.src}}\" media=\"(min-width: 800px)\" />
+                <source srcset=\"{{image_mobile.src}}\" />
+                <img src=\"{{image.src}}\" alt=\"{{al-text}}\" />
+            </picture>
+        {{else}}
+            {{#if image.src}}
+                <img src=\"{{image.src}}\" alt=\"{{al-text}}\" width=\"756\" height=\"870\">
+            {{/if}}
+        {{/and}}
+        {{#if floating_text}}
+            <div class=\"label section__label\">
+                <img src=\"https://store-prgttqb2zi.mybigcommerce.com/content/hexagon-red.svg\" alt=\"\" width=\"8\" height=\"9\">
+                {{floating_text}}
+            </div>
+        {{/if}}
+    </figure>
+    <div class=\"section__inner\" {{#if bg_color}}style=\"background: {{bg_color}}\" {{/if}}>
+        <div class=\"shell\">
+            <figure class=\"section__decoration a{{truncate _.id 5}}\">
+                {{#if show_pattern \"===\" \"show\"}}<img src=\"https://store-prgttqb2zi.mybigcommerce.com/content/deco-background.png\" alt=\"\">{{/if}}
+            </figure>
+            <div class=\"section__wrapper\" style=\"position: relative;z-index: 99;\">
+                <{{eyebrow_tag}} class=\"section__subtitle eyebrow-tag\">{{eyebrow_text}}</{{eyebrow_tag}}>
+                <div class=\"section__content\">
+                    <{{title_tag}} class=\"section__content-title\">
+                        {{title_text}}
+                        <strong>{{title_text_two}}</strong>
+                    </{{title_tag}}>
+                    <div class=\"section__entry\">
+                        <p>{{description}}</p>
+                    </div>
+                    <div class='custom-content'>
+                        {{{custom_content}}}
+                    </div>
+                </div>
+                <div class=\"section__actions{{cta_type}}\">
+                    <a href=\"{{cta-url}}\" class=\"btn-arrow\">
+                        {{cta-text}} <svg><use xlink:href=\"#icon-right-arrow\"></use></svg>
+                   </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
