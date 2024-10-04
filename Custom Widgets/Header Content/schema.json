@@ -1,0 +1,206 @@
+{
+	"name": "Header Content",
+	"schema": [
+		{
+			"type": "tab",
+			"label": "Header Content",
+			"sections": [
+				{
+					"label": "Header Content",
+					"settings": [
+						{
+							"type": "visibility",
+							"label": "Show Item 1?",
+							"id": "show_1",
+							"default": "show"
+						},
+						{
+							"type": "imageManager",
+							"id": "img_01",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							},
+							"conditional": {
+								"key": "show_1",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image ALT",
+							"id": "alt_01",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter image description"
+							},
+							"conditional": {
+								"key": "show_1",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Item Text",
+							"id": "text_01",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							},
+							"conditional": {
+								"key": "show_1",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+
+						{
+							"type": "visibility",
+							"label": "Show Item 2?",
+							"id": "show_2",
+							"default": "show"
+						},
+						{
+							"type": "imageManager",
+							"id": "img_02",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							},
+							"conditional": {
+								"key": "show_2",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image ALT",
+							"id": "alt_02",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter image description"
+							},
+							"conditional": {
+								"key": "show_2",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Item Text",
+							"id": "text_02",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							},
+							"conditional": {
+								"key": "show_2",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "visibility",
+							"label": "Show Item 3?",
+							"id": "show_3",
+							"default": "show"
+						},
+						{
+							"type": "imageManager",
+							"id": "img_03",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							},
+							"conditional": {
+								"key": "show_3",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image ALT",
+							"id": "alt_03",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter image description"
+							},
+							"conditional": {
+								"key": "show_3",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Item Text",
+							"id": "text_03",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							},
+							"conditional": {
+								"key": "show_3",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "visibility",
+							"label": "Show Item 4?",
+							"id": "show_4",
+							"default": "show"
+						},
+						{
+							"type": "imageManager",
+							"id": "img_04",
+							"default": {
+								"src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+								"type": "IMAGE_MANAGER"
+							},
+							"conditional": {
+								"key": "show_4",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Image ALT",
+							"id": "alt_04",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter image description"
+							},
+							"conditional": {
+								"key": "show_4",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						},
+						{
+							"type": "input",
+							"label": "Item Text",
+							"id": "text_04",
+							"default": "",
+							"typeMeta": {
+								"placeholder": "Enter text"
+							},
+							"conditional": {
+								"key": "show_4",
+								"operator": "IN",
+								"value": ["show"]
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"template": "<div class='headerContent'> <ul class='headerContent-list'> {{#if show_1 '===' 'show'}} <li class='headerContent-item'> <img src='{{img_01.src}}' alt='{{alt_01}}' class='headerContent-image' /> <p class='headerContent-text'>{{text_01}}</p> </li> {{/if}} {{#if show_2 '===' 'show'}} <li class='headerContent-item'> <img src='{{img_02.src}}' alt='{{alt_02}}' class='headerContent-image' /> <p class='headerContent-text'>{{text_02}}</p> </li> {{/if}} {{#if show_3 '===' 'show'}} <li class='headerContent-item'> <img src='{{img_03.src}}' alt='{{alt_03}}' class='headerContent-image' /> <p class='headerContent-text'>{{text_03}}</p> </li> {{/if}} {{#if show_4 '===' 'show'}} <li class='headerContent-item'> <img src='{{img_04.src}}' alt='{{alt_04}}' class='headerContent-image' /> <p class='headerContent-text'>{{text_04}}</p> </li> {{/if}} </ul> </div>"
+}

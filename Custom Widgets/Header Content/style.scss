@@ -1,0 +1,42 @@
+.headerContent {
+	background-color: stencilColor('color-background');
+	display: none;
+	@include breakpoint('medium') {
+		display: block;
+	}
+	&-list {
+		margin: 0 auto;
+		display: flex;
+		max-width: 1440px;
+		list-style: none;
+
+		@include breakpoint('medium') {
+			padding: 0 40px;
+		}
+	}
+
+	&-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+		margin: 0;
+		padding: 20px 0;
+	}
+	
+    &-image {
+		margin: 0 7px 0 0;
+		height: 24px;
+		width: 24px;
+		object-fit: contain;
+	}
+	
+    &-text {
+		color: stencilColor('color-grey-13');
+		font-family: stencilFontFamily('body-standard');
+		font-size: remCalc(12px);
+		font-style: normal;
+		font-weight: 600;
+		margin: 0;
+	}
+}
