@@ -1,0 +1,55 @@
+<style> 
+    [id='{{_.id}}'] .heroWidget-inner-container { 
+        background-color: {{content_bg_color}}; 
+        
+        {{#gt max_width 0}}  max-width: {{max_width}}%; margin: 0 auto; {{/gt}} 
+    } 
+    [id='{{_.id}}'] .heroWidget-image::after { 
+        content: ''; 
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        height: 100%; 
+        width: 100%; 
+        transform: translate(-50%, -50%); 
+        background-color: {{slide_overlay}}; 
+    } 
+
+</style> 
+
+<div class='heroWidget' id='{{_.id}}'>
+    <ul class='heroWidget-slides' data-olive-slider data-dots='{{showDots}}' data-autoplay='{{autoplay}}'
+        data-controls='{{showControls}}' data-arrows='{{showArrows}}' data-autoplay-speed='{{speed}}'> 
+        {{#each slides}}
+            <li class='heroWidget-slide'>
+                <div class='heroWidget-image'> <img src='{{desktop_img.src}}' alt='{{desktop_img_alt}}' class='desktop'>
+                    <img src='{{mobile_img.src}}' alt='{{mobile_img_alt}}' class='mobile'> </div>
+                <div class='heroWidget-content {{alignment}}'>
+                    <div class='heroWidget-container'>
+                        <div class='heroWidget-inner-container'> 
+                            {{#if slide_heading}} 
+                                <{{heading_tag}} class='heading'>
+                                    {{slide_heading}}
+                                </{{heading_tag}}> 
+                            {{/if}}
+                            {{#if slide_text}} 
+                                <p class='text'>
+                                    {{slide_text}} 
+                                </p> 
+                            {{/if}} 
+                            <div class='heroWidget-actions'> 
+                                {{#if show_button_1 '===' 'show'}} 
+                                    <a href='{{button_1_link}}' class='button button--primary'>{{button_1_text}}</a>
+                                {{/if}} 
+                                {{#if show_button_2 '===' 'show'}} 
+                                    <a href='{{button_2_link}}' class='button button--secondary'>{{button_2_text}}
+                                    </a>
+                                {{/if}} 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li> 
+        {{/each}}
+    </ul>
+</div>

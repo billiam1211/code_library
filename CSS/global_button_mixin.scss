@@ -1,0 +1,82 @@
+@mixin button($type: 'custom--button', $backgroundColor: stencilColor('color-primary'), $color: stencilColor('color-white'), $hoverBg: stencilColor('color-primary--alt'), $hoverColor: stencilColor('color-white')) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 16px;
+	margin: 0;
+	font-size: remCalc(16px);
+	transition: all .3s ease-in-out;
+	padding: 12px 20px 12px 20px;
+	border: initial;
+
+	& + .button {
+
+		margin-top: 12px;
+
+		@include breakpoint('medium') {
+			margin-left: 0;
+		}
+		
+		@include breakpoint($screen-large) {
+			margin-top: 0;
+			margin-left: 28px;
+		}
+	}
+
+	&.disabled {
+		opacity: .5;
+		pointer-events: none;
+	}
+
+	&--primary {
+		background-color: stencilColor('color-primary');
+		color: stencilColor('color-white');		
+		border: initial;
+
+		&:hover,
+		&:focus {
+			border: initial;
+			background-color: stencilColor('color-priamry--alt');
+		}
+	}
+	
+	&--secondary {
+		background-color: stencilColor('color-secondary');
+		color: stencilColor('color-black');
+		border: initial;
+
+		&:hover,
+		&:focus {
+			border: initial;
+			background-color: stencilColor('color-secondary--alt');
+		}
+	}
+	
+	&--tertiary {
+		background-color: stencilColor('color-tertiary');
+		color: stencilColor('color-black');
+		border: initial;
+
+		&:hover,
+		&:focus {
+			border: initial;
+			background-color: stencilColor('color-tertiary--alt');
+		}
+	}	
+
+	@if $type == 'custom' {
+		background-color: $backgroundColor;
+		color: $color;
+	
+		&:hover,
+		&:focus {
+			background-color: $hoverBg;
+			color: $hoverColor;
+		}
+	}
+}
+
+.button {
+	@include button();
+}

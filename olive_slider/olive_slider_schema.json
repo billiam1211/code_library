@@ -1,0 +1,309 @@
+{
+	"name": "Hero Widget",
+	"schema": [
+		{
+			"type": "array",
+			"label": "Slides",
+			"id": "slides",
+			"defaultCount": 1,
+			"entryLabel": "Slide",
+			"schema": [
+				{
+					"type": "tab",
+					"label": "Slide Content",
+					"sections": [
+						{
+							"settings": [
+								{
+									"type": "imageManager",
+									"label": "Desktop Image",
+									"id": "desktop_img",
+									"default": {
+										"src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+										"type": "IMAGE_MANAGER"
+									}
+								},
+								{
+									"type": "input",
+                                    "label": "Destkop image ALT",
+									"id": "desktop_img_alt",
+									"default": ""
+								},
+								{
+									"type": "imageManager",
+									"label": "Mobile Image",
+									"id": "mobile_img",
+									"default": {
+										"src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+										"type": "IMAGE_MANAGER"
+									}
+								},
+								{
+									"type": "input",
+                                    "label": "Mobile image ALT",
+									"id": "mobile_img_alt",
+									"default": ""
+								},
+								{
+									"type": "select",
+									"label": "Heading Tag",
+									"id": "heading_tag",
+									"default": "h2",
+									"typeMeta": {
+										"selectOptions": [
+											{
+												"label": "h1",
+												"value": "h1"
+											},
+											{
+												"label": "h2",
+												"value": "h2"
+											},
+											{
+												"label": "h3",
+												"value": "h3"
+											},
+											{
+												"label": "h4",
+												"value": "h4"
+											},
+											{
+												"label": "h5",
+												"value": "h5"
+											},
+											{
+												"label": "h6",
+												"value": "h6"
+											},
+											{
+												"label": "p",
+												"value": "p"
+											}
+										]
+									}
+								},
+								{
+									"type": "input",
+									"label": "Slide heading",
+									"id": "slide_heading",
+									"default": ""
+								},
+								{
+									"type": "input",
+									"label": "Slide text",
+									"id": "slide_text",
+									"default": ""
+								},
+								{
+									"type": "visibility",
+									"label": "Button 1 Visibility",
+									"id": "show_button_1",
+									"default": "show"
+								},
+								{
+									"type": "input",
+									"id": "button_1_text",
+									"default": "",
+									"conditional": {
+										"key": "show_button_1",
+										"operator": "IN",
+										"value": [
+											"show"
+										]
+									}
+								},
+								{
+									"type": "input",
+									"id": "button_1_link",
+									"default": "",
+									"conditional": {
+										"key": "show_button_1",
+										"operator": "IN",
+										"value": [
+											"show"
+										]
+									}
+								},
+								{
+									"type": "visibility",
+									"label": "Button 2 Visibility",
+									"id": "show_button_2",
+									"default": "show"
+								},
+								{
+									"type": "input",
+									"id": "button_2_text",
+									"default": "",
+									"conditional": {
+										"key": "show_button_2",
+										"operator": "IN",
+										"value": [
+											"show"
+										]
+									}
+								},
+								{
+									"type": "input",
+									"id": "button_2_link",
+									"default": "",
+									"conditional": {
+										"key": "show_button_2",
+										"operator": "IN",
+										"value": [
+											"show"
+										]
+									}
+								},
+								{
+									"type": "select",
+									"label": "Text Alignment",
+									"id": "alignment",
+									"default": "center",
+									"typeMeta": {
+										"selectOptions": [
+											{
+												"label": "center",
+												"value": "align-center"
+											},
+											{
+												"label": "left",
+												"value": "align-left"
+											},
+											{
+												"label": "right",
+												"value": "align-right"
+											}
+										]
+									}
+								}												
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "tab",
+			"label": "Settings",
+			"sections": [
+				{
+					"settings": [
+						{
+							"type": "color",
+							"label": "Content Background?",
+							"id": "content_bg_color",
+							"default": "rgba(0,0,0,.3)"					
+						},
+						{
+							"type": "color",
+							"label": "Slide Overlay Color?",
+							"id": "slide_overlay",
+							"default": "rgba(0,0,0,.3)"					
+						},
+						{
+							"type": "range",
+							"label": "Content Max Width",
+							"id": "max_width",
+							"default": 100,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 0,
+									"max": 100,
+									"step": 1,
+									"unit": "%"
+								}
+							}									
+						}	,
+						{
+							"type": "select",
+							"label": "Enable auto-play?",
+							"id": "autoplay",
+							"default": "false",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "true",
+										"value": "true"
+									},
+									{
+										"label": "false",
+										"value": "false"
+									}
+								]
+							}
+						},
+						{
+							"type": "range",
+							"label": "Autoplay Speed",
+							"id": "speed",
+							"default": 5000,
+							"typeMeta": {
+								"rangeValues": {
+									"min": 1000,
+									"max": 10000,
+									"step": 100,
+									"unit": "ms"
+								}
+							}
+						},
+						{
+							"type": "select",
+							"label": "Show Controls?",
+							"id": "showControls",
+							"default": "false",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "true",
+										"value": "true"
+									},
+									{
+										"label": "false",
+										"value": "false"
+									}
+								]
+							}
+						},
+						{
+							"type": "select",
+							"label": "Show Dots?",
+							"id": "showDots",
+							"default": "true",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "true",
+										"value": "true"
+									},
+									{
+										"label": "false",
+										"value": "false"
+									}
+								]
+							}
+						},
+						{
+							"type": "select",
+							"label": "Show Arrows?",
+							"id": "showArrows",
+							"default": "true",
+							"typeMeta": {
+								"selectOptions": [
+									{
+										"label": "true",
+										"value": "true"
+									},
+									{
+										"label": "false",
+										"value": "false"
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"template": "<style> [id='{{_.id}}'] .heroWidget-inner-container { background-color: {{content_bg_color}}; {{#gt max_width 0}}  max-width: {{max_width}}%; margin: 0 auto; {{/gt}} } [id='{{_.id}}'] .heroWidget-image::after { content: ''; position: absolute; top: 50%; left: 50%; height: 100%; width: 100%; transform: translate(-50%, -50%); background-color: {{slide_overlay}}; } </style> <div class='heroWidget' id='{{_.id}}'> <ul class='heroWidget-slides' data-olive-slider data-dots='{{showDots}}' data-autoplay='{{autoplay}}' data-controls='{{showControls}}' data-arrows='{{showArrows}}' data-autoplay-speed='{{speed}}'> {{#each slides}} <li class='heroWidget-slide'> <div class='heroWidget-image'> <img src='{{desktop_img.src}}' alt='{{desktop_img_alt}}' class='desktop'> <img src='{{mobile_img.src}}' alt='{{mobile_img_alt}}' class='mobile'> </div> <div class='heroWidget-content {{alignment}}'> <div class='heroWidget-container'> <div class='heroWidget-inner-container'> {{#if slide_heading}} <{{heading_tag}} class='heading'> {{slide_heading}}</{{heading_tag}}> {{/if}} {{#if slide_text}} <p class='text'> {{slide_text}} </p> {{/if}} <div class='heroWidget-actions'> {{#if show_button_1 '===' 'show'}} <a href='{{button_1_link}}' class='button button--primary'>{{button_1_text}}</a> {{/if}} {{#if show_button_2 '===' 'show'}} <a href='{{button_2_link}}' class='button button--secondary'>{{button_2_text}}</a> {{/if}} </div> </div> </div> </div> </li> {{/each}} </ul> </div>"
+}
