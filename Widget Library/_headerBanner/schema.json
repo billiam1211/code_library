@@ -1,0 +1,114 @@
+{
+    "name": "Header Banner",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Slides",
+            "id": "slides",
+            "defaultCount": 3,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Item Content",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "id": "html",
+                                    "label": "HTML Code",
+                                    "default": "<p style=\"\n  border: 1px dashed #8C93AD;\n  color: #313440;\n  font-family: arial;\n  margin: 0;\n  padding: 1rem;\n  text-align: center;\n\">\n  You can use this widget to input arbitrary HTML code into the page. Invalid HTML code may cause issues with the preview pane.\n</p>",
+                                    "type": "code",
+                                    "typeMeta": {
+                                        "language": "html",
+                                        "placeholder": "Insert HTML code here"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Title Text",
+            "sections": [
+                {
+                    "settings": [
+                        {
+                            "type": "select",
+                            "label": "Auto Play?",
+                            "id": "autoplay",
+                            "default": "false",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "true",
+                                        "value": "true"
+                                    },
+                                    {
+                                        "label": "false",
+                                        "value": "false"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "range",
+                            "label": "Autoplay Speed",
+                            "id": "speed",
+                            "default": 5000,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 1000,
+                                    "max": 10000,
+                                    "step": 100,
+                                    "unit": "ms"
+                                }
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Show Controls?",
+                            "id": "controls",
+                            "default": "true",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "true",
+                                        "value": "true"
+                                    },
+                                    {
+                                        "label": "false",
+                                        "value": "false"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "select",
+                            "label": "Show Dots?",
+                            "id": "dots",
+                            "default": "true",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "true",
+                                        "value": "true"
+                                    },
+                                    {
+                                        "label": "false",
+                                        "value": "false"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='headerBanner'> <div class='container'> <ul class='headerBanner-slides' data-olive-slider data-dots='{{dots}}' data-autoplay='{{autoplay}}' data-autoplay-speed='{{speed}}' data-controls='{{controls}}'> {{#each slides}} <li class='headerBanner-slide'>{{{html}}}</li> {{/each}} </ul> </div> </div>"
+}

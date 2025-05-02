@@ -1,0 +1,162 @@
+{
+    "name": "Content Widget",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Settings",
+            "sections": [
+                {
+                    "settings": [
+                        {
+                            "type": "color",
+                            "label": "Content Background?",
+                            "id": "bg_color",
+                            "default": ""
+                        },
+                        {
+                            "type": "color",
+                            "label": "Text Color",
+                            "id": "text_color",
+                            "default": ""
+                        },
+                        {
+                            "type": "range",
+                            "label": "Content Max Width",
+                            "id": "max_width",
+                            "default": 0,
+                            "typeMeta": {
+                                "rangeValues": {
+                                    "min": 0,
+                                    "max": 100,
+                                    "step": 1,
+                                    "unit": "%"
+                                }
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Eyebrow",
+                            "id": "eyebrow",
+                            "default": ""
+                        },
+                        {
+                            "type": "select",
+                            "label": "Heading Tag",
+                            "id": "tag",
+                            "default": "h2",
+                            "typeMeta": {
+                                "selectOptions": [
+                                    {
+                                        "label": "h1",
+                                        "value": "h1"
+                                    },
+                                    {
+                                        "label": "h2",
+                                        "value": "h2"
+                                    },
+                                    {
+                                        "label": "h3",
+                                        "value": "h3"
+                                    },
+                                    {
+                                        "label": "h4",
+                                        "value": "h4"
+                                    },
+                                    {
+                                        "label": "h5",
+                                        "value": "h5"
+                                    },
+                                    {
+                                        "label": "h6",
+                                        "value": "h6"
+                                    },
+                                    {
+                                        "label": "p",
+                                        "value": "p"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "label": "Heading",
+                            "id": "heading",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "label": "Text",
+                            "id": "text",
+                            "default": ""
+                        },
+                        {
+                            "type": "visibility",
+                            "label": "Button 1 Visibility",
+                            "id": "show_button_1",
+                            "default": "show"
+                        },
+                        {
+                            "type": "input",
+                            "id": "button_1",
+                            "label": "Button 1 Text",
+                            "default": "",
+                            "conditional": {
+                                "key": "show_button_1",
+                                "operator": "IN",
+                                "value": [
+                                    "show"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "id": "link_1",
+                            "label": "Button 1 Link",
+                            "default": "",
+                            "conditional": {
+                                "key": "show_button_1",
+                                "operator": "IN",
+                                "value": [
+                                    "show"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "visibility",
+                            "label": "Button 2 Visibility",
+                            "id": "show_button_2",
+                            "default": "show"
+                        },
+                        {
+                            "type": "input",
+                            "id": "button_2",
+                            "label": "Button 2 Text",
+                            "default": "",
+                            "conditional": {
+                                "key": "show_button_2",
+                                "operator": "IN",
+                                "value": [
+                                    "show"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "input",
+                            "id": "link_2",
+                            "label": "Button 2 Link",
+                            "default": "",
+                            "conditional": {
+                                "key": "show_button_2",
+                                "operator": "IN",
+                                "value": [
+                                    "show"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<style> [id='{{_.id}}'] { background-color: {{bg_color}}; } [id='{{_.id}}'] .eyebrow, [id='{{_.id}}'] .heading, [id='{{_.id}}'] .text { color: {{text_color}}; } {{#if max_width}} [id='{{_.id}}'] .contentWidget-container { @media (min-width: 1360px) { max-width: {{max_width}}%; } } {{/if}} </style> <div class='contentWidget' id='{{_.id}}'> <div class='contentWidget-container'> <div class='contentWidget-content'> {{#if eyebrow}} <span class='eyebrow'> {{eyebrow}} </span> {{/if}} {{#if heading}} <{{tag}} class='heading'> {{{heading}}} </{{tag}}> {{/if}} {{#if text}} <p class='text'> {{{text}}} </p> {{/if}} <div class='actions'> {{#if show_button_1 '===' 'show'}} <a href='{{link_1}}' class='button'>{{button_1}}</a> {{/if}} {{#if show_button_2 '===' 'show'}} <a href='{{link_2}}' class='button'>{{button_2}}</a> {{/if}} </div> </div> </div> </div>"    
+}

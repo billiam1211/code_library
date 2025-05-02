@@ -1,0 +1,38 @@
+{
+    "name": "Header Links",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Header Links",
+            "id": "array",
+            "defaultCount": 3,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Item Settings",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "type": "input",
+                                    "label": "URL",
+                                    "id": "itemUrl",
+                                    "default": ""
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Text",
+                                    "id": "itemText",
+                                    "default": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<ul class='headerPages-list'> {{#each array}} <li class='headerPages-item'><a class='headerPages-link' href='{{itemUrl}}'>{{itemText}}</a></li> {{/each}} </ul>"
+}

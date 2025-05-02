@@ -1,0 +1,77 @@
+.contentWidget {
+    padding: 48px 0;
+    width: 100%;
+    margin: 0 auto;
+    
+    &-container {
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 1400px;
+        text-align: center;        
+
+        .eyebrow {
+            color: stencilColor('color-black');
+            font-family: stencilFontFamily('body-font');
+            font-size: remCalc(12px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+        }
+
+        .heading {
+            color: stencilColor('color-black');
+            font-family: stencilFontFamily('headings-font');
+            font-size: remCalc(48px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            /* 57.6px */
+            margin: 16px 0;
+        }
+
+        .text {
+            color: stencilColor('color-black');
+            font-family: stencilFontFamily('headings-font');
+            font-size: remCalc(18px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            /* 57.6px */
+            margin: 16px 0 28px 0;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+
+            .button {
+                width: 100%;
+                @include button('custom', stencilColor('color-primary'), stencilColor('color-white'), stencilColor('color-primary--alt'), stencilColor('color-white'));
+                margin: 0;
+                
+                @include breakpoint($screen-large) {
+                    width: auto;
+                }
+                
+                &+.button {
+                    @include button('custom', stencilColor('color-white'), stencilColor('color-primary'), stencilColor('color-greyLight'), stencilColor('color-primary'));
+                    border: 1px solid stencilColor('color-primary') ;
+                    margin-top: 8px;
+
+                    @include breakpoint($screen-large) {
+                        margin-top: initial;
+                        margin-left: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-content {
+        max-width: 785px;
+        margin: 0 auto;
+    }
+}

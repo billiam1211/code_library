@@ -1,0 +1,96 @@
+@import '../breakpoints.scss';
+
+.footerColumn {
+	transition: all 0.5s ease-in-out;
+	margin-bottom: 12px;
+
+	@include breakpoint($screen-large) {
+		padding-right: initial;
+		margin-bottom: initial;
+	}
+
+	&-list {
+		margin: 0;
+		padding: 0;
+		transition: all 0.5s ease-in-out;
+
+		@media (min-width: 1024px) {
+			padding: 0 0 6px 0;
+		}
+
+		h2 {
+			margin: 0 0 6px 0;
+			padding: 0;
+
+			button {
+				color: stencilColor('color-white');
+				font-size: remCalc(16px);
+				font-style: normal;
+				font-weight: 800;
+				margin: 0;
+				padding: 0;
+				display: block;
+				width: 100%;
+				position: relative;
+				text-align: left;
+
+				i.icon {
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(-2px, -50%);
+					height: 16px;
+					width: 16px;
+
+					@media (min-width: 1024px) {
+						display: none;
+					}
+
+					svg {
+						stroke: stencilColor('color-white');
+						fill: stencilColor('color-white');
+					}
+				}
+			}
+		}
+	}
+
+	&-item {
+		display: none;
+
+		@media (min-width: 1024px) {
+			display: block;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			font-size: remCalc(14px);
+			transition: all 0.5s ease-in-out;
+			padding: 6px 0;
+			display: block;
+		}
+
+		&.footerColumn-title {
+			display: block;
+		}
+	}
+
+	&.is-open {
+		ul.footerColumn-list {
+			h2 {
+				margin-bottom: 6px;
+
+				button.footerColumn-toggle {
+					i.icon {
+						transform: translate(-6px, -75%) rotate(180deg);
+					}
+				}
+			}
+
+			li.footerColumn-item {
+				display: block;
+			}
+		}
+	}
+}

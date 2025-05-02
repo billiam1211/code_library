@@ -1,0 +1,47 @@
+<style> 
+    [id='{{_.id}}'] { 
+        background-color: {{bg_color}}; 
+    }
+
+    [id='{{_.id}}'] .eyebrow, 
+    [id='{{_.id}}'] .heading, 
+    [id='{{_.id}}'] .text { 
+        color: {{text_color}}; 
+    }
+    {{#if max_width}} 
+        [id='{{_.id}}'] .contentWidget-container { 
+            @media (min-width: 1360px) { 
+                max-width: {{max_width}}%; 
+            }
+        } 
+    {{/if}} 
+</style> 
+
+
+<div class='contentWidget' id='{{_.id}}'>
+    <div class='contentWidget-container'>
+        <div class='contentWidget-content'> 
+            {{#if eyebrow}} 
+                <span class='eyebrow'> 
+                    {{eyebrow}} 
+                </span> 
+            {{/if}} 
+            {{#if heading}} 
+                <{{tag}} class='heading'> {{{heading}}} </{{tag}}> 
+            {{/if}} 
+            {{#if text}} 
+                <p class='text'>
+                    {{{text}}} 
+                </p> 
+            {{/if}} 
+            <div class='actions'> 
+                {{#if show_button_1 '===' 'show'}} 
+                    <a href='{{link_1}}' class='button'>{{button_1}}</a> 
+                {{/if}} 
+                {{#if show_button_2 '===' 'show'}} 
+                    <a href='{{link_2}}' class='button'>{{button_2}}</a> 
+                {{/if}} 
+            </div>
+        </div>
+    </div>
+</div>

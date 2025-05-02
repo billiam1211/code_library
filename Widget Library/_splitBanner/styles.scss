@@ -1,0 +1,150 @@
+.splitBanner {
+    background-color: stencilColor('color-primary');
+    width: 100%;
+
+    &-container {
+        margin: 0 auto;
+        padding: 48px 20px;
+        max-width: 1400px;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint($screen-large) {
+            flex-direction: row;
+
+            &.reverse {
+                flex-direction: row-reverse;
+
+                .splitBanner-column.content {
+                    @include breakpoint($screen-large) {
+                        padding-right: initial;
+                        padding-left: 20%;
+                    }
+                }
+            }
+        }
+    }
+
+    &-column {
+        width: 100%;
+
+        @include breakpoint($screen-large) {
+            width: 50%;
+        }
+
+        &.content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: stencilColor('color-white');
+            padding: 0;
+
+            @include breakpoint($screen-large) {
+                padding-right: 20%;
+            }
+
+            .eyebrow {
+                display: block;
+                color: stencilColor('color-white');
+                font-family: stencilFontFamily('body-font');
+                font-size: remCalc(12px);
+                font-weight: 400;
+                padding: 4px 8px;
+                margin: 0 0 16px 0;
+            }
+
+            .heading {
+                margin: 0 0 16px 0;
+                color: stencilColor('color-white');
+                font-family: stencilFontFamily('headings-font');
+                font-size: remCalc(48px);
+                font-style: normal;
+                font-weight: 400;                
+            }
+
+            .text {
+                margin: 0 0 20px 0;
+                color: stencilColor('color-white');
+                font-family: stencilFontFamily('body-font');
+                font-size: remCalc(16px);
+                font-weight: 400;
+                line-height: 150%;
+            }
+
+            .splitBanner-actions {
+                display: flex;
+                flex-wrap: wrap;
+
+                a.button {
+                    width: 100%;
+                    
+                    @include button(
+                        'custom', 
+                        stencilColor('color-white'), 
+                        stencilColor('color-black'), 
+                        stencilColor('color-greyLighter'), 
+                        stencilColor('color-black')
+                    );
+
+                    border: 1px solid stencilColor('color-white');
+                    margin: 0;
+
+                    @include breakpoint($screen-large) {                        
+                        width: auto;
+                    }
+
+                    &+a.button {
+                        @include button(
+                            'custom', stencilColor('color-primary'), 
+                            stencilColor('color-white'), 
+                            stencilColor('color-primary--alt'), 
+                            stencilColor('color-white')
+                        );
+                        
+                        border: 1px solid stencilColor('color-white');
+                        margin-top: 8px;
+
+                        @include breakpoint($screen-large) {
+                            margin-top: initial;
+                            margin-left: 28px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.media {
+            margin-top: 48px;
+            position: relative;
+
+            @include breakpoint($screen-large) {
+                margin-top: initial;
+            }
+
+            img {
+                &.desktop {
+                    display: none;
+
+                    @include breakpoint($screen-large) {
+                        display: block;
+                    }
+                }
+
+                &.mobile {
+                    display: block;
+                    width: auto;
+                    margin:  0 auto;
+                    object-fit: contain;
+
+                    &.full-width {
+                        width: 100%;
+                    }
+
+                    @include breakpoint($screen-large) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

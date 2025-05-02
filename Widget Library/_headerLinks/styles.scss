@@ -1,0 +1,31 @@
+.headerPages-list {
+	margin: 0;
+
+	@include breakpoint($screen-medium) {
+		display: flex;
+		justify-content: flex-end;
+		flex-grow: 1;
+	}
+	.headerPages-item {
+		margin: 0;
+		display: flex;
+		align-items: center;
+
+		.headerPages-link {
+			text-align: center;
+			color: stencilColor('color-white');
+			font-family: stencilFontFamily('body-font');
+			font-size: remCalc(16px);
+			font-weight: 500;
+			font-style: normal;
+			line-height: normal;
+			text-decoration: none;
+			padding: 16px 0;
+
+			@include breakpoint($screen-medium) {
+				color: stencilColor('color-greyDark');
+				padding: 16px;
+			}
+		}
+	}
+}

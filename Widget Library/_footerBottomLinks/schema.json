@@ -1,0 +1,38 @@
+{
+    "name": "Footer Bottom Links",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Footer Bottom Links",
+            "id": "footerBottom-items",
+            "defaultCount": 3,
+            "entryLabel": "Item",
+            "thumbnail": "imageUrl",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Item Settings",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "type": "input",
+                                    "label": "URL",
+                                    "id": "itemUrl",
+                                    "default": ""
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Text",
+                                    "id": "itemText",
+                                    "default": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<ul class='footerBottom-list'> {{#each footerBottom-items}} <li class='footerBottom-item'><a class='footerBottom-link' href='{{itemUrl}}'>{{itemText}}</a></li> {{/each}} </ul>"
+}

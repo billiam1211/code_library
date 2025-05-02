@@ -1,0 +1,155 @@
+{
+    "name": "Accordion Widget",
+    "schema": [
+        {
+            "type": "array",
+            "label": "Tabs",
+            "id": "tabs",
+            "defaultCount": 1,
+            "entryLabel": "Slide",
+            "schema": [
+                {
+                    "type": "tab",
+                    "label": "Content",
+                    "sections": [
+                        {
+                            "settings": [                                           
+                                {
+                                    "type": "select",
+                                    "label": "Heading Tag",
+                                    "id": "tag",
+                                    "default": "h2",
+                                    "typeMeta": {
+                                        "selectOptions": [
+                                            {
+                                                "label": "h1",
+                                                "value": "h1"
+                                            },
+                                            {
+                                                "label": "h2",
+                                                "value": "h2"
+                                            },
+                                            {
+                                                "label": "h3",
+                                                "value": "h3"
+                                            },
+                                            {
+                                                "label": "h4",
+                                                "value": "h4"
+                                            },
+                                            {
+                                                "label": "h5",
+                                                "value": "h5"
+                                            },
+                                            {
+                                                "label": "h6",
+                                                "value": "h6"
+                                            },
+                                            {
+                                                "label": "p",
+                                                "value": "p"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Accordion Heading",
+                                    "id": "tab_subheading",
+                                    "default": ""
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Accordion Text",
+                                    "id": "tab_text",
+                                    "default": ""
+                                },
+                                {
+                                    "type": "visibility",
+                                    "label": "Show Primary Button",
+                                    "id": "show_button_1",
+                                    "default": "show"
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Button Primary Text",
+                                    "id": "button_1",
+                                    "default": "",
+                                    "conditional": {
+                                        "key": "show_button_1",
+                                        "operator": "IN",
+                                        "value": [
+                                            "show"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "Button Primary Link",
+                                    "id": "link_1",
+                                    "default": "",
+                                    "conditional": {
+                                        "key": "show_button_1",
+                                        "operator": "IN",
+                                        "value": [
+                                            "show"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "visibility",
+                                    "label": "Show Secondary Button",
+                                    "id": "show_button_2",
+                                    "default": "show"
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "BUtton Secondary Text",
+                                    "id": "button_2",
+                                    "default": "",
+                                    "conditional": {
+                                        "key": "show_button_2",
+                                        "operator": "IN",
+                                        "value": [
+                                            "show"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "label": "BUtton Secondary Link",
+                                    "id": "link_2",
+                                    "default": "",
+                                    "conditional": {
+                                        "key": "show_button_2",
+                                        "operator": "IN",
+                                        "value": [
+                                            "show"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tab",
+            "label": "Settings",
+            "sections": [
+                {
+                    "settings": [
+                        {
+                            "type": "input",
+                            "label": "Main Heading",
+                            "id": "widget_heading",
+                            "default": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "template": "<div class='accordionWidget'> <div class='accordionWidget-container'> <p class='accordionWidget-heading'> {{{widget_heading}}} </p> {{#each tabs}} <div class='accordionWidget-block{{#if @first}} is-open{{/if}}'> <button class='accordionWidget-toggle'> {{{tab_heading}}} <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'> <mask id='mask0_539_1869' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'> <rect width='24' height='24' fill='#D9D9D9' /> </mask> <g mask='url(#mask0_539_1869)'> <path d='M11.9998 20.5C11.7871 20.5 11.609 20.4281 11.4655 20.2843C11.3218 20.1406 11.25 19.9625 11.25 19.75V12.75H4.25C4.0375 12.75 3.85942 12.6781 3.71575 12.5343C3.57192 12.3904 3.5 12.2122 3.5 11.9998C3.5 11.7871 3.57192 11.609 3.71575 11.4655C3.85942 11.3218 4.0375 11.25 4.25 11.25H11.25V4.25C11.25 4.0375 11.3219 3.85942 11.4658 3.71575C11.6096 3.57192 11.7878 3.5 12.0003 3.5C12.2129 3.5 12.391 3.57192 12.5345 3.71575C12.6782 3.85942 12.75 4.0375 12.75 4.25V11.25H19.75C19.9625 11.25 20.1406 11.3219 20.2843 11.4658C20.4281 11.6096 20.5 11.7878 20.5 12.0003C20.5 12.2129 20.4281 12.391 20.2843 12.5345C20.1406 12.6782 19.9625 12.75 19.75 12.75H12.75V19.75C12.75 19.9625 12.6781 20.1406 12.5343 20.2843C12.3904 20.4281 12.2122 20.5 11.9998 20.5Z' fill='black' /> </g> </svg> </button> <div class='accordionWidget-content'> <{{tag}} class='title'>{{{tab_subheading}}}</{{tag}}> <p class='text'> {{{tab_text}}} </p> <div class='actions'> {{#if show_button_1 '===' 'show'}} <a href='{{link_1}}' class='button button--primary'>{{{button_1}}}</a> {{/if}} {{#if show_button_2 '===' 'show'}} <a href='{{link_2}}' class='button button--secondary'>{{{button_2}}}</a> {{/if}} </div> </div> </div> {{/each}} </div> </div>"
+}

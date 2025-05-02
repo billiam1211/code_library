@@ -1,0 +1,69 @@
+<style> 
+    
+    [id='{{_.id}}'] { 
+        {{#if content_bg_color}} background-color: {{content_bg_color}}; {{/if}} 
+    } 
+    [id='{{_.id}}'] .splitBanner-content .text, 
+    [id='{{_.id}}'] .splitBanner-content .heading, 
+    [id='{{_.id}}'] .splitBanner-content .eyebrow { 
+        {{#if text_color}}
+            color: {{text_color}}; 
+        {{/if}} 
+    } 
+    [id='{{_.id}}'] .splitBanner-column.content { 
+        {{#gt max_width 0}} 
+            @media (min-width: 1400px) { 
+                padding-left: initial; padding-right: {{content_padding}}%; 
+            } 
+        {{/gt}} 
+    } 
+    [id='{{_.id}}'] .splitBanner-container.reverse .splitBanner-column.content { 
+        {{#gt max_width 0}} 
+            padding-left: initial; 
+            padding-right: initial; 
+            @media (min-width: 1400px) { 
+                padding-right: initial; padding-left: {{content_padding}}%; 
+            } 
+        {{/gt}} 
+    } 
+    {{#if slide_overlay}} 
+        [id='{{_.id}}'] .splitBanner-image::after { 
+            content: ''; position: absolute; top: 50%; left: 50%; height: 100%; width: 100%; transform: translate(-50%, -50%); background-color: {{slide_overlay}}; 
+        } 
+    {{/if}} 
+    [id='{{_.id}}'] .splitBanner-image img.mobile {
+        width: {{mobile_img_width}};
+    }
+</style> 
+
+<div class='splitBanner' id='{{_.id}}'>
+    <div class='splitBanner-container {{#if reverse \"===\" \"true\"}} reverse{{/if}}'>
+        <div class='splitBanner-column content'>
+            <div class='splitBanner-content'> 
+                {{#if eyebrow}} 
+                    <span class='eyebrow'>{{eyebrow}}</span> 
+                {{/if}} 
+                {{#if heading_text}} 
+                    <{{heading_tag}} class='heading'>{{{heading_text}}}</{{heading_tag}}> 
+                {{/if}} 
+                {{#if text}} 
+                    <p class='text'> {{{text}}} </p> 
+                {{/if}} 
+                <div class='splitBanner-actions'> 
+                    {{#if show_button_1 '===' 'show'}} 
+                        <a href='{{{button_1_link}}}' class='button'>{{{button_1_text}}}</a> 
+                    {{/if}} 
+                    {{#if show_button_2 '===' 'show'}} 
+                        <a href='{{{button_2_link}}}' class='button'>{{{button_2_text}}}</a>                    
+                    {{/if}} 
+                </div>
+            </div>
+        </div>
+        <div class='splitBanner-column media'>
+            <div class='splitBanner-image'> 
+                <img src='{{image_mobile.src}}' alt='{{mobile_alt}}' class='mobile'> 
+                <img src='{{image_desktop.src}}' alt='{{desktop_alt}}' class='desktop'> 
+            </div>
+        </div>
+    </div>
+</div>

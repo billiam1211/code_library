@@ -1,0 +1,101 @@
+.accordionWidget {
+    text-align: center;
+
+    &-container {
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 0 20px;
+        background-color: stencilColor('color-white');
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &-heading {
+        width: 100%;
+        color: stencilColor('color-black');
+        font-family: stencilFontFamily('headings-font');
+        font-size: remCalc(32px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin: 0 0 48px 0;
+    }
+
+    &-block {
+        width: 100%;
+        border-top: 1px solid stencilColor('color-greyLight');
+
+        &:last-child {
+            border-bottom: 1px solid stencilColor('color-greyLight');            
+        }
+
+        &.is-open {
+            transition: all .5s ease-in-out;
+            div.accordionWidget-content {
+                max-height: 500px;
+            }
+        }
+    }
+
+    &-toggle {
+        color: stencilColor('color-black');
+        font-family: stencilFontFamily('headings-font');
+        font-size: remCalc(32px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: left;
+        margin: 0;
+        padding: 16px 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-content {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        
+
+        .title {
+            color: stencilColor('color-black');
+            font-family: stencilFontFamily('body-font');
+            font-size: remCalc(18px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            margin: 8px 0 12px 0;
+            display: block;
+            text-align: left;
+        }
+
+        .text {
+            color: stencilColor('color-black');
+            font-family: stencilFontFamily('body-font');
+            font-size: remCalc(16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            display: block;
+            text-align: left;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+
+            .button {
+                width: 100%;
+
+                @include breakpoint($screen-large) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
